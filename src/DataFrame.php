@@ -47,4 +47,23 @@ class DataFrame
 	public function cell($column, int $line)
 	{
 	}
+
+	/**
+	 * Sumariza o dataframe com informações relevantes e de estatística descritiva
+	 *
+	 * @return array Retorna um array com informações sumarizadas do dataframe.
+	 */
+	public function summary(): array
+	{
+	}
+
+	/**
+	 * Executa uma iteração com cada linha do dataframe.
+	 *
+	 * @return ArrayObject Retorna um ArrayObject com uma linha do dataframe.
+	 */
+	public function iterate(): ArrayObject
+	{
+	}
+
 }
