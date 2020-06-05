@@ -1,9 +1,16 @@
 <?php
 namespace Bear;
 
+use ArrayObject;
+
 class DataFrame
 {
-	public function __construct()
+	/**
+	 * Construtor do dataframe.
+	 *
+	 * @param ArrayObject $data Objeto com os dados, composto por ArrayObject com seus itens representando as linhas e um ArrayObject para cada linha, representando as cada colunas.
+	 */
+	public function __construct(ArrayObject $data)
 	{
 	}
 
