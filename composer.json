@@ -1,0 +1,20 @@
+{
+    "name": "everton3x/bear",
+    "description": "Pandas para PHP, ou quase isso...",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Everton da Rosa",
+            "email": "everton3x@gmail.com"
+        }
+    ],
+    "require": {
+		"php": ">=7.4.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"Bear\\": "src"
+		}
+	}
+}
