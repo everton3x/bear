@@ -2,6 +2,9 @@
 namespace Bear;
 
 use Bear\Exception\InvalidDataStructureException;
+use Bear\Exception\InvalidPatternException;
+use Bear\Exception\OutOfRangeException;
+use InvalidArgumentException;
 
 class DataFrame
 {
@@ -57,7 +60,7 @@ class DataFrame
      */
     public function checkStructure(): bool
     {
-        foreach($this->data as $rowIndex => $row ) {
+        foreach ($this->data as $rowIndex => $row) {
 
             if ($this->checkColumnNames($row) === false) {
                 throw new InvalidDataStructureException($rowIndex, array_keys($row));
@@ -91,30 +94,42 @@ class DataFrame
      */
     public function sum($column): float
     {
-        
-    }
-    
-    /**
-     * Pega uma coluna inteira.
-     * 
-     * @param type $column
-     * @return array
-     */
-    protected function getColumn($column): array
-    {
-        if(is_int($column)){
+        if (is_int($column)) {
             $column = $this->getColumnNameByIndex($column);
         }
+
+        return (float) array_sum($this->getColumn([$column])[$column]);
     }
-    
+
+    /**
+     * Filtra as colunas de $columnNames.
+     * 
+     * @param array $columnNames
+     * @return array
+     */
+    protected function getColumn(array $columnNames): array
+    {
+        $dataFiltered = [];
+
+        foreach ($columnNames as $column) {
+            $dataFiltered[$column] = array_column($this->data, $column);
+        }
+
+        return $dataFiltered;
+    }
+
     /**
      * Pega o nome da coluna de acordo com o seu index.
      * 
      * @param int $index
      * @return string
      */
-    protected function getColumnNameByIndex(int $index): string
+    public function getColumnNameByIndex(int $index): string
     {
+        if (key_exists($index, $this->columnNames) === false) {
+            throw new OutOfRangeException($index);
+        }
+
         return $this->columnNames[$index];
     }
 
@@ -126,7 +141,36 @@ class DataFrame
      */
     public function line($lines): DataFrame
     {
+        if (is_string($lines)) {
+            if (preg_match('/^(\d)(:)(\d)$/', $lines) === 1) {//sequência
+                $range = explode(':', $lines);
+                if($range[0] < $range[1]){
+                    $min = $range[0];
+                    $max = $range[1];
+                }else{
+                    $min = $range[1];
+                    $max = $range[0];
+                }
+                $lines = range($min, $max);
+            } elseif (preg_match('/^(\d)(,\d){0,}$/', $lines) === 1) {//conjunto
+                $lines = explode(',', $lines);
+            } else {//erro
+                throw new InvalidPatternException($lines);
+            }
+        }elseif(is_array($lines)){
+            
+        }else{//erro
+            throw new InvalidArgumentException('Invalid argument detected.');
+        }
         
+        foreach ($lines as $index){
+            if(key_exists($index, $this->data) === false){
+                throw new OutOfRangeException($index);
+            }
+            
+            $linesFiltered[] = $this->data[$index];
+        }
+        return new DataFrame($linesFiltered);
     }
 
     /**

@@ -27,7 +27,7 @@ class InvalidDataStructureException extends Exception
      * @param array $columns Lista de colunas da linha inválida.
      * @return Exception
      */
-    public function __construct(int $rowIndex, array $columns): \Exception
+    public function __construct(int $rowIndex, array $columns)
     {
         parent::__construct("Invalid data structure detected on row $rowIndex.");
         

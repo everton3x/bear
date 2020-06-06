@@ -9,22 +9,20 @@ $data = [
 		'money' => 10000
 	],
 	[
-		'id' => 1,
-		'name' => 'Everton',
-		'money' => 10000
+		'id' => 2,
+		'name' => 'Marlise',
+		'money' => 5000
 	],
 	[
-		'id' => 1,
-		'name' => 'Everton',
-		'money' => 10000
+		'id' => 3,
+		'name' => 'Arthur',
+		'money' => 100
 	]
 ];
 //print_r($data);
-$ao = new ArrayObject($data);
-//print_r($ao);
 
-$df = new Bear\DataFrame($ao);
+$df = new Bear\DataFrame($data);
 
-//print_r($df->getFieldNames());
-
-$df->checkStructure();
+//var_dump($df->line('0:2'));
+//var_dump($df->line('0,2'));
+var_dump($df->line([1,2]));
