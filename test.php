@@ -21,4 +21,10 @@ $data = [
 ];
 //print_r($data);
 $ao = new ArrayObject($data);
-print_r($ao);
+//print_r($ao);
+
+$df = new Bear\DataFrame($ao);
+
+//print_r($df->getFieldNames());
+
+$df->checkStructure();

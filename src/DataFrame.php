@@ -5,6 +5,17 @@ use ArrayObject;
 
 class DataFrame
 {
+
+	/**
+	 * Os dados do dataframe.
+	 */
+	protected ArrayObject $data;
+
+	/**
+	 * Os nomes de campos
+	 */
+	protected ArrayObject $fieldNames;
+
 	/**
 	 * Construtor do dataframe.
 	 *
@@ -12,6 +23,64 @@ class DataFrame
 	 */
 	public function __construct(ArrayObject $data)
 	{
+		$this->data = $data;
+
+		$this->fieldNames = $this->readFieldNames();
+	}
+
+	/**
+	 * Detecta os nomes de campos.
+	 *
+	 * @return ArrayObject Retorna um ArrayObject com os nomes de campos.
+	 */
+	protected function readFieldNames(): ArrayObject
+	{
+		$iterator = $this->data->getIterator();
+		return new ArrayObject(array_keys($iterator->current()));
+	}
+
+	/**
+	 * Pega os nomes de campos do dataframe.
+	 *
+	 * @return array Retorna um array com os nomes dos campos.
+	 */
+	public function getFieldNames(): array
+	{
+		return $this->fieldNames->getArrayCopy();
+	}
+
+	/**
+	 * Verifica se o dataframe obedece à estrutura correta.
+	 *
+	 * @return bool
+	 */
+	public function checkStructure(): bool
+	{
+		for($lineIterator = $this->data->getIterator();$lineIterator->valid();$lineIterator->next()) {
+			
+			if($this->checkFieldNames($lineIterator->current()) === false){
+				print_r($lineIterator->current());
+				throw new \Exception('asgaga');
+			}
+				
+		}
+
+		return true;
+	}
+
+	/**
+	 * Testa se $dataToCheck é uma linha com todas as colunas necessárias.
+	 * @param array Uma linha do dataframe.
+	 * @return bool
+	 */
+	protected function checkFieldNames(array $dataToCheck): bool
+	{
+		//verifica se existe diferença entre os campos detectados e os campos passados
+		if(sizeof(array_diff_assoc(array_keys($dataToCheck), $this->getFieldNames())) !== 0){
+			return false;
+		}
+
+		return true;
 	}
 
 	/**
