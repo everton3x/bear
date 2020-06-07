@@ -111,8 +111,10 @@ class DataFrame
     {
         $dataFiltered = [];
 
-        foreach ($columnNames as $column) {
-            $dataFiltered[$column] = array_column($this->data, $column);
+        foreach ($this->data as $rowIndex => $row) {
+            foreach ($columnNames as $column) {
+                $dataFiltered[$rowIndex][$column] = $row[$column];
+            }
         }
 
         return $dataFiltered;
@@ -144,10 +146,10 @@ class DataFrame
         if (is_string($lines)) {
             if (preg_match('/^(\d)(:)(\d)$/', $lines) === 1) {//sequência
                 $range = explode(':', $lines);
-                if($range[0] < $range[1]){
+                if ($range[0] < $range[1]) {
                     $min = $range[0];
                     $max = $range[1];
-                }else{
+                } else {
                     $min = $range[1];
                     $max = $range[0];
                 }
@@ -157,20 +159,31 @@ class DataFrame
             } else {//erro
                 throw new InvalidPatternException($lines);
             }
-        }elseif(is_array($lines)){
+        } elseif (is_array($lines)) {
             
-        }else{//erro
+        } else {//erro
             throw new InvalidArgumentException('Invalid argument detected.');
         }
-        
-        foreach ($lines as $index){
-            if(key_exists($index, $this->data) === false){
+
+        foreach ($lines as $index) {
+            if (key_exists($index, $this->data) === false) {
                 throw new OutOfRangeException($index);
             }
-            
+
             $linesFiltered[] = $this->data[$index];
         }
         return new DataFrame($linesFiltered);
+    }
+
+    protected function getColumnIndexFor(string $columnName): int
+    {
+        $index = array_search($columnName, $this->getColumnNames());
+
+        if (is_null($index)) {
+            throw new InvalidColumnNameException($columnName);
+        }
+
+        return $index;
     }
 
     /**
@@ -181,7 +194,49 @@ class DataFrame
      */
     public function columns($columns): DataFrame
     {
-        
+        if (preg_match('/^(\d)(:)(\d)$/', $columns) === 1) {
+            $columns = explode(':', $columns);
+            if ($columns[0] < $columns[1]) {
+                $min = $columns[0];
+                $max = $columns[1];
+            } else {
+                $min = $columns[1];
+                $max = $columns[0];
+            }
+
+            $range = range($min, $max);
+            foreach ($range as $index) {
+                $columnNames[] = $this->getColumnNameByIndex($index);
+            }
+
+            $data = $this->getColumn($columnNames);
+        } elseif (preg_match('/^([A-Za-z0-9_]+)(:)([A-Za-z0-9_]+)$/', $columns) === 1) {
+            $columns = explode(':', $columns);
+            $column1 = $this->getColumnIndexFor($columns[0]);
+            $column2 = $this->getColumnIndexFor($columns[1]);
+
+            if ($column1 < $column2) {
+                $min = $column1;
+                $max = $column2;
+            } else {
+                $min = $column2;
+                $max = $column1;
+            }
+
+            $range = range($min, $max);
+
+            foreach ($range as $index) {
+                $columnNames[] = $this->getColumnNameByIndex($index);
+            }
+
+            $data = $this->getColumn($columnNames);
+        } else {
+            throw new InvalidPatternException($columns);
+        }
+
+        print_r($data);
+        exit();
+        return new DataFrame($data);
     }
 
     /**
