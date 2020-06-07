@@ -1,6 +1,7 @@
 <?php
 namespace Bear;
 
+use Bear\Exception\InvalidColumnNameException;
 use Bear\Exception\InvalidDataStructureException;
 use Bear\Exception\InvalidPatternException;
 use Bear\Exception\OutOfRangeException;
@@ -175,6 +176,13 @@ class DataFrame
         return new DataFrame($linesFiltered);
     }
 
+    /**
+     * Pega o índex da coluna para um dado nome de coluna.
+     * 
+     * @param string $columnName
+     * @return int
+     * @throws InvalidColumnNameException
+     */
     protected function getColumnIndexFor(string $columnName): int
     {
         $index = array_search($columnName, $this->getColumnNames());
@@ -249,13 +257,25 @@ class DataFrame
     /**
      * Seleciona uma célula específica no dataset.
      *
-     * @param mixed $column O índice ou rótulo da coluna.
      * @param int $line O índice da linha.
+     * @param mixed $column O índice ou rótulo da coluna.
      * @return mixed Retorna o conteúdo da célula.
      */
-    public function cell($column, int $line)
+    public function cell(int $line, $column)
     {
+        if(key_exists($line, $this->data) === false){
+            throw new OutOfRangeException($line);
+        }
         
+        if(is_numeric($column)){
+            $column = $this->getColumnNameByIndex($column);
+        }
+        
+        if(key_exists($column, $this->data[$line]) === false){
+            throw new OutOfBoundsException($column);
+        }
+        
+        return $this->data[$line][$column];
     }
 
     /**
