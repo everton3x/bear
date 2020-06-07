@@ -208,53 +208,73 @@ class DataFrame
      */
     public function columns($columns): DataFrame
     {
-        if (preg_match('/^(\d)(:)(\d)$/', $columns) === 1) {
-            $columns = explode(':', $columns);
-            if ($columns[0] < $columns[1]) {
-                $min = $columns[0];
-                $max = $columns[1];
+        if (is_string($columns)) {
+            if (preg_match('/^[:,]/', $columns) === 1) {
+                $data = $this->getColumn([$columns]);
+            } elseif (preg_match('/^(\d)(:)(\d)$/', $columns) === 1) {
+                $columns = explode(':', $columns);
+                if ($columns[0] < $columns[1]) {
+                    $min = $columns[0];
+                    $max = $columns[1];
+                } else {
+                    $min = $columns[1];
+                    $max = $columns[0];
+                }
+
+                $range = range($min, $max);
+                foreach ($range as $index) {
+                    $columnNames[] = $this->getColumnNameByIndex($index);
+                }
+
+                $data = $this->getColumn($columnNames);
+            } elseif (preg_match('/^([A-Za-z0-9_]+)(:)([A-Za-z0-9_]+)$/', $columns) === 1) {
+                $columns = explode(':', $columns);
+                $column1 = $this->getColumnIndexFor($columns[0]);
+                $column2 = $this->getColumnIndexFor($columns[1]);
+
+                if ($column1 < $column2) {
+                    $min = $column1;
+                    $max = $column2;
+                } else {
+                    $min = $column2;
+                    $max = $column1;
+                }
+
+                $range = range($min, $max);
+
+                foreach ($range as $index) {
+                    $columnNames[] = $this->getColumnNameByIndex($index);
+                }
+
+                $data = $this->getColumn($columnNames);
+            } elseif (preg_match('/^(\d)(,\d){0,}$/', $columns) === 1) {
+                $range = explode(',', $columns);
+                foreach ($range as $index) {
+                    $columnNames[] = $this->getColumnNameByIndex($index);
+                }
+                $data = $this->getColumn($columnNames);
+            } elseif (preg_match('/^([A-Za-z0-9_]+)(,[A-Za-z0-9_]+){0,}$/', $columns) === 1) {
+                $columnNames = explode(',', $columns);
+                $data = $this->getColumn($columnNames);
             } else {
-                $min = $columns[1];
-                $max = $columns[0];
+                throw new InvalidPatternException($columns);
             }
-
-            $range = range($min, $max);
-            foreach ($range as $index) {
-                $columnNames[] = $this->getColumnNameByIndex($index);
-            }
-
-            $data = $this->getColumn($columnNames);
-        } elseif (preg_match('/^([A-Za-z0-9_]+)(:)([A-Za-z0-9_]+)$/', $columns) === 1) {
-            $columns = explode(':', $columns);
-            $column1 = $this->getColumnIndexFor($columns[0]);
-            $column2 = $this->getColumnIndexFor($columns[1]);
-
-            if ($column1 < $column2) {
-                $min = $column1;
-                $max = $column2;
+        } elseif (is_array($columns)) {
+            if (is_int($columns[0])) {
+                foreach ($columns as $index) {
+                    $columnNames[] = $this->getColumnNameByIndex($index);
+                }
+                $data = $this->getColumn($columnNames);
+            } elseif (is_string($columns[0])) {
+                $data = $this->getColumn($columns);
             } else {
-                $min = $column2;
-                $max = $column1;
+                throw new InvalidArgumentException('Invalid argument detected.');
             }
-
-            $range = range($min, $max);
-
-            foreach ($range as $index) {
-                $columnNames[] = $this->getColumnNameByIndex($index);
-            }
-
-            $data = $this->getColumn($columnNames);
-        } elseif (preg_match('/^(\d)(,\d){0,}$/', $columns) === 1) {
-            $range = explode(',', $columns);
-            foreach ($range as $index) {
-                $columnNames[] = $this->getColumnNameByIndex($index);
-            }
-            $data = $this->getColumn($columnNames);
-        } elseif (preg_match('/^([A-Za-z0-9_]+)(,[A-Za-z0-9_]+){0,}$/', $columns) === 1) {
-            $columnNames = explode(',', $columns);
+        } elseif (is_int($columns)) {
+            $columnNames[] = $this->getColumnNameByIndex($columns);
             $data = $this->getColumn($columnNames);
         } else {
-            throw new InvalidPatternException($columns);
+            throw new InvalidArgumentException('Invalid argument detected.');
         }
 
         return new DataFrame($data);
