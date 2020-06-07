@@ -99,7 +99,11 @@ class DataFrame
             $column = $this->getColumnNameByIndex($column);
         }
 
-        return (float) array_sum($this->getColumn([$column])[$column]);
+        $sum = 0.0;
+        foreach ($this->getColumn([$column]) as $row) {
+            $sum += $row[$column];
+        }
+        return $sum;
     }
 
     /**
@@ -142,7 +146,7 @@ class DataFrame
      * @param mixed $lines Indica uma ou mais linhas ou um intervalo de linhas. As linhas sempre começam em 0. Por exemplo: use 10, para retornar a 11ª linha; use um array com os números das linhas desejadas para um conjunto de linhas, não sequenciais; ou use 0:20 para as linhas de 0 a 19; ou use 15:21, para as linhas de 15 a 20.
      * @return DataFrame Retorna um dataframe com as linhas desejadas.
      */
-    public function line($lines): DataFrame
+    public function lines($lines): DataFrame
     {
         if (is_string($lines)) {
             if (preg_match('/^(\d)(:)(\d)$/', $lines) === 1) {//sequência
@@ -161,7 +165,9 @@ class DataFrame
                 throw new InvalidPatternException($lines);
             }
         } elseif (is_array($lines)) {
-            
+            //não faz nada
+        } elseif (is_int($lines)) {
+            $lines = [$lines];
         } else {//erro
             throw new InvalidArgumentException('Invalid argument detected.');
         }
@@ -263,18 +269,18 @@ class DataFrame
      */
     public function cell(int $line, $column)
     {
-        if(key_exists($line, $this->data) === false){
+        if (key_exists($line, $this->data) === false) {
             throw new OutOfRangeException($line);
         }
-        
-        if(is_numeric($column)){
+
+        if (is_numeric($column)) {
             $column = $this->getColumnNameByIndex($column);
         }
-        
-        if(key_exists($column, $this->data[$line]) === false){
+
+        if (key_exists($column, $this->data[$line]) === false) {
             throw new OutOfBoundsException($column);
         }
-        
+
         return $this->data[$line][$column];
     }
 
@@ -286,5 +292,15 @@ class DataFrame
     public function summary(): array
     {
         
+    }
+
+    /**
+     * Conta quantas linhas tem o dataframe.
+     * 
+     * @return int
+     */
+    public function size(): int
+    {
+        return sizeof($this->data);
     }
 }
