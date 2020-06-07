@@ -230,12 +230,19 @@ class DataFrame
             }
 
             $data = $this->getColumn($columnNames);
+        } elseif (preg_match('/^(\d)(,\d){0,}$/', $columns) === 1) {
+            $range = explode(',', $columns);
+            foreach ($range as $index) {
+                $columnNames[] = $this->getColumnNameByIndex($index);
+            }
+            $data = $this->getColumn($columnNames);
+        } elseif (preg_match('/^([A-Za-z0-9_]+)(,[A-Za-z0-9_]+){0,}$/', $columns) === 1) {
+            $columnNames = explode(',', $columns);
+            $data = $this->getColumn($columnNames);
         } else {
             throw new InvalidPatternException($columns);
         }
 
-        print_r($data);
-        exit();
         return new DataFrame($data);
     }
 

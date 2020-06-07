@@ -27,4 +27,6 @@ $df = new Bear\DataFrame($data);
 //var_dump($df->line('0,2'));
 //var_dump($df->line([1,2]));
 //print_r($df->columns('0:2'));
-print_r($df->columns('id:money'));
+//print_r($df->columns('id:money'));
+//print_r($df->columns('0,2'));
+print_r($df->columns('id,money'));
