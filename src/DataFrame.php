@@ -1,11 +1,14 @@
 <?php
 namespace Bear;
 
+use ArrayIterator;
+use ArrayObject;
 use Bear\Exception\InvalidColumnNameException;
 use Bear\Exception\InvalidDataStructureException;
 use Bear\Exception\InvalidPatternException;
 use Bear\Exception\OutOfRangeException;
 use InvalidArgumentException;
+use OutOfBoundsException;
 
 class DataFrame
 {
@@ -21,6 +24,12 @@ class DataFrame
      * @var array Lista com os nomes das colunas.
      */
     protected array $columnNames;
+    
+    /**
+     *
+     * @var ArrayIterator Um iterador para as linhas.
+     */
+    protected ?ArrayIterator $iterator = null;
 
     /**
      * Construtor do dataframe.
@@ -322,5 +331,58 @@ class DataFrame
     public function size(): int
     {
         return sizeof($this->data);
+    }
+    
+    /**
+     * Pega um iterador para as linhas.
+     * 
+     * @param int $flags Uma das flag disponíveis em ArrayIterator. Padrão é ArrayIterator::ARRAY_AS_PROPS, que dá acesso às chaves do array como propriedades.
+     * @return ArrayIterator
+     * @link https://www.php.net/manual/en/class.arrayiterator.php#arrayiterator.constants Flags de ArrayIterator.
+     */
+    public function getIterator(int $flags = ArrayIterator::ARRAY_AS_PROPS): ArrayIterator
+    {
+        if(is_null($this->iterator)){
+            $this->iterator = new ArrayIterator($this->data);
+            $this->iterator->setFlags($flags);
+        }
+        
+        return $this->iterator;
+    }
+    
+    /**
+     * Itera por cada linha de dados.
+     * 
+     * @param bool $object Se true (padrão), retorna uma instância de ArrayObject com os dados da linha. Se false, retorna a linha no formato de array.
+     * @param int $flags Uma das flag disponíveis em ArrayIterator. Padrão é ArrayIterator::ARRAY_AS_PROPS, que dá acesso às chaves do array como propriedades.
+     * @return ArrayObject|array|bool Retorna um ArrayObject com a linha, se $object=true, um array, se $object=false, ou false, se não houver mais elementos para iterar.
+     */
+    public function iterate(bool $object = true, int $flags = ArrayIterator::ARRAY_AS_PROPS)
+    {
+        $iterator = $this->getIterator();
+        if($iterator->valid() === false){
+            return false;
+        }
+        $current = $iterator->current();
+        $iterator->next();
+        
+        if($object === true){
+            $current = new ArrayObject($current);
+            $current->setFlags($flags);
+        }
+        
+        return $current;
+    }
+    
+    /**
+     * Reset, destruindo o iterador, se ele existir.
+     * 
+     * @return DataFrame
+     */
+    public function resetIterator(): DataFrame
+    {
+        unset($this->iterator);
+        
+        return $this;
     }
 }

@@ -230,4 +230,31 @@ class DataFrameTest extends PHPUnit\Framework\TestCase
 
         $this->assertEquals(3, $df->size());
     }
+
+    public function testGetIterator()
+    {
+        $df = new \Bear\DataFrame($this->data);
+
+        $this->assertInstanceOf(ArrayIterator::class, $df->getIterator());
+    }
+
+    public function testIterateArray()
+    {
+        $df = new \Bear\DataFrame($this->data);
+
+        $this->assertEquals([
+            'id' => 1,
+            'name' => 'Fulano',
+            'age' => 20
+            ],
+            $df->iterate(false)
+        );
+    }
+    
+    public function testIterateObject()
+    {
+        $df = new \Bear\DataFrame($this->data);
+
+        $this->assertEquals(1, $df->iterate(true)->id);
+    }
 }
