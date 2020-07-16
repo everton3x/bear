@@ -1,0 +1,51 @@
+<map id="PHPUnit\Framework\Test" name="PHPUnit\Framework\Test">
+<area shape="rect" id="node1" title=" " alt="" coords="6143,131,6325,208"/>
+<area shape="rect" id="node3" href="$classPHPUnit_1_1Framework_1_1TestCase.html" title=" " alt="" coords="5812,256,6091,1243"/>
+<area shape="rect" id="node48" href="$classPHPUnit_1_1Framework_1_1TestSuite.html" title=" " alt="" coords="6115,520,6353,979"/>
+<area shape="rect" id="node49" href="$classPHPUnit_1_1Runner_1_1PhptTestCase.html" title=" " alt="" coords="6378,549,6594,949"/>
+<area shape="rect" id="node2" title=" " alt="" coords="6190,5,6278,83"/>
+<area shape="rect" id="node4" href="$classDataFrameTest.html" title=" " alt="" coords="5,1364,265,1617"/>
+<area shape="rect" id="node5" href="$classPharIo_1_1Manifest_1_1ApplicationNameTest.html" title=" " alt="" coords="290,1379,557,1603"/>
+<area shape="rect" id="node6" href="$classPharIo_1_1Manifest_1_1ApplicationTest.html" title=" " alt="" coords="581,1423,807,1559"/>
+<area shape="rect" id="node7" href="$classPharIo_1_1Manifest_1_1AuthorCollectionTest.html" title=" " alt="" coords="832,1415,1095,1566"/>
+<area shape="rect" id="node8" href="$classPharIo_1_1Manifest_1_1AuthorElementCollectionTest.html" title=" " alt="" coords="1119,1437,1383,1544"/>
+<area shape="rect" id="node9" href="$classPharIo_1_1Manifest_1_1AuthorElementTest.html" title=" " alt="" coords="1407,1437,1658,1544"/>
+<area shape="rect" id="node10" href="$classPharIo_1_1Manifest_1_1AuthorTest.html" title=" " alt="" coords="1682,1423,1898,1559"/>
+<area shape="rect" id="node11" href="$classPharIo_1_1Manifest_1_1BundledComponentCollectionTest.html" title=" " alt="" coords="1922,1408,2178,1573"/>
+<area shape="rect" id="node12" href="$classPharIo_1_1Manifest_1_1BundledComponentTest.html" title=" " alt="" coords="2202,1430,2485,1551"/>
+<area shape="rect" id="node13" href="$classPharIo_1_1Manifest_1_1BundlesElementTest.html" title=" " alt="" coords="2509,1401,2785,1581"/>
+<area shape="rect" id="node14" href="$classPharIo_1_1Manifest_1_1ComponentElementCollectionTest.html" title=" " alt="" coords="2809,1437,3043,1544"/>
+<area shape="rect" id="node15" href="$classPharIo_1_1Manifest_1_1ComponentElementTest.html" title=" " alt="" coords="3067,1430,3283,1551"/>
+<area shape="rect" id="node16" href="$classPharIo_1_1Manifest_1_1ContainsElementTest.html" title=" " alt="" coords="3307,1357,3566,1625"/>
+<area shape="rect" id="node17" href="$classPharIo_1_1Manifest_1_1CopyrightElementTest.html" title=" " alt="" coords="3591,1364,3835,1617"/>
+<area shape="rect" id="node18" href="$classPharIo_1_1Manifest_1_1CopyrightInformationTest.html" title=" " alt="" coords="3859,1408,4086,1573"/>
+<area shape="rect" id="node19" href="$classPharIo_1_1Manifest_1_1EmailTest.html" title=" " alt="" coords="4110,1423,4350,1559"/>
+<area shape="rect" id="node20" href="$classPharIo_1_1Manifest_1_1ExtElementCollectionTest.html" title=" " alt="" coords="4375,1437,4608,1544"/>
+<area shape="rect" id="node21" href="$classPharIo_1_1Manifest_1_1ExtElementTest.html" title=" " alt="" coords="4633,1445,4862,1537"/>
+<area shape="rect" id="node22" href="$classPharIo_1_1Manifest_1_1ExtensionElementTest.html" title=" " alt="" coords="4887,1423,5139,1559"/>
+<area shape="rect" id="node23" href="$classPharIo_1_1Manifest_1_1ExtensionTest.html" title=" " alt="" coords="5163,1335,5446,1647"/>
+<area shape="rect" id="node24" href="$classPharIo_1_1Manifest_1_1LibraryTest.html" title=" " alt="" coords="5469,1423,5668,1559"/>
+<area shape="rect" id="node25" href="$classPharIo_1_1Manifest_1_1LicenseElementTest.html" title=" " alt="" coords="5692,1437,5949,1544"/>
+<area shape="rect" id="node26" href="$classPharIo_1_1Manifest_1_1LicenseTest.html" title=" " alt="" coords="5974,1430,6190,1551"/>
+<area shape="rect" id="node27" href="$classPharIo_1_1Manifest_1_1ManifestDocumentLoadingExceptionTest.html" title=" " alt="" coords="6214,1445,6457,1537"/>
+<area shape="rect" id="node28" href="$classPharIo_1_1Manifest_1_1ManifestDocumentMapperTest.html" title=" " alt="" coords="6481,1386,6795,1595"/>
+<area shape="rect" id="node29" href="$classPharIo_1_1Manifest_1_1ManifestDocumentTest.html" title=" " alt="" coords="6819,1305,7102,1676"/>
+<area shape="rect" id="node30" href="$classPharIo_1_1Manifest_1_1ManifestLoaderTest.html" title=" " alt="" coords="7126,1401,7358,1581"/>
+<area shape="rect" id="node31" href="$classPharIo_1_1Manifest_1_1ManifestSerializerTest.html" title=" " alt="" coords="7382,1423,7617,1559"/>
+<area shape="rect" id="node32" href="$classPharIo_1_1Manifest_1_1ManifestTest.html" title=" " alt="" coords="7641,1291,7909,1691"/>
+<area shape="rect" id="node33" href="$classPharIo_1_1Manifest_1_1PhpElementTest.html" title=" " alt="" coords="7933,1379,8204,1603"/>
+<area shape="rect" id="node34" href="$classPharIo_1_1Manifest_1_1PhpExtensionRequirementTest.html" title=" " alt="" coords="8229,1437,8445,1544"/>
+<area shape="rect" id="node35" href="$classPharIo_1_1Manifest_1_1PhpVersionRequirementTest.html" title=" " alt="" coords="8469,1423,8671,1559"/>
+<area shape="rect" id="node36" href="$classPharIo_1_1Manifest_1_1RequirementCollectionTest.html" title=" " alt="" coords="8695,1408,8949,1573"/>
+<area shape="rect" id="node37" href="$classPharIo_1_1Manifest_1_1RequiresElementTest.html" title=" " alt="" coords="8973,1401,9220,1581"/>
+<area shape="rect" id="node38" href="$classPharIo_1_1Manifest_1_1UrlTest.html" title=" " alt="" coords="9245,1437,9514,1544"/>
+<area shape="rect" id="node39" href="$classPharIo_1_1Version_1_1AbstractVersionConstraintTest.html" title=" " alt="" coords="9538,1445,9759,1537"/>
+<area shape="rect" id="node40" href="$classPharIo_1_1Version_1_1AndVersionConstraintGroupTest.html" title=" " alt="" coords="9784,1423,10031,1559"/>
+<area shape="rect" id="node41" href="$classPharIo_1_1Version_1_1AnyVersionConstraintTest.html" title=" " alt="" coords="10055,1430,10247,1551"/>
+<area shape="rect" id="node42" href="$classPharIo_1_1Version_1_1ExactVersionConstraintTest.html" title=" " alt="" coords="10271,1408,10530,1573"/>
+<area shape="rect" id="node43" href="$classPharIo_1_1Version_1_1GreaterThanOrEqualToVersionConstraintTest.html" title=" " alt="" coords="10555,1430,10783,1551"/>
+<area shape="rect" id="node44" href="$classPharIo_1_1Version_1_1OrVersionConstraintGroupTest.html" title=" " alt="" coords="10807,1408,11053,1573"/>
+<area shape="rect" id="node45" href="$classPharIo_1_1Version_1_1PreReleaseSuffixTest.html" title=" " alt="" coords="11077,1430,11330,1551"/>
+<area shape="rect" id="node46" href="$classPharIo_1_1Version_1_1SpecificMajorAndMinorVersionConstraintTest.html" title=" " alt="" coords="11354,1430,11581,1551"/>
+<area shape="rect" id="node47" href="$classPharIo_1_1Version_1_1SpecificMajorVersionConstraintTest.html" title=" " alt="" coords="11605,1430,11831,1551"/>
+</map>

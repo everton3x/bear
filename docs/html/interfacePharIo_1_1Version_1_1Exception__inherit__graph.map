@@ -1,0 +1,6 @@
+<map id="PharIo\Version\Exception" name="PharIo\Version\Exception">
+<area shape="rect" id="node1" title=" " alt="" coords="117,5,299,83"/>
+<area shape="rect" id="node2" href="$classPharIo_1_1Version_1_1InvalidPreReleaseSuffixException.html" title=" " alt="" coords="5,131,189,223"/>
+<area shape="rect" id="node3" href="$classPharIo_1_1Version_1_1InvalidVersionException.html" title=" " alt="" coords="213,131,424,223"/>
+<area shape="rect" id="node4" href="$classPharIo_1_1Version_1_1UnsupportedVersionConstraintException.html" title=" " alt="" coords="448,131,651,223"/>
+</map>

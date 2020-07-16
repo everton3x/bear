@@ -1,388 +1,408 @@
 <?php
 namespace Bear;
 
-use ArrayIterator;
-use ArrayObject;
-use Bear\Exception\InvalidColumnNameException;
 use Bear\Exception\InvalidDataStructureException;
-use Bear\Exception\InvalidPatternException;
-use Bear\Exception\OutOfRangeException;
+use Bear\Exception\OutOfBoundsException;
 use InvalidArgumentException;
-use OutOfBoundsException;
 
+/**
+ * Abstração de dados tabulares.
+ */
 class DataFrame
 {
 
     /**
      *
-     * @var array Os dados do dataframe.
+     * @var array A matriz de dados, organizada como array bidimensional no formato [linha][coluna] = valor
      */
-    protected array $data;
+    protected array $data = [];
 
     /**
      *
-     * @var array Lista com os nomes das colunas.
+     * @var array Nomes das colunas.
      */
-    protected array $columnNames;
-    
-    /**
-     *
-     * @var ArrayIterator Um iterador para as linhas.
-     */
-    protected ?ArrayIterator $iterator = null;
+    protected array $colNames = [];
 
     /**
-     * Construtor do dataframe.
-     *
-     * @param array $data Os dados, composto por array multidimensional no formato linhas, colunas, células.
+     * Nova instância de um dataframe.
+     * 
+     * @param array $data Os dados no formato [linha][coluna] = valor, como 
+     * neste exemplo:
+     * 
+     *      $data = [
+     *  
+     *          [//início da linha 0
+     *              'id' => 1,//campo id com valor 1
+     *              'name' => 'John',//campo name com valor John
+     *              'age' => 39//campo age com valor 39
+     *          ],//fim da linha 0
+     *          [//início da linha 1
+     *              'id' => 2,//campo id com valor 2
+     *              'name' => 'Mary',//campo name com valor Mary
+     *              'age' => 37//campo age com valor 37
+     *          ]//fim da linha 1
+     *      ];
+     * 
+     * Observe que as chaves das colunas da primeira linha são automaticamente 
+     * usadas como nomes de colunas. Os nomes de colunas podem ser modificados 
+     * por DataFrame::setColumnNames().
+     * 
+     * Também é possível fornecer um array vazio. Neste caso, o data frame não
+     * terá nomes de colunas nem dados e DataFrame::get() e 
+     * DataFrame::getColumnNames() retornam um array vazio.
+     * 
+     * @throws InvalidDataStructureException
+     * @see DataFrame::setColumnNames()
+     * @see DataFrame::getColumnNames()
+     * @see DataFrame::$colNames
+     * @see DataFrame::$data
+     * @see DataFrame::checkDataStructure()
+     * @see DataFrame::disassembleDataFrame()
      */
     public function __construct(array $data)
     {
         $this->data = $data;
-
-        $this->columnNames = $this->readColumnNames();
+        if ($data !== []) {//possibilita a criação de df vazios
+            $this->detectColNames();
+            try {
+                $this->checkDataStructure();
+                $this->disassembleDataFrame();
+            } catch (InvalidDataStructureException $ex) {
+                throw $ex;
+            }
+        }
     }
 
     /**
-     * Detecta os nomes de campos.
-     *
-     * @return array Retorna um ArrayObject com os nomes de campos.
+     * Desmonta o array de dados fornecido no construtor.
+     * 
+     * Necessário para economizar memória (eu ainda não testei isso), já que, caso nomes de colunas sejam 
+     * fornecidos no construtor, eles se repetiriam nas chaves de colunas em 
+     * todas as linhas.
+     * 
+     * Desta forma, desmontando o array, os nomes de colunas são trocados por 
+     * inteiros representando a ordem das colunas.
+     * 
+     * 
+     * @return void
+     * @see DataFrame::assembleDataFrame()
      */
-    protected function readColumnNames(): array
+    protected function disassembleDataFrame(): void
     {
-        return array_keys($this->data[0]);
+        $rowId = 0;
+        foreach ($this->data as $row) {
+            $colId = 0;
+            foreach ($row as $cell) {
+                $newRow[$colId] = $cell;
+                $colId++;
+            }
+            $this->data[$rowId] = $newRow;
+            $rowId++;
+        }
     }
 
     /**
-     * Pega os nomes de campos do dataframe.
-     *
-     * @return array Retorna um array com os nomes dos campos.
+     * Monta um array trocando as chaves numéricas das colunas pelos nomes de 
+     * colunas em cada linha.
+     * 
+     * @return array
+     * @see DataFrame::disassembleDataFrame()
+     */
+    protected function assembleDataFrame(): array
+    {
+        $data = [];
+        foreach ($this->data as $rowId => $row) {
+            $colId = 0;
+            foreach ($this->colNames as $colName) {
+                $newRow[$colName] = $row[$colId];
+                $colId++;
+            }
+            $data[$rowId] = $newRow;
+        }
+
+        return $data;
+    }
+
+    /**
+     * Descobre os nomes de colunas a partir da primeira linha do data frame.
+     * 
+     * @return void
+     * @see DataFrame::$colNames
+     */
+    protected function detectColNames(): void
+    {
+        foreach ($this->data as $row) {
+            $this->colNames = array_keys($row);
+            break;
+        }
+    }
+
+    /**
+     * Verifica a estrutura do array fornecido em DataFrame::__construct().
+     * 
+     * A verificação conta o número de colunas em cada linha e dispara uma 
+     * InvalidDataStructureException() se houver diferença.
+     * 
+     * @return void
+     * @throws InvalidDataStructureException
+     */
+    protected function checkDataStructure(): void
+    {
+        $numCols = count($this->colNames);
+
+        foreach ($this->data as $rowId => $row) {
+            if (count($row) !== $numCols) {
+                throw new InvalidDataStructureException($rowId, array_keys($row));
+            }
+        }
+    }
+
+    /**
+     * Conta o número de linhas do data frame.
+     * 
+     * @return int
+     */
+    public function countRows(): int
+    {
+        return count($this->data);
+    }
+
+    /**
+     * Conta o número de colunas do data frame.
+     * 
+     * @return int
+     * @see DataFrame$colNames
+     */
+    public function countColumns(): int
+    {
+        return count($this->colNames);
+    }
+
+    /**
+     * Fornece uma arrya com os nomes de colunas.
+     * 
+     * @return array
+     * @see DataFrame::$colNames
      */
     public function getColumnNames(): array
     {
-        return $this->columnNames;
+        return $this->colNames;
     }
 
     /**
-     * Verifica se o dataframe obedece à estrutura correta.
-     *
-     * @return bool
-     */
-    public function checkStructure(): bool
-    {
-        foreach ($this->data as $rowIndex => $row) {
-
-            if ($this->checkColumnNames($row) === false) {
-                throw new InvalidDataStructureException($rowIndex, array_keys($row));
-            }
-        }
-
-        return true;
-    }
-
-    /**
-     * Testa se $dataToCheck é uma linha com todas as colunas necessárias.
+     * Fornece um array com os dados do data frame no formato 
+     * [linha][coluna] = valor
      * 
-     * @param array Uma linha do dataframe.
-     * @return bool
-     */
-    protected function checkColumnNames(array $dataToCheck): bool
-    {
-        //verifica se existe diferença entre os campos detectados e os campos passados
-        if (sizeof(array_diff_assoc(array_keys($dataToCheck), $this->getColumnNames())) !== 0) {
-            return false;
-        }
-
-        return true;
-    }
-
-    /**
-     * Soma as linhas de uma coluna.
-     *
-     * @param mixed $col Indica a coluna, pelo nome ou pela ordem.
-     * @return float Retorna o valor da soma de todas as linhas da coluna indicada em $column.
-     */
-    public function sum($column): float
-    {
-        if (is_int($column)) {
-            $column = $this->getColumnNameByIndex($column);
-        }
-
-        $sum = 0.0;
-        foreach ($this->getColumn([$column]) as $row) {
-            $sum += $row[$column];
-        }
-        return $sum;
-    }
-
-    /**
-     * Filtra as colunas de $columnNames.
-     * 
-     * @param array $columnNames
      * @return array
+     * @see DataFrame::assembleDataFrame()
      */
-    protected function getColumn(array $columnNames): array
+    public function get(): array
     {
-        $dataFiltered = [];
-
-        foreach ($this->data as $rowIndex => $row) {
-            foreach ($columnNames as $column) {
-                $dataFiltered[$rowIndex][$column] = $row[$column];
-            }
+        if ($this->data === []) {
+            return [];
         }
 
-        return $dataFiltered;
+        return $this->assembleDataFrame();
     }
 
     /**
-     * Pega o nome da coluna de acordo com o seu index.
+     * Configura os nomes das colunas.
      * 
-     * @param int $index
-     * @return string
-     */
-    public function getColumnNameByIndex(int $index): string
-    {
-        if (key_exists($index, $this->columnNames) === false) {
-            throw new OutOfRangeException($index);
-        }
-
-        return $this->columnNames[$index];
-    }
-
-    /**
-     * Seleciona linhas em um dataframe.
-     *
-     * @param mixed $lines Indica uma ou mais linhas ou um intervalo de linhas. As linhas sempre começam em 0. Por exemplo: use 10, para retornar a 11ª linha; use um array com os números das linhas desejadas para um conjunto de linhas, não sequenciais; ou use 0:20 para as linhas de 0 a 19; ou use 15:21, para as linhas de 15 a 20.
-     * @return DataFrame Retorna um dataframe com as linhas desejadas.
-     */
-    public function lines($lines): DataFrame
-    {
-        if (is_string($lines)) {
-            if (preg_match('/^(\d)(:)(\d)$/', $lines) === 1) {//sequência
-                $range = explode(':', $lines);
-                if ($range[0] < $range[1]) {
-                    $min = $range[0];
-                    $max = $range[1];
-                } else {
-                    $min = $range[1];
-                    $max = $range[0];
-                }
-                $lines = range($min, $max);
-            } elseif (preg_match('/^(\d)(,\d){0,}$/', $lines) === 1) {//conjunto
-                $lines = explode(',', $lines);
-            } else {//erro
-                throw new InvalidPatternException($lines);
-            }
-        } elseif (is_array($lines)) {
-            //não faz nada
-        } elseif (is_int($lines)) {
-            $lines = [$lines];
-        } else {//erro
-            throw new InvalidArgumentException('Invalid argument detected.');
-        }
-
-        foreach ($lines as $index) {
-            if (key_exists($index, $this->data) === false) {
-                throw new OutOfRangeException($index);
-            }
-
-            $linesFiltered[] = $this->data[$index];
-        }
-        return new DataFrame($linesFiltered);
-    }
-
-    /**
-     * Pega o índex da coluna para um dado nome de coluna.
+     * Precisa respeitar a ordem e a quantidade das colunas no data frame.
      * 
-     * @param string $columnName
-     * @return int
-     * @throws InvalidColumnNameException
+     * @param array $colNames
+     * @return \Bear\DataFrame
+     * @throws InvalidArgumentException
+     * @see DataFrame::$colNames
+     * @see DataFrame::getColumnNames()
      */
-    protected function getColumnIndexFor(string $columnName): int
+    public function setColumnNames(array $colNames): DataFrame
     {
-        $index = array_search($columnName, $this->getColumnNames());
-
-        if (is_null($index)) {
-            throw new InvalidColumnNameException($columnName);
+        if (count($colNames) !== $this->countColumns()) {
+            throw new InvalidArgumentException(sprintf('Invalid number of columns. %d columns were expected, but $d were provided.', $this->countColumns(), count($colNames)));
         }
 
-        return $index;
-    }
+        $this->colNames = $colNames;
 
-    /**
-     * Seleciona colunas em um dataframe.
-     *
-     * @param mixed $columns Indica uma ou mais colunas para retornar. As colunas podem ser informadas pelos seus rótulos ou pela sua posição, começando em 0. Por exemplo: use 2 para a 3ª coluna; use colName para a coluna rotulada colName; use um array com os índices ou nomes das colunas desejadas, ou use uma sequência como 0:2 para as colunas 1, 2 e 3, ou colname1:colname3 para as colunas de rótulo colnam1 até colname3.
-     * @return DataFrame Retorna um novo dataframe com as colunas selecionadas.
-     */
-    public function columns($columns): DataFrame
-    {
-        if (is_string($columns)) {
-            if (preg_match('/^[:,]/', $columns) === 1) {
-                $data = $this->getColumn([$columns]);
-            } elseif (preg_match('/^(\d)(:)(\d)$/', $columns) === 1) {
-                $columns = explode(':', $columns);
-                if ($columns[0] < $columns[1]) {
-                    $min = $columns[0];
-                    $max = $columns[1];
-                } else {
-                    $min = $columns[1];
-                    $max = $columns[0];
-                }
-
-                $range = range($min, $max);
-                foreach ($range as $index) {
-                    $columnNames[] = $this->getColumnNameByIndex($index);
-                }
-
-                $data = $this->getColumn($columnNames);
-            } elseif (preg_match('/^([A-Za-z0-9_]+)(:)([A-Za-z0-9_]+)$/', $columns) === 1) {
-                $columns = explode(':', $columns);
-                $column1 = $this->getColumnIndexFor($columns[0]);
-                $column2 = $this->getColumnIndexFor($columns[1]);
-
-                if ($column1 < $column2) {
-                    $min = $column1;
-                    $max = $column2;
-                } else {
-                    $min = $column2;
-                    $max = $column1;
-                }
-
-                $range = range($min, $max);
-
-                foreach ($range as $index) {
-                    $columnNames[] = $this->getColumnNameByIndex($index);
-                }
-
-                $data = $this->getColumn($columnNames);
-            } elseif (preg_match('/^(\d)(,\d){0,}$/', $columns) === 1) {
-                $range = explode(',', $columns);
-                foreach ($range as $index) {
-                    $columnNames[] = $this->getColumnNameByIndex($index);
-                }
-                $data = $this->getColumn($columnNames);
-            } elseif (preg_match('/^([A-Za-z0-9_]+)(,[A-Za-z0-9_]+){0,}$/', $columns) === 1) {
-                $columnNames = explode(',', $columns);
-                $data = $this->getColumn($columnNames);
-            } else {
-                throw new InvalidPatternException($columns);
-            }
-        } elseif (is_array($columns)) {
-            if (is_int($columns[0])) {
-                foreach ($columns as $index) {
-                    $columnNames[] = $this->getColumnNameByIndex($index);
-                }
-                $data = $this->getColumn($columnNames);
-            } elseif (is_string($columns[0])) {
-                $data = $this->getColumn($columns);
-            } else {
-                throw new InvalidArgumentException('Invalid argument detected.');
-            }
-        } elseif (is_int($columns)) {
-            $columnNames[] = $this->getColumnNameByIndex($columns);
-            $data = $this->getColumn($columnNames);
-        } else {
-            throw new InvalidArgumentException('Invalid argument detected.');
-        }
-
-        return new DataFrame($data);
-    }
-
-    /**
-     * Seleciona uma célula específica no dataset.
-     *
-     * @param int $line O índice da linha.
-     * @param mixed $column O índice ou rótulo da coluna.
-     * @return mixed Retorna o conteúdo da célula.
-     */
-    public function cell(int $line, $column)
-    {
-        if (key_exists($line, $this->data) === false) {
-            throw new OutOfRangeException($line);
-        }
-
-        if (is_numeric($column)) {
-            $column = $this->getColumnNameByIndex($column);
-        }
-
-        if (key_exists($column, $this->data[$line]) === false) {
-            throw new OutOfBoundsException($column);
-        }
-
-        return $this->data[$line][$column];
-    }
-
-    /**
-     * Sumariza o dataframe com informações relevantes e de estatística descritiva
-     *
-     * @return array Retorna um array com informações sumarizadas do dataframe.
-     */
-    public function summary(): array
-    {
-        
-    }
-
-    /**
-     * Conta quantas linhas tem o dataframe.
-     * 
-     * @return int
-     */
-    public function size(): int
-    {
-        return sizeof($this->data);
-    }
-    
-    /**
-     * Pega um iterador para as linhas.
-     * 
-     * @param int $flags Uma das flag disponíveis em ArrayIterator. Padrão é ArrayIterator::ARRAY_AS_PROPS, que dá acesso às chaves do array como propriedades.
-     * @return ArrayIterator
-     * @link https://www.php.net/manual/en/class.arrayiterator.php#arrayiterator.constants Flags de ArrayIterator.
-     */
-    public function getIterator(int $flags = ArrayIterator::ARRAY_AS_PROPS): ArrayIterator
-    {
-        if(is_null($this->iterator)){
-            $this->iterator = new ArrayIterator($this->data);
-            $this->iterator->setFlags($flags);
-        }
-        
-        return $this->iterator;
-    }
-    
-    /**
-     * Itera por cada linha de dados.
-     * 
-     * @param bool $object Se true (padrão), retorna uma instância de ArrayObject com os dados da linha. Se false, retorna a linha no formato de array.
-     * @param int $flags Uma das flag disponíveis em ArrayIterator. Padrão é ArrayIterator::ARRAY_AS_PROPS, que dá acesso às chaves do array como propriedades.
-     * @return ArrayObject|array|bool Retorna um ArrayObject com a linha, se $object=true, um array, se $object=false, ou false, se não houver mais elementos para iterar.
-     */
-    public function iterate(bool $object = true, int $flags = ArrayIterator::ARRAY_AS_PROPS)
-    {
-        $iterator = $this->getIterator();
-        if($iterator->valid() === false){
-            return false;
-        }
-        $current = $iterator->current();
-        $iterator->next();
-        
-        if($object === true){
-            $current = new ArrayObject($current);
-            $current->setFlags($flags);
-        }
-        
-        return $current;
-    }
-    
-    /**
-     * Reset, destruindo o iterador, se ele existir.
-     * 
-     * @return DataFrame
-     */
-    public function resetIterator(): DataFrame
-    {
-        unset($this->iterator);
-        
         return $this;
+    }
+
+    /**
+     * Fornece um data frame com as colunas selecionadas pelo nome.
+     * 
+     * @param array $columns
+     * @return \Bear\DataFrame
+     * @throws OutOfBoundsException
+     */
+    public function getColumnsByName(array $columns): DataFrame
+    {
+        foreach ($columns as $colName) {
+            $colIndex = array_search($colName, $this->colNames);
+            if ($colIndex === false) {
+                throw new OutOfBoundsException($colName);
+            }
+
+            $colList[] = $colIndex;
+        }
+
+        $df = $this->getColumnsByIndex($colList);
+        return $df;
+    }
+
+    /**
+     * Fornece um data frame com as colunas filtradas pelo seu index (sua ordem 
+     * dentro do data frame).
+     * 
+     * @param array $columns
+     * @return \Bear\DataFrame
+     * @throws OutOfBoundsException
+     */
+    public function getColumnsByIndex(array $columns): DataFrame
+    {
+        $data = [];
+
+        foreach ($this->data as $rowId => $row) {
+            foreach ($columns as $colId => $colIndex) {
+                if (!key_exists($colIndex, $this->colNames)) {
+                    throw new OutOfBoundsException($colIndex);
+                }
+                $colName = $this->colNames[$colIndex];
+
+                $data[$rowId][$colName] = $row[$colIndex];
+            }
+        }
+
+        $df = new DataFrame($data);
+
+        return $df;
+    }
+
+    /**
+     * Fornece um data frame com as colunas filtradas por uma coluna inicial e 
+     * outra final (inclusive), segundo o seu índice.
+     * 
+     * @param int|null $start
+     * @param int|null $end
+     * @return \Bear\DataFrame
+     * @throws OutOfBoundsException
+     * @throws InvalidArgumentException
+     */
+    public function getColumnsRangeByIndex(?int $start = null, ?int $end = null): DataFrame
+    {
+        $data = [];
+
+        if (is_null($start)) {
+            $start = array_key_first($this->colNames);
+        }
+
+        if (is_null($end)) {
+            $end = array_key_last($this->colNames);
+        }
+
+        if (!key_exists($start, $this->colNames)) {
+            throw new OutOfBoundsException($start);
+        }
+
+        if (!key_exists($end, $this->colNames)) {
+            throw new OutOfBoundsException($end);
+        }
+
+        for ($i = $start; $i <= $end; $i++) {
+            $colNames[] = $this->colNames[$i];
+        }
+
+        $length = $end - $start + 1;
+
+        if ($start > $end) {
+            throw new InvalidArgumentException("The start column $start cannot be later than the end column $end.");
+        }
+
+        foreach ($this->data as $row) {
+            $data[] = array_slice($row, $start, $length);
+        }
+
+        $df = new DataFrame($data);
+        $df->setColumnNames($colNames);
+
+        return $df;
+    }
+
+    /**
+     * Fornece um data frame com as colunas selecionadas dentro do intervalo dos 
+     * nomes das colunas inicial e final (inclusive).
+     * 
+     * @param string|null $start
+     * @param string|null $end
+     * @return \Bear\DataFrame
+     * @throws OutOfBoundsException
+     */
+    public function getColumnsRangeByName(?string $start = null, ?string $end = null): DataFrame
+    {
+        if (!is_null($start)) {
+            $start = array_search($start, $this->colNames);
+            if ($start === false) {
+                throw new OutOfBoundsException($start);
+            }
+        }
+
+        if (!is_null($end)) {
+            $end = array_search($end, $this->colNames);
+            if ($end === false) {
+                throw new OutOfBoundsException($end);
+            }
+        }
+
+        $df = $this->getColumnsRangeByIndex($start, $end);
+
+        return $df;
+    }
+    
+    /**
+     * Fornece um data frame com as linhas filtradas de acordo com a seleção 
+     * fornecida.
+     * 
+     * @param array $rows
+     * @return \Bear\DataFrame
+     * @throws OutOfBoundsException
+     */
+    public function getRows(array $rows): DataFrame
+    {
+        $data = [];
+        foreach ($rows as $index){
+            if(!key_exists($index, $this->data)){
+                throw new OutOfBoundsException($index);
+            }
+            $data[] = $this->data[$index];
+        }
+        
+        $df = new DataFrame($data);
+        $df->setColumnNames($this->colNames);
+        
+        return $df;
+    }
+    
+    public function getRowRange(?int $start = null, ?int $end = null): DataFrame
+    {
+        if(is_null($start)){
+            $start = 0;
+        }
+        
+        if(is_null($end)){
+            $end = $this->countRows() - 1;
+        }
+        
+        if($start > $end){
+            throw new InvalidArgumentException("The start row $start cannot be later than the end row $end.");
+        }
+        
+        if(!key_exists($start, $this->data)){
+            throw new OutOfBoundsException($start);
+        }
+        
+        if(!key_exists($end, $this->data)){
+            throw new OutOfBoundsException($end);
+        }
+        
+        return $this->getRows(range($start, $end, 1));
     }
 }

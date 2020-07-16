@@ -1,0 +1,23 @@
+<map id="Prophecy\Exception\Exception" name="Prophecy\Exception\Exception">
+<area shape="rect" id="node1" title=" " alt="" coords="1085,5,1235,97"/>
+<area shape="rect" id="node2" href="$interfaceProphecy_1_1Exception_1_1Doubler_1_1DoublerException.html" title=" " alt="" coords="427,145,623,237"/>
+<area shape="rect" id="node11" href="$classProphecy_1_1Exception_1_1InvalidArgumentException.html" title=" " alt="" coords="993,145,1191,237"/>
+<area shape="rect" id="node12" href="$interfaceProphecy_1_1Exception_1_1Prediction_1_1PredictionException.html" title=" " alt="" coords="1116,477,1340,569"/>
+<area shape="rect" id="node18" href="$interfaceProphecy_1_1Exception_1_1Prophecy_1_1ProphecyException.html" title=" " alt="" coords="1317,145,1531,237"/>
+<area shape="rect" id="node3" href="$classProphecy_1_1Exception_1_1Doubler_1_1ClassCreatorException.html" title=" " alt="" coords="49,285,277,392"/>
+<area shape="rect" id="node4" href="$classProphecy_1_1Exception_1_1Doubler_1_1ClassMirrorException.html" title=" " alt="" coords="301,285,520,392"/>
+<area shape="rect" id="node5" href="$classProphecy_1_1Exception_1_1Doubler_1_1DoubleException.html" title=" " alt="" coords="545,293,735,385"/>
+<area shape="rect" id="node6" href="$classProphecy_1_1Exception_1_1Doubler_1_1ClassNotFoundException.html" title=" " alt="" coords="768,469,1011,576"/>
+<area shape="rect" id="node8" href="$classProphecy_1_1Exception_1_1Doubler_1_1MethodNotExtendableException.html" title=" " alt="" coords="5,447,232,598"/>
+<area shape="rect" id="node9" href="$classProphecy_1_1Exception_1_1Doubler_1_1MethodNotFoundException.html" title=" " alt="" coords="256,440,512,605"/>
+<area shape="rect" id="node10" href="$classProphecy_1_1Exception_1_1Doubler_1_1ReturnByReferenceException.html" title=" " alt="" coords="537,447,743,598"/>
+<area shape="rect" id="node7" href="$classProphecy_1_1Exception_1_1Doubler_1_1InterfaceNotFoundException.html" title=" " alt="" coords="707,675,909,782"/>
+<area shape="rect" id="node13" href="$classProphecy_1_1Exception_1_1Prediction_1_1AggregateException.html" title=" " alt="" coords="1156,653,1383,804"/>
+<area shape="rect" id="node14" href="$classProphecy_1_1Exception_1_1Prediction_1_1FailedPredictionException.html" title=" " alt="" coords="933,675,1131,782"/>
+<area shape="rect" id="node15" href="$classProphecy_1_1Exception_1_1Prediction_1_1NoCallsException.html" title=" " alt="" coords="1637,683,1846,775"/>
+<area shape="rect" id="node16" href="$classProphecy_1_1Exception_1_1Prediction_1_1UnexpectedCallsException.html" title=" " alt="" coords="1407,668,1612,789"/>
+<area shape="rect" id="node17" href="$classProphecy_1_1Exception_1_1Prediction_1_1UnexpectedCallsCountException.html" title=" " alt="" coords="1407,852,1612,973"/>
+<area shape="rect" id="node19" href="$classProphecy_1_1Exception_1_1Prophecy_1_1ObjectProphecyException.html" title=" " alt="" coords="1347,285,1603,392"/>
+<area shape="rect" id="node20" href="$classProphecy_1_1Exception_1_1Call_1_1UnexpectedCallException.html" title=" " alt="" coords="1363,455,1586,591"/>
+<area shape="rect" id="node21" href="$classProphecy_1_1Exception_1_1Prophecy_1_1MethodProphecyException.html" title=" " alt="" coords="1610,469,1873,576"/>
+</map>

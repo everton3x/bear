@@ -1,0 +1,12 @@
+<map id="phpDocumentor\Reflection\DocBlock\Tags\TagWithType" name="phpDocumentor\Reflection\DocBlock\Tags\TagWithType">
+<area shape="rect" id="node1" title=" " alt="" coords="683,373,890,480"/>
+<area shape="rect" id="node4" href="$classphpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Param.html" title=" " alt="" coords="5,528,200,693"/>
+<area shape="rect" id="node5" href="$classphpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Property.html" title=" " alt="" coords="224,543,419,679"/>
+<area shape="rect" id="node6" href="$classphpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1PropertyRead.html" title=" " alt="" coords="443,543,655,679"/>
+<area shape="rect" id="node7" href="$classphpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1PropertyWrite.html" title=" " alt="" coords="679,543,894,679"/>
+<area shape="rect" id="node8" href="$classphpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Return__.html" title=" " alt="" coords="919,550,1113,671"/>
+<area shape="rect" id="node9" href="$classphpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Throws.html" title=" " alt="" coords="1137,550,1332,671"/>
+<area shape="rect" id="node10" href="$classphpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Var__.html" title=" " alt="" coords="1356,543,1551,679"/>
+<area shape="rect" id="node2" href="$classphpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1BaseTag.html" title=" " alt="" coords="689,189,884,325"/>
+<area shape="rect" id="node3" href="$interfacephpDocumentor_1_1Reflection_1_1DocBlock_1_1Tag.html" title=" " alt="" coords="689,5,884,141"/>
+</map>

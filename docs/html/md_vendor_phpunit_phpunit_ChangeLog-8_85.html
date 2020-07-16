@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bear API: Changes in PHPUnit 8.5</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bear API
+   </div>
+   <div id="projectbrief">Um manipulador de dados tabulares inspirados no Pandas/Python e no R.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('md_vendor_phpunit_phpunit_ChangeLog-8_85.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Changes in <a class="el" href="namespacePHPUnit.html">PHPUnit</a> 8.5 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>All notable changes of the <a class="el" href="namespacePHPUnit.html">PHPUnit</a> 8.5 release series are documented in this file using the <a href="https://keepachangelog.com/">Keep a CHANGELOG</a> principles.</p>
+<h1><a class="anchor" id="autotoc_md277"></a>
+&lt;a href="https://github.com/sebastianbergmann/phpunit/compare/8.5.7...8.5.8"&gt;8.5.8&lt;/a&gt; - 2020-06-22</h1>
+<h2><a class="anchor" id="autotoc_md278"></a>
+Fixed</h2>
+<ul>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/4312">#4312</a>: Fix for <a href="https://github.com/sebastianbergmann/phpunit/issues/4299">#4299</a> breaks backward compatibility</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md279"></a>
+&lt;a href="https://github.com/sebastianbergmann/phpunit/compare/8.5.6...8.5.7"&gt;8.5.7&lt;/a&gt; - 2020-06-21</h1>
+<h2><a class="anchor" id="autotoc_md280"></a>
+Fixed</h2>
+<ul>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/4299">#4299</a>: "No tests executed" does not always result in exit code <code>1</code></li>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/4306">#4306</a>: Exceptions during code coverage driver initialization are not handled correctly</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md281"></a>
+&lt;a href="https://github.com/sebastianbergmann/phpunit/compare/8.5.5...8.5.6"&gt;8.5.6&lt;/a&gt; - 2020-06-15</h1>
+<h2><a class="anchor" id="autotoc_md282"></a>
+Fixed</h2>
+<ul>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/4211">#4211</a>: <code>phpdbg_*()</code> functions are scoped to <code><a class="el" href="namespacePHPUnit.html">PHPUnit</a>\phpdbg_*()</code></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md283"></a>
+&lt;a href="https://github.com/sebastianbergmann/phpunit/compare/8.5.4...8.5.5"&gt;8.5.5&lt;/a&gt; - 2020-05-22</h1>
+<h2><a class="anchor" id="autotoc_md284"></a>
+Fixed</h2>
+<ul>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/4033">#4033</a>: Unexpected behaviour when <code>$GLOBALS</code> is deleted</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md285"></a>
+&lt;a href="https://github.com/sebastianbergmann/phpunit/compare/8.5.3...8.5.4"&gt;8.5.4&lt;/a&gt; - 2020-04-23</h1>
+<h2><a class="anchor" id="autotoc_md286"></a>
+Changed</h2>
+<ul>
+<li>Changed how <code><a class="el" href="namespacePHPUnit.html">PHPUnit</a>\TextUI\Command</code> passes warnings to <code><a class="el" href="namespacePHPUnit.html">PHPUnit</a>\TextUI\TestRunner</code></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md287"></a>
+&lt;a href="https://github.com/sebastianbergmann/phpunit/compare/8.5.2...8.5.3"&gt;8.5.3&lt;/a&gt; - 2020-03-31</h1>
+<h2><a class="anchor" id="autotoc_md288"></a>
+Fixed</h2>
+<ul>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/4017">#4017</a>: Do not suggest refactoring to something that is also deprecated</li>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/4133">#4133</a>: <code>expectExceptionMessageRegExp()</code> has been removed in <a class="el" href="namespacePHPUnit.html">PHPUnit</a> 9 without a deprecation warning being given in <a class="el" href="namespacePHPUnit.html">PHPUnit</a> 8</li>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/4139">#4139</a>: Cannot double interfaces that declare a constructor with PHP 8</li>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/4144">#4144</a>: Empty objects are converted to empty arrays in JSON comparison failure diff</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md289"></a>
+&lt;a href="https://github.com/sebastianbergmann/phpunit/compare/8.5.1...8.5.2"&gt;8.5.2&lt;/a&gt; - 2020-01-08</h1>
+<h2><a class="anchor" id="autotoc_md290"></a>
+Removed</h2>
+<ul>
+<li><code>eval-stdin.php</code> has been removed, it was not used anymore since <a class="el" href="namespacePHPUnit.html">PHPUnit</a> 7.2.7</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md291"></a>
+&lt;a href="https://github.com/sebastianbergmann/phpunit/compare/8.5.0...8.5.1"&gt;8.5.1&lt;/a&gt; - 2019-12-25</h1>
+<h2><a class="anchor" id="autotoc_md292"></a>
+Changed</h2>
+<ul>
+<li><code>eval-stdin.php</code> can now only be executed with <code>cli</code> and <code>phpdbg</code></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md293"></a>
+Fixed</h2>
+<ul>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/3983">#3983</a>: Deprecation warning given too eagerly</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md294"></a>
+&lt;a href="https://github.com/sebastianbergmann/phpunit/compare/8.4.3...8.5.0"&gt;8.5.0&lt;/a&gt; - 2019-12-06</h1>
+<h2><a class="anchor" id="autotoc_md295"></a>
+Added</h2>
+<ul>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/3911">#3911</a>: Support combined use of <code>addMethods()</code> and <code>onlyMethods()</code></li>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/3949">#3949</a>: Introduce specialized assertions <code><a class="el" href="namespacePHPUnit_1_1Framework.html#a8ecb25ddfc9de7ca4309280d944fea5a">assertFileEqualsCanonicalizing()</a></code>, <code><a class="el" href="namespacePHPUnit_1_1Framework.html#a5f521a6e8512b5d348080c4c2b37a089">assertFileEqualsIgnoringCase()</a></code>, <code><a class="el" href="namespacePHPUnit_1_1Framework.html#a34a74e1f29d9a8cedd20c4bbb06a1c9b">assertStringEqualsFileCanonicalizing()</a></code>, <code><a class="el" href="namespacePHPUnit_1_1Framework.html#ada525698ff14a21be71ff11f19d616ed">assertStringEqualsFileIgnoringCase()</a></code>, <code><a class="el" href="namespacePHPUnit_1_1Framework.html#adcffa9bcad852dd2b013447045499df7">assertFileNotEqualsCanonicalizing()</a></code>, <code><a class="el" href="namespacePHPUnit_1_1Framework.html#a36a79397781a5f33e32b14f0b365bfae">assertFileNotEqualsIgnoringCase()</a></code>, <code><a class="el" href="namespacePHPUnit_1_1Framework.html#ae5ca541256ea71dd0abff83c2b63d1f1">assertStringNotEqualsFileCanonicalizing()</a></code>, and <code><a class="el" href="namespacePHPUnit_1_1Framework.html#a37fc23412db70abfde134135d871c8d2">assertStringNotEqualsFileIgnoringCase()</a></code> as alternative to using <code><a class="el" href="namespacePHPUnit_1_1Framework.html#a6470f3018c0c4bd3d8edf45488e0fef2">assertFileEquals()</a></code> etc. with optional parameters</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md296"></a>
+Changed</h2>
+<ul>
+<li><a href="https://github.com/sebastianbergmann/phpunit/pull/3860">#3860</a>: Deprecate invoking <a class="el" href="namespacePHPUnit.html">PHPUnit</a> commandline test runner with just a class name</li>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/3950">#3950</a>: Deprecate optional parameters of <code><a class="el" href="namespacePHPUnit_1_1Framework.html#a6470f3018c0c4bd3d8edf45488e0fef2">assertFileEquals()</a></code> etc.</li>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/3955">#3955</a>: Deprecate support for doubling multiple interfaces</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md297"></a>
+Fixed</h2>
+<ul>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/3953">#3953</a>: Code Coverage for test executed in isolation does not work when the PHAR is used</li>
+<li><a href="https://github.com/sebastianbergmann/phpunit/issues/3967">#3967</a>: Cannot double interface that extends interface that extends <code>\Throwable</code></li>
+<li><a href="https://github.com/sebastianbergmann/phpunit/pull/3968">#3968</a>: Test class run in a separate PHP process are passing when <code>exit</code> called inside </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

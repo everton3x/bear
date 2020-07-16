@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bear API: Referência da Classe PharIo\Manifest\ManifestSerializer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bear API
+   </div>
+   <div id="projectbrief">Um manipulador de dados tabulares inspirados no Pandas/Python e no R.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classPharIo_1_1Manifest_1_1ManifestSerializer.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#pri-methods">Membros Privados</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a> &#124;
+<a href="classPharIo_1_1Manifest_1_1ManifestSerializer-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência da Classe PharIo\Manifest\ManifestSerializer</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Diagrama de colaboração para PharIo\Manifest\ManifestSerializer:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classPharIo_1_1Manifest_1_1ManifestSerializer__coll__graph.png" border="0" usemap="#PharIo_0cManifest_0cManifestSerializer_coll__map" alt="Collaboration graph"/></div>
+<map name="PharIo_0cManifest_0cManifestSerializer_coll__map" id="PharIo_0cManifest_0cManifestSerializer_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,191,215"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:a4091c230af89eafd41a6180e784617c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a4091c230af89eafd41a6180e784617c7">serializeToFile</a> (<a class="el" href="classPharIo_1_1Manifest_1_1Manifest.html">Manifest</a> $manifest, $filename)</td></tr>
+<tr class="separator:a4091c230af89eafd41a6180e784617c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adca9ee3779dc8be77f8347c710d57a5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#adca9ee3779dc8be77f8347c710d57a5d">serializeToString</a> (<a class="el" href="classPharIo_1_1Manifest_1_1Manifest.html">Manifest</a> $manifest)</td></tr>
+<tr class="separator:adca9ee3779dc8be77f8347c710d57a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Membros Privados</h2></td></tr>
+<tr class="memitem:a18dc44ff707a4438270f80bf59f0397f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a18dc44ff707a4438270f80bf59f0397f">startDocument</a> ()</td></tr>
+<tr class="separator:a18dc44ff707a4438270f80bf59f0397f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0201a70259e655f16d4d65d26926d6ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a0201a70259e655f16d4d65d26926d6ab">finishDocument</a> ()</td></tr>
+<tr class="separator:a0201a70259e655f16d4d65d26926d6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fea58f015456fe1640af3c0774b83a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a6fea58f015456fe1640af3c0774b83a2">addContains</a> ($name, <a class="el" href="classPharIo_1_1Version_1_1Version.html">Version</a> $version, <a class="el" href="classPharIo_1_1Manifest_1_1Type.html">Type</a> $type)</td></tr>
+<tr class="separator:a6fea58f015456fe1640af3c0774b83a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e80a7dd6ab8fe054a19b85b6a6b890e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a8e80a7dd6ab8fe054a19b85b6a6b890e">addCopyright</a> (<a class="el" href="classPharIo_1_1Manifest_1_1CopyrightInformation.html">CopyrightInformation</a> $copyrightInformation)</td></tr>
+<tr class="separator:a8e80a7dd6ab8fe054a19b85b6a6b890e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62dc45275ff6072f4ea4b1ad9f08a3f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a62dc45275ff6072f4ea4b1ad9f08a3f2">addRequirements</a> (<a class="el" href="classPharIo_1_1Manifest_1_1RequirementCollection.html">RequirementCollection</a> $requirementCollection)</td></tr>
+<tr class="separator:a62dc45275ff6072f4ea4b1ad9f08a3f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a421d8e928acce51db0ebf258cbaf2209"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a421d8e928acce51db0ebf258cbaf2209">addBundles</a> (<a class="el" href="classPharIo_1_1Manifest_1_1BundledComponentCollection.html">BundledComponentCollection</a> $bundledComponentCollection)</td></tr>
+<tr class="separator:a421d8e928acce51db0ebf258cbaf2209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0448ca9364baec37edf6c203226b3ece"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a0448ca9364baec37edf6c203226b3ece">addExtension</a> ($application, <a class="el" href="interfacePharIo_1_1Version_1_1VersionConstraint.html">VersionConstraint</a> $versionConstraint)</td></tr>
+<tr class="separator:a0448ca9364baec37edf6c203226b3ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr class="memitem:affe823f4b9637cd77803597f1b7b81dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#affe823f4b9637cd77803597f1b7b81dd">$xmlWriter</a></td></tr>
+<tr class="separator:affe823f4b9637cd77803597f1b7b81dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a421d8e928acce51db0ebf258cbaf2209"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a421d8e928acce51db0ebf258cbaf2209">&#9670;&nbsp;</a></span>addBundles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PharIo\Manifest\ManifestSerializer::addBundles </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPharIo_1_1Manifest_1_1BundledComponentCollection.html">BundledComponentCollection</a>&#160;</td>
+          <td class="paramname"><em>$bundledComponentCollection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#adca9ee3779dc8be77f8347c710d57a5d">PharIo\Manifest\ManifestSerializer\serializeToString()</a>.</p>
+
+</div>
+</div>
+<a id="a6fea58f015456fe1640af3c0774b83a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fea58f015456fe1640af3c0774b83a2">&#9670;&nbsp;</a></span>addContains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PharIo\Manifest\ManifestSerializer::addContains </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPharIo_1_1Version_1_1Version.html">Version</a>&#160;</td>
+          <td class="paramname"><em>$version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPharIo_1_1Manifest_1_1Type.html">Type</a>&#160;</td>
+          <td class="paramname"><em>$type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referencias <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a0448ca9364baec37edf6c203226b3ece">PharIo\Manifest\ManifestSerializer\addExtension()</a>, <a class="el" href="classPharIo_1_1Version_1_1Version.html#a0b23006c1a79db61da16029a53d4eb55">PharIo\Version\Version\getVersionString()</a>, <a class="el" href="classPharIo_1_1Manifest_1_1Type.html#a428bb3850ad19c5586ed651073abec1b">PharIo\Manifest\Type\isApplication()</a>, <a class="el" href="classPharIo_1_1Manifest_1_1Type.html#af4e729796c4916451f81c0c3ea7c84c9">PharIo\Manifest\Type\isExtension()</a> e <a class="el" href="classPharIo_1_1Manifest_1_1Type.html#af34f76e434024d93ad2890f9aaa99e58">PharIo\Manifest\Type\isLibrary()</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#adca9ee3779dc8be77f8347c710d57a5d">PharIo\Manifest\ManifestSerializer\serializeToString()</a>.</p>
+
+</div>
+</div>
+<a id="a8e80a7dd6ab8fe054a19b85b6a6b890e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e80a7dd6ab8fe054a19b85b6a6b890e">&#9670;&nbsp;</a></span>addCopyright()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PharIo\Manifest\ManifestSerializer::addCopyright </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPharIo_1_1Manifest_1_1CopyrightInformation.html">CopyrightInformation</a>&#160;</td>
+          <td class="paramname"><em>$copyrightInformation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referencias <a class="el" href="classPharIo_1_1Manifest_1_1CopyrightInformation.html#ab76f8ee548a409a1451419942d60088f">PharIo\Manifest\CopyrightInformation\getAuthors()</a> e <a class="el" href="classPharIo_1_1Manifest_1_1CopyrightInformation.html#a2ef93a78686dac5180da1a16e527892f">PharIo\Manifest\CopyrightInformation\getLicense()</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#adca9ee3779dc8be77f8347c710d57a5d">PharIo\Manifest\ManifestSerializer\serializeToString()</a>.</p>
+
+</div>
+</div>
+<a id="a0448ca9364baec37edf6c203226b3ece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0448ca9364baec37edf6c203226b3ece">&#9670;&nbsp;</a></span>addExtension()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PharIo\Manifest\ManifestSerializer::addExtension </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$application</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacePharIo_1_1Version_1_1VersionConstraint.html">VersionConstraint</a>&#160;</td>
+          <td class="paramname"><em>$versionConstraint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referencias <a class="el" href="interfacePharIo_1_1Version_1_1VersionConstraint.html#aecabf5b931bfd7001af15cbffe5441c8">PharIo\Version\VersionConstraint\asString()</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a6fea58f015456fe1640af3c0774b83a2">PharIo\Manifest\ManifestSerializer\addContains()</a>.</p>
+
+</div>
+</div>
+<a id="a62dc45275ff6072f4ea4b1ad9f08a3f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62dc45275ff6072f4ea4b1ad9f08a3f2">&#9670;&nbsp;</a></span>addRequirements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PharIo\Manifest\ManifestSerializer::addRequirements </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPharIo_1_1Manifest_1_1RequirementCollection.html">RequirementCollection</a>&#160;</td>
+          <td class="paramname"><em>$requirementCollection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#adca9ee3779dc8be77f8347c710d57a5d">PharIo\Manifest\ManifestSerializer\serializeToString()</a>.</p>
+
+</div>
+</div>
+<a id="a0201a70259e655f16d4d65d26926d6ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0201a70259e655f16d4d65d26926d6ab">&#9670;&nbsp;</a></span>finishDocument()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PharIo\Manifest\ManifestSerializer::finishDocument </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#adca9ee3779dc8be77f8347c710d57a5d">PharIo\Manifest\ManifestSerializer\serializeToString()</a>.</p>
+
+</div>
+</div>
+<a id="a4091c230af89eafd41a6180e784617c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4091c230af89eafd41a6180e784617c7">&#9670;&nbsp;</a></span>serializeToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PharIo\Manifest\ManifestSerializer::serializeToFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPharIo_1_1Manifest_1_1Manifest.html">Manifest</a>&#160;</td>
+          <td class="paramname"><em>$manifest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referencias <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#adca9ee3779dc8be77f8347c710d57a5d">PharIo\Manifest\ManifestSerializer\serializeToString()</a>.</p>
+
+</div>
+</div>
+<a id="adca9ee3779dc8be77f8347c710d57a5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca9ee3779dc8be77f8347c710d57a5d">&#9670;&nbsp;</a></span>serializeToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PharIo\Manifest\ManifestSerializer::serializeToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPharIo_1_1Manifest_1_1Manifest.html">Manifest</a>&#160;</td>
+          <td class="paramname"><em>$manifest</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referencias <a class="el" href="example-01_8php.html#a4d1af7792e788060ae7e6f5cf8f28afa">$manifest</a>, <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a421d8e928acce51db0ebf258cbaf2209">PharIo\Manifest\ManifestSerializer\addBundles()</a>, <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a6fea58f015456fe1640af3c0774b83a2">PharIo\Manifest\ManifestSerializer\addContains()</a>, <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a8e80a7dd6ab8fe054a19b85b6a6b890e">PharIo\Manifest\ManifestSerializer\addCopyright()</a>, <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a62dc45275ff6072f4ea4b1ad9f08a3f2">PharIo\Manifest\ManifestSerializer\addRequirements()</a>, <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a0201a70259e655f16d4d65d26926d6ab">PharIo\Manifest\ManifestSerializer\finishDocument()</a>, <a class="el" href="classPharIo_1_1Manifest_1_1Manifest.html#a4de812ff28869271cbdc05a58120feb7">PharIo\Manifest\Manifest\getBundledComponents()</a>, <a class="el" href="classPharIo_1_1Manifest_1_1Manifest.html#aac3a55013903c98edb69fb275d8acd58">PharIo\Manifest\Manifest\getCopyrightInformation()</a>, <a class="el" href="classPharIo_1_1Manifest_1_1Manifest.html#adeb67fdd044b3958d227c390eef79499">PharIo\Manifest\Manifest\getName()</a>, <a class="el" href="classPharIo_1_1Manifest_1_1Manifest.html#ac3b022bbf6f916d789dfa12f30ee2c4d">PharIo\Manifest\Manifest\getRequirements()</a> e <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a18dc44ff707a4438270f80bf59f0397f">PharIo\Manifest\ManifestSerializer\startDocument()</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a4091c230af89eafd41a6180e784617c7">PharIo\Manifest\ManifestSerializer\serializeToFile()</a>.</p>
+
+</div>
+</div>
+<a id="a18dc44ff707a4438270f80bf59f0397f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18dc44ff707a4438270f80bf59f0397f">&#9670;&nbsp;</a></span>startDocument()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PharIo\Manifest\ManifestSerializer::startDocument </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referencias <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#affe823f4b9637cd77803597f1b7b81dd">PharIo\Manifest\ManifestSerializer\$xmlWriter</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#adca9ee3779dc8be77f8347c710d57a5d">PharIo\Manifest\ManifestSerializer\serializeToString()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Atributos</h2>
+<a id="affe823f4b9637cd77803597f1b7b81dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe823f4b9637cd77803597f1b7b81dd">&#9670;&nbsp;</a></span>$xmlWriter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PharIo\Manifest\ManifestSerializer::$xmlWriter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html#a18dc44ff707a4438270f80bf59f0397f">PharIo\Manifest\ManifestSerializer\startDocument()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<li>vendor/phar-io/manifest/src/<a class="el" href="ManifestSerializer_8php.html">ManifestSerializer.php</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacePharIo.html">PharIo</a></li><li class="navelem"><a class="el" href="namespacePharIo_1_1Manifest.html">Manifest</a></li><li class="navelem"><a class="el" href="classPharIo_1_1Manifest_1_1ManifestSerializer.html">ManifestSerializer</a></li>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

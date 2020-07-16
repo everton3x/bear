@@ -1,0 +1,12 @@
+<map id="PHPUnit\Framework\RiskyTestError" name="PHPUnit\Framework\RiskyTestError">
+<area shape="rect" id="node1" title=" " alt="" coords="235,565,453,657"/>
+<area shape="rect" id="node8" href="$classPHPUnit_1_1Framework_1_1CoveredCodeNotExecutedException.html" title=" " alt="" coords="5,705,216,797"/>
+<area shape="rect" id="node9" href="$classPHPUnit_1_1Framework_1_1MissingCoversAnnotationException.html" title=" " alt="" coords="241,705,447,797"/>
+<area shape="rect" id="node10" href="$classPHPUnit_1_1Framework_1_1UnintentionallyCoveredCodeError.html" title=" " alt="" coords="472,705,728,797"/>
+<area shape="rect" id="node2" href="$classPHPUnit_1_1Framework_1_1AssertionFailedError.html" title=" " alt="" coords="235,425,453,517"/>
+<area shape="rect" id="node3" href="$classPHPUnit_1_1Framework_1_1Exception.html" title=" " alt="" coords="105,256,325,377"/>
+<area shape="rect" id="node4" title=" " alt="" coords="61,131,203,208"/>
+<area shape="rect" id="node5" href="$interfacePHPUnit_1_1Exception.html" title=" " alt="" coords="227,131,370,208"/>
+<area shape="rect" id="node6" title=" " alt="" coords="253,5,344,83"/>
+<area shape="rect" id="node7" href="$interfacePHPUnit_1_1Framework_1_1SelfDescribing.html" title=" " alt="" coords="349,278,600,355"/>
+</map>

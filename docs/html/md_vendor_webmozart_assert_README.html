@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bear API: Webmozart Assert</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bear API
+   </div>
+   <div id="projectbrief">Um manipulador de dados tabulares inspirados no Pandas/Python e no R.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('md_vendor_webmozart_assert_README.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title"><a class="el" href="namespaceWebmozart.html">Webmozart</a> Assert </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a href="https://travis-ci.org/webmozart/assert"><object type="image/svg+xml" data="https://travis-ci.org/webmozart/assert.svg?branch=master" style="pointer-events: none;">Build Status</object></a> <a href="https://ci.appveyor.com/project/webmozart/assert/branch/master"><img src="https://ci.appveyor.com/api/projects/status/lyg83bcsisrr94se/branch/master?svg=true" alt="Build status" class="inline"/></a> <a href="https://scrutinizer-ci.com/g/webmozart/assert/?branch=master"><img src="https://scrutinizer-ci.com/g/webmozart/assert/badges/coverage.png?b=master" alt="Code Coverage" class="inline"/></a> <a href="https://packagist.org/packages/webmozart/assert"><object type="image/svg+xml" data="https://poser.pugx.org/webmozart/assert/v/stable.svg" style="pointer-events: none;">Latest Stable Version</object></a> <a href="https://packagist.org/packages/webmozart/assert"><object type="image/svg+xml" data="https://poser.pugx.org/webmozart/assert/downloads.svg" style="pointer-events: none;">Total Downloads</object></a></p>
+<p>This library contains efficient assertions to test the input and output of your methods. With these assertions, you can greatly reduce the amount of coding needed to write a safe implementation.</p>
+<p>All assertions in the <a href="src/Assert.php"><code>Assert</code></a> class throw an <code>\InvalidArgumentException</code> if they fail.</p>
+<h1><a class="anchor" id="autotoc_md604"></a>
+FAQ</h1>
+<p><b>What's the difference to <a href="https://github.com/beberlei/assert">beberlei/assert</a>?</b></p>
+<p>This library is heavily inspired by Benjamin Eberlei's wonderful <a href="https://github.com/beberlei/assert">assert package</a>, but fixes a usability issue with error messages that can't be fixed there without breaking backwards compatibility.</p>
+<p>This package features usable error messages by default. However, you can also easily write custom error messages:</p>
+<div class="fragment"><div class="line">Assert::string($path, &#39;The path is expected to be a string. Got: %s&#39;);</div>
+</div><!-- fragment --><p>In <a href="https://github.com/beberlei/assert">beberlei/assert</a>, the ordering of the <code>s</code> placeholders is different for every assertion. This package, on the contrary, provides consistent placeholder ordering for all assertions:</p>
+<ul>
+<li><code>s</code>: The tested value as string, e.g. <code>"/foo/bar"</code>.</li>
+<li><code>%2$s</code>, <code>%3$s</code>, ...: Additional assertion-specific values, e.g. the minimum/maximum length, allowed values, etc.</li>
+</ul>
+<p>Check the source code of the assertions to find out details about the additional available placeholders.</p>
+<h1><a class="anchor" id="autotoc_md605"></a>
+Installation</h1>
+<p>Use <a href="https://getcomposer.org">Composer</a> to install the package:</p>
+<div class="fragment"><div class="line">$ composer require webmozart/assert</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md606"></a>
+Example</h1>
+<div class="fragment"><div class="line">use <a class="code" href="classWebmozart_1_1Assert_1_1Assert.html">Webmozart\Assert\Assert</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>Employee</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">function</span> __construct($id)</div>
+<div class="line">    {</div>
+<div class="line">        Assert::integer($id, <span class="stringliteral">&#39;The employee ID must be an integer. Got: %s&#39;</span>);</div>
+<div class="line">        <a class="code" href="namespacePHPUnit_1_1Framework.html#ac9f76ee82511de67cdefdf383df89d54">Assert::greaterThan</a>($id, 0, <span class="stringliteral">&#39;The employee ID must be a positive integer. Got: %s&#39;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>If you create an employee with an invalid ID, an exception is thrown:</p>
+<div class="fragment"><div class="line"><span class="keyword">new</span> Employee(<span class="stringliteral">&#39;foobar&#39;</span>);</div>
+<div class="line"><span class="comment">// =&gt; InvalidArgumentException:</span></div>
+<div class="line"><span class="comment">//    The employee ID must be an integer. Got: string</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">new</span> Employee(-10);</div>
+<div class="line"><span class="comment">// =&gt; InvalidArgumentException:</span></div>
+<div class="line"><span class="comment">//    The employee ID must be a positive integer. Got: -10</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md607"></a>
+Assertions</h1>
+<p>The <a href="src/Assert.php"><code>Assert</code></a> class provides the following assertions:</p>
+<h2><a class="anchor" id="autotoc_md608"></a>
+Type Assertions</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lsquo;string($value, $message = &rsquo;')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is a string&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>stringNotEmpty($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is a non-empty string&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>integer($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is an integer&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>integerish($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value casts to an integer&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>float($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is a float&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>numeric($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is numeric&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>natural($value, $message= ''')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is a non-negative integer&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>boolean($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is a boolean&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>scalar($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is a scalar&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>object($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is an object&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>resource($value, $type = null, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is a resource&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isCallable($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is a callable&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isArray($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is an array&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isTraversable($value, $message = '')<code>(deprecated)&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is an array or a</code>\Traversable<code>&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isIterable($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is an array or a</code>\Traversable<code>&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isCountable($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is an array or a</code>\Countable<code>&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isInstanceOf($value, $class, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is an</code>instanceof<code>a class&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isInstanceOfAny($value, array $classes, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is an</code>instanceof<code>at least one class on the array of classes&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>notInstanceOf($value, $class, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is not an</code>instanceof<code>a class&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isAOf($value, $class, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is of the class or has one of its parents&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isAnyOf($value, array $classes, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is of at least one of the classes or has one of its parents&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isNotA($value, $class, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is not of the class or has not one of its parents&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isArrayAccessible($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value can be accessed as an array&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>uniqueValues($values, $message = '')` </td><td class="markdownTableBodyNone">Check that the given array contains unique values  </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md609"></a>
+Comparison Assertions</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lsquo;true($value, $message = &rsquo;')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is</code>true<code>&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>false($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is</code>false<code>&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>notFalse($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is not</code>false<code>&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>null($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is</code>null<code>&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>notNull($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is not</code>null<code>&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isEmpty($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is</code>empty()<code>&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>notEmpty($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is not</code>empty()<code>&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>eq($value, $value2, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value equals another (</code>==<code>)&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>notEq($value, $value2, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value does not equal another (</code>!=<code>)&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>same($value, $value2, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is identical to another (</code>===<code>)&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>notSame($value, $value2, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is not identical to another (</code>!==<code>)&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>greaterThan($value, $value2, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is greater than another&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>greaterThanEq($value, $value2, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is greater than or equal to another&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>lessThan($value, $value2, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is less than another&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>lessThanEq($value, $value2, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is less than or equal to another&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>range($value, $min, $max, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is within a range&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>inArray($value, array $values, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is one of a list of values&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>oneOf($value, array $values, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is one of a list of values (alias of</code>inArray`)  </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md610"></a>
+String Assertions</h2>
+<p>You should check that a value is a string with <code>Assert::string()</code> before making any of the following assertions.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lsquo;contains($value, $subString, $message = &rsquo;')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string contains a substring&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>notContains($value, $subString, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string does not contain a substring&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>startsWith($value, $prefix, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string has a prefix&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>notStartsWith($value, $prefix, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string does not have a prefix&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>startsWithLetter($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string starts with a letter&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>endsWith($value, $suffix, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string has a suffix&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>notEndsWith($value, $suffix, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string does not have a suffix&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>regex($value, $pattern, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string matches a regular expression&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>notRegex($value, $pattern, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string does not match a regular expression&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>unicodeLetters($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string contains Unicode letters only&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>alpha($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string contains letters only&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>digits($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string contains digits only&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>alnum($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string contains letters and digits only&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>lower($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string contains lowercase characters only&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>upper($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string contains uppercase characters only&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>length($value, $length, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string has a certain number of characters&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>minLength($value, $min, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string has at least a certain number of characters&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>maxLength($value, $max, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string has at most a certain number of characters&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>lengthBetween($value, $min, $max, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string has a length in the given range&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>uuid($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string is a valid UUID&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>ip($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string is a valid IP (either IPv4 or IPv6)&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>ipv4($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string is a valid IPv4&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>ipv6($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string is a valid IPv6&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>email($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a string is a valid e-mail address&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>notWhitespaceOnly($value, $message = '')` </td><td class="markdownTableBodyNone">Check that a string contains at least one non-whitespace character  </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md611"></a>
+File Assertions</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lsquo;fileExists($value, $message = &rsquo;')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is an existing path&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>file($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is an existing file&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>directory($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is an existing directory&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>readable($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is a readable path&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>writable($value, $message = '')` </td><td class="markdownTableBodyNone">Check that a value is a writable path  </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md612"></a>
+Object Assertions</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lsquo;classExists($value, $message = &rsquo;')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is an existing class name&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>subclassOf($value, $class, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a class is a subclass of another&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>interfaceExists($value, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is an existing interface name&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>implementsInterface($value, $class, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a class implements an interface&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>propertyExists($value, $property, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a property exists in a class/object&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>propertyNotExists($value, $property, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a property does not exist in a class/object&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>methodExists($value, $method, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a method exists in a class/object&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>methodNotExists($value, $method, $message = '')` </td><td class="markdownTableBodyNone">Check that a method does not exist in a class/object  </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md613"></a>
+Array Assertions</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lsquo;keyExists($array, $key, $message = &rsquo;')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a key exists in an array&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>keyNotExists($array, $key, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a key does not exist in an array&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>validArrayKey($key, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that a value is a valid array key (int or string)&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>count($array, $number, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that an array contains a specific number of elements&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>minCount($array, $min, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that an array contains at least a certain number of elements&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>maxCount($array, $max, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that an array contains at most a certain number of elements&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>countBetween($array, $min, $max, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that an array has a count in the given range&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isList($array, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that an array is a non-associative list&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isNonEmptyList($array, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that an array is a non-associative list, and not empty&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isMap($array, $message = '')<code>&lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Check that an array is associative and has strings as keys&lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>isNonEmptyMap($array, $message = '')` </td><td class="markdownTableBodyNone">Check that an array is associative and has strings as keys, and is not empty  </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md614"></a>
+Function Assertions</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Method </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">&lsquo;throws($closure, $class, $message = &rsquo;')` </td><td class="markdownTableBodyNone">Check that a function throws a certain exception. Subclasses of the exception class will be accepted.  </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md615"></a>
+Collection Assertions</h2>
+<p>All of the above assertions can be prefixed with <code>all*()</code> to test the contents of an array or a <code>\Traversable</code>:</p>
+<div class="fragment"><div class="line">Assert::allIsInstanceOf($employees, <span class="stringliteral">&#39;Acme\Employee&#39;</span>);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md616"></a>
+Nullable Assertions</h2>
+<p>All of the above assertions can be prefixed with <code>nullOr*()</code> to run the assertion only if it the value is not <code>null</code>:</p>
+<div class="fragment"><div class="line">Assert::nullOrString($middleName, <span class="stringliteral">&#39;The middle name must be a string or null. Got: %s&#39;</span>);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md617"></a>
+Extending Assert</h2>
+<p>The <code>Assert</code> class comes with a few methods, which can be overridden to change the class behaviour. You can also extend it to add your own assertions.</p>
+<h3><a class="anchor" id="autotoc_md618"></a>
+Overriding methods</h3>
+<p>Overriding the following methods in your assertion class allows you to change the behaviour of the assertions:</p>
+<ul>
+<li><code>public static function __callStatic($name, $arguments)</code><ul>
+<li>This method is used to 'create' the <code>nullOr</code> and <code>all</code> versions of the assertions.</li>
+</ul>
+</li>
+<li><code>protected static function valueToString($value)</code><ul>
+<li>This method is used for error messages, to convert the value to a string value for displaying. You could use this for representing a value object with a <code>__toString</code> method for example.</li>
+</ul>
+</li>
+<li><code>protected static function typeToString($value)</code><ul>
+<li>This method is used for error messages, to convert the a value to a string representing its type.</li>
+</ul>
+</li>
+<li><code>protected static function strlen($value)</code><ul>
+<li>This method is used to calculate string length for relevant methods, using the <code>mb_strlen</code> if available and useful.</li>
+</ul>
+</li>
+<li><code>protected static function reportInvalidArgument($message)</code><ul>
+<li>This method is called when an assertion fails, with the specified error message. Here you can throw your own exception, or log something.</li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md619"></a>
+Authors</h1>
+<ul>
+<li><a href="https://webmozarts.com">Bernhard Schussek</a> a.k.a. <a href="https://twitter.com/webmozart">@webmozart</a></li>
+<li><a href="https://github.com/webmozart/assert/graphs/contributors">The Community Contributors</a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md620"></a>
+Contribute</h1>
+<p>Contributions to the package are always welcome!</p>
+<ul>
+<li>Report any bugs or issues you find on the <a href="https://github.com/webmozart/assert/issues">issue tracker</a>.</li>
+<li>You can grab the source code at the package's <a href="https://github.com/webmozart/assert">Git repository</a>.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md621"></a>
+License</h1>
+<p>All contents of this package are licensed under the [MIT license]. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div class="ttc" id="anamespacePHPUnit_1_1Framework_html_ac9f76ee82511de67cdefdf383df89d54"><div class="ttname"><a href="namespacePHPUnit_1_1Framework.html#ac9f76ee82511de67cdefdf383df89d54">PHPUnit\Framework\greaterThan</a></div><div class="ttdeci">greaterThan($value)</div><div class="ttdef"><b>Definition:</b> Functions.php:2115</div></div>
+<div class="ttc" id="aclassWebmozart_1_1Assert_1_1Assert_html"><div class="ttname"><a href="classWebmozart_1_1Assert_1_1Assert.html">Webmozart\Assert\Assert</a></div><div class="ttdef"><b>Definition:</b> Assert.php:36</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

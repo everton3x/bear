@@ -1,0 +1,11 @@
+<map id="Prophecy\Exception\Doubler\DoubleException" name="Prophecy\Exception\Doubler\DoubleException">
+<area shape="rect" id="node1" title=" " alt="" coords="422,285,613,377"/>
+<area shape="rect" id="node5" href="$classProphecy_1_1Exception_1_1Doubler_1_1ClassNotFoundException.html" title=" " alt="" coords="5,455,248,561"/>
+<area shape="rect" id="node7" href="$classProphecy_1_1Exception_1_1Doubler_1_1MethodNotExtendableException.html" title=" " alt="" coords="272,433,499,583"/>
+<area shape="rect" id="node8" href="$classProphecy_1_1Exception_1_1Doubler_1_1MethodNotFoundException.html" title=" " alt="" coords="523,425,779,591"/>
+<area shape="rect" id="node9" href="$classProphecy_1_1Exception_1_1Doubler_1_1ReturnByReferenceException.html" title=" " alt="" coords="803,433,1010,583"/>
+<area shape="rect" id="node2" title=" " alt="" coords="351,153,492,230"/>
+<area shape="rect" id="node3" href="$interfaceProphecy_1_1Exception_1_1Doubler_1_1DoublerException.html" title=" " alt="" coords="517,145,713,237"/>
+<area shape="rect" id="node4" href="$interfaceProphecy_1_1Exception_1_1Exception.html" title=" " alt="" coords="539,5,690,97"/>
+<area shape="rect" id="node6" href="$classProphecy_1_1Exception_1_1Doubler_1_1InterfaceNotFoundException.html" title=" " alt="" coords="26,639,227,745"/>
+</map>

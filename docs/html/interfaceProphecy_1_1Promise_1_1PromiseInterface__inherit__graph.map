@@ -1,0 +1,7 @@
+<map id="Prophecy\Promise\PromiseInterface" name="Prophecy\Promise\PromiseInterface">
+<area shape="rect" id="node1" title=" " alt="" coords="391,5,587,97"/>
+<area shape="rect" id="node2" href="$classProphecy_1_1Promise_1_1CallbackPromise.html" title=" " alt="" coords="5,153,204,259"/>
+<area shape="rect" id="node3" href="$classProphecy_1_1Promise_1_1ReturnArgumentPromise.html" title=" " alt="" coords="229,153,479,259"/>
+<area shape="rect" id="node4" href="$classProphecy_1_1Promise_1_1ReturnPromise.html" title=" " alt="" coords="504,160,743,252"/>
+<area shape="rect" id="node5" href="$classProphecy_1_1Promise_1_1ThrowPromise.html" title=" " alt="" coords="767,145,1003,267"/>
+</map>

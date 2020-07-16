@@ -1,0 +1,26 @@
+var classPHP__Token__FUNCTION =
+[
+    [ "__toString", "classPHP__Token__FUNCTION.html#acaceb755d410d45b3b701ff0d13c6b76", null ],
+    [ "getArguments", "classPHP__Token__FUNCTION.html#a2ca6d607b3be9a4c8a781a168f44baac", null ],
+    [ "getCCN", "classPHP__Token__FUNCTION.html#a245ecbd5071614c61a768a537e887d27", null ],
+    [ "getDocblock", "classPHP__Token__FUNCTION.html#ab9c03167b404bba3f507346aa61392a7", null ],
+    [ "getEndLine", "classPHP__Token__FUNCTION.html#a6bcbff361b84319ddf7ba0ed651d9b1f", null ],
+    [ "getEndTokenId", "classPHP__Token__FUNCTION.html#aca28eba84f5f3e7a9fa120460aa58c92", null ],
+    [ "getId", "classPHP__Token__FUNCTION.html#a2a16dabb2bbd437c2ba1f83d05af3a8a", null ],
+    [ "getKeywords", "classPHP__Token__FUNCTION.html#a5a62f6058d591f4630ee17c418c6daf1", null ],
+    [ "getLine", "classPHP__Token__FUNCTION.html#a65b3ac33c6861378ee7aa071ba6539eb", null ],
+    [ "getName", "classPHP__Token__FUNCTION.html#a3e9e3ab31103188f008e75747a7dbf8f", null ],
+    [ "getSignature", "classPHP__Token__FUNCTION.html#ac2e9a1afa0b766d5489b565af0f2c0de", null ],
+    [ "getVisibility", "classPHP__Token__FUNCTION.html#a44c9d182cfdef9257bf1bd9c1ce4184b", null ],
+    [ "isAnonymous", "classPHP__Token__FUNCTION.html#a754341a13b403726ca5eb5ee6a53fa4b", null ],
+    [ "$anonymous", "classPHP__Token__FUNCTION.html#a79ce020343671c835cb2416b0a25735a", null ],
+    [ "$arguments", "classPHP__Token__FUNCTION.html#aaaa1bbd7a4febeff18e82c7611ae5e83", null ],
+    [ "$ccn", "classPHP__Token__FUNCTION.html#aa23302cec82b64f1b24ff8454859278c", null ],
+    [ "$endTokenId", "classPHP__Token__FUNCTION.html#aefb8e6e4ceac82aa111dc0d3045fa4b6", null ],
+    [ "$id", "classPHP__Token__FUNCTION.html#a7ae1d600ed52531dc679f700a7af5d24", null ],
+    [ "$line", "classPHP__Token__FUNCTION.html#a3aa3f1bbba559575f53b7b29a50ffa09", null ],
+    [ "$name", "classPHP__Token__FUNCTION.html#a7f41e0dd310db02e1665f5904e8d451d", null ],
+    [ "$signature", "classPHP__Token__FUNCTION.html#a944e11eb3bc264af30d2145077f864a9", null ],
+    [ "$text", "classPHP__Token__FUNCTION.html#a52fcabfee4075dbc86fc6c97e6f60392", null ],
+    [ "$tokenStream", "classPHP__Token__FUNCTION.html#a1ea1335cc828e933eb6d49c816a3b9cf", null ]
+];

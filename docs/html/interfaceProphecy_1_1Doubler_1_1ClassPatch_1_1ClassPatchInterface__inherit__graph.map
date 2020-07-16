@@ -1,0 +1,12 @@
+<map id="Prophecy\Doubler\ClassPatch\ClassPatchInterface" name="Prophecy\Doubler\ClassPatch\ClassPatchInterface">
+<area shape="rect" id="node1" title=" " alt="" coords="944,5,1155,127"/>
+<area shape="rect" id="node2" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1DisableConstructorPatch.html" title=" " alt="" coords="5,204,216,325"/>
+<area shape="rect" id="node3" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1HhvmExceptionPatch.html" title=" " alt="" coords="240,204,451,325"/>
+<area shape="rect" id="node4" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1KeywordPatch.html" title=" " alt="" coords="475,197,685,333"/>
+<area shape="rect" id="node5" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1MagicCallPatch.html" title=" " alt="" coords="709,197,920,333"/>
+<area shape="rect" id="node6" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1ProphecySubjectPatch.html" title=" " alt="" coords="944,204,1155,325"/>
+<area shape="rect" id="node7" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1ReflectionClassNewInstancePatch.html" title=" " alt="" coords="1179,204,1424,325"/>
+<area shape="rect" id="node8" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1SplFileInfoPatch.html" title=" " alt="" coords="1448,182,1659,347"/>
+<area shape="rect" id="node9" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1ThrowablePatch.html" title=" " alt="" coords="1683,175,1936,355"/>
+<area shape="rect" id="node10" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1TraversablePatch.html" title=" " alt="" coords="1960,204,2171,325"/>
+</map>

@@ -1,0 +1,1177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bear API: Referência da Classe SebastianBergmann\CodeCoverage\Node\AbstractNode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bear API
+   </div>
+   <div id="projectbrief">Um manipulador de dados tabulares inspirados no Pandas/Python e no R.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a> &#124;
+<a href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência da Classe SebastianBergmann\CodeCoverage\Node\AbstractNode</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Diagrama de hierarquia para SebastianBergmann\CodeCoverage\Node\AbstractNode:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode__inherit__graph.png" border="0" usemap="#SebastianBergmann_0cCodeCoverage_0cNode_0cAbstractNode_inherit__map" alt="Inheritance graph"/></div>
+<map name="SebastianBergmann_0cCodeCoverage_0cNode_0cAbstractNode_inherit__map" id="SebastianBergmann_0cCodeCoverage_0cNode_0cAbstractNode_inherit__map">
+<area shape="rect" title=" " alt="" coords="143,131,395,443"/>
+<area shape="rect" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html" title=" " alt="" coords="5,535,257,920"/>
+<area shape="rect" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html" title=" " alt="" coords="281,491,533,964"/>
+<area shape="rect" title=" " alt="" coords="225,5,313,83"/>
+</map>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Diagrama de colaboração para SebastianBergmann\CodeCoverage\Node\AbstractNode:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode__coll__graph.png" border="0" usemap="#SebastianBergmann_0cCodeCoverage_0cNode_0cAbstractNode_coll__map" alt="Collaboration graph"/></div>
+<map name="SebastianBergmann_0cCodeCoverage_0cNode_0cAbstractNode_coll__map" id="SebastianBergmann_0cCodeCoverage_0cNode_0cAbstractNode_coll__map">
+<area shape="rect" title=" " alt="" coords="5,131,257,443"/>
+<area shape="rect" title=" " alt="" coords="87,5,175,83"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:a5cde3dfcd5db2070b00d56b207728978"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a5cde3dfcd5db2070b00d56b207728978">__construct</a> (string $name, self $parent=null)</td></tr>
+<tr class="separator:a5cde3dfcd5db2070b00d56b207728978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dce684440726e83f98f4fb1ba4e8ceb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a8dce684440726e83f98f4fb1ba4e8ceb">getName</a> ()</td></tr>
+<tr class="separator:a8dce684440726e83f98f4fb1ba4e8ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79b24fb3314016a97050ced6f6795a3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a79b24fb3314016a97050ced6f6795a3d">getId</a> ()</td></tr>
+<tr class="separator:a79b24fb3314016a97050ced6f6795a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a936926cfc61366bd6672e71c8e1db659"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a936926cfc61366bd6672e71c8e1db659">getPath</a> ()</td></tr>
+<tr class="separator:a936926cfc61366bd6672e71c8e1db659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76440ae4707ce99fb724a66931e7e7ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a76440ae4707ce99fb724a66931e7e7ef">getPathAsArray</a> ()</td></tr>
+<tr class="separator:a76440ae4707ce99fb724a66931e7e7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accad979fc676cc231cf7a35825f60344"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#accad979fc676cc231cf7a35825f60344">getParent</a> ()</td></tr>
+<tr class="separator:accad979fc676cc231cf7a35825f60344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d76f9d9a5b81e551036f31b1f272339"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a6d76f9d9a5b81e551036f31b1f272339">getTestedClassesPercent</a> (bool $asString=true)</td></tr>
+<tr class="separator:a6d76f9d9a5b81e551036f31b1f272339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0498ffdc903935f75d43fa796988518"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ad0498ffdc903935f75d43fa796988518">getTestedTraitsPercent</a> (bool $asString=true)</td></tr>
+<tr class="separator:ad0498ffdc903935f75d43fa796988518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a446229d9059a2471bfeb49e78756ccf7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a446229d9059a2471bfeb49e78756ccf7">getTestedClassesAndTraitsPercent</a> (bool $asString=true)</td></tr>
+<tr class="separator:a446229d9059a2471bfeb49e78756ccf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7424e0be6866b845cec68b5dfda5e40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ab7424e0be6866b845cec68b5dfda5e40">getTestedFunctionsPercent</a> (bool $asString=true)</td></tr>
+<tr class="separator:ab7424e0be6866b845cec68b5dfda5e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac26adf7fae46ac14249fc16bfe57ea4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ac26adf7fae46ac14249fc16bfe57ea4e">getTestedMethodsPercent</a> (bool $asString=true)</td></tr>
+<tr class="separator:ac26adf7fae46ac14249fc16bfe57ea4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63e1594b21bface2fa92c2e4499e2969"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a63e1594b21bface2fa92c2e4499e2969">getTestedFunctionsAndMethodsPercent</a> (bool $asString=true)</td></tr>
+<tr class="separator:a63e1594b21bface2fa92c2e4499e2969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d89548793018caa50d91aa1e0ce1e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ae6d89548793018caa50d91aa1e0ce1e9">getLineExecutedPercent</a> (bool $asString=true)</td></tr>
+<tr class="separator:ae6d89548793018caa50d91aa1e0ce1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d8c4097c5ba1a9fb19233ed05d5e26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a42d8c4097c5ba1a9fb19233ed05d5e26">getNumClassesAndTraits</a> ()</td></tr>
+<tr class="separator:a42d8c4097c5ba1a9fb19233ed05d5e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b9e299fe7083c6c330d81e3ff2a82c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a9b9e299fe7083c6c330d81e3ff2a82c7">getNumTestedClassesAndTraits</a> ()</td></tr>
+<tr class="separator:a9b9e299fe7083c6c330d81e3ff2a82c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b61250aeb5779d88a42f74fc700387"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a08b61250aeb5779d88a42f74fc700387">getClassesAndTraits</a> ()</td></tr>
+<tr class="separator:a08b61250aeb5779d88a42f74fc700387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdf355dac48cf3048c28b76e23162cdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#afdf355dac48cf3048c28b76e23162cdd">getNumFunctionsAndMethods</a> ()</td></tr>
+<tr class="separator:afdf355dac48cf3048c28b76e23162cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8591fca7d1cc5ed3001f7495d872db99"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a8591fca7d1cc5ed3001f7495d872db99">getNumTestedFunctionsAndMethods</a> ()</td></tr>
+<tr class="separator:a8591fca7d1cc5ed3001f7495d872db99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c1b83d9569caba8ccd288c50502fbe0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a8c1b83d9569caba8ccd288c50502fbe0">getFunctionsAndMethods</a> ()</td></tr>
+<tr class="separator:a8c1b83d9569caba8ccd288c50502fbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c14516266456e859d021d07cd1c248"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a81c14516266456e859d021d07cd1c248">getClasses</a> ()</td></tr>
+<tr class="separator:a81c14516266456e859d021d07cd1c248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16260718c7f0abcc646455c44c4052b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a16260718c7f0abcc646455c44c4052b3">getTraits</a> ()</td></tr>
+<tr class="separator:a16260718c7f0abcc646455c44c4052b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0310ee1dfb23d7a7d97d517db6cba607"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a0310ee1dfb23d7a7d97d517db6cba607">getFunctions</a> ()</td></tr>
+<tr class="separator:a0310ee1dfb23d7a7d97d517db6cba607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf55b3ebf0a14ab16fce12629d4d651"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a8cf55b3ebf0a14ab16fce12629d4d651">getLinesOfCode</a> ()</td></tr>
+<tr class="separator:a8cf55b3ebf0a14ab16fce12629d4d651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90f2b85f08845d7fa6ee6cda51185bcf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a90f2b85f08845d7fa6ee6cda51185bcf">getNumExecutableLines</a> ()</td></tr>
+<tr class="separator:a90f2b85f08845d7fa6ee6cda51185bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a869e7dc13e80281b6c12f538660ff5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a3a869e7dc13e80281b6c12f538660ff5">getNumExecutedLines</a> ()</td></tr>
+<tr class="separator:a3a869e7dc13e80281b6c12f538660ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488bace519f34ac96128295e0c2a3d98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a488bace519f34ac96128295e0c2a3d98">getNumClasses</a> ()</td></tr>
+<tr class="separator:a488bace519f34ac96128295e0c2a3d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dbb4f4fc89b1ee861a7c12d8199fb74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a7dbb4f4fc89b1ee861a7c12d8199fb74">getNumTestedClasses</a> ()</td></tr>
+<tr class="separator:a7dbb4f4fc89b1ee861a7c12d8199fb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fca109a44ad797d29bb266467a7e5f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a4fca109a44ad797d29bb266467a7e5f9">getNumTraits</a> ()</td></tr>
+<tr class="separator:a4fca109a44ad797d29bb266467a7e5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe1260f064e46af49a0d8454ea796e35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#afe1260f064e46af49a0d8454ea796e35">getNumTestedTraits</a> ()</td></tr>
+<tr class="separator:afe1260f064e46af49a0d8454ea796e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6cb1e312a8b031a9dfc93b93645ee23"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ac6cb1e312a8b031a9dfc93b93645ee23">getNumMethods</a> ()</td></tr>
+<tr class="separator:ac6cb1e312a8b031a9dfc93b93645ee23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7b066b649aa1374c410e49421345315"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ae7b066b649aa1374c410e49421345315">getNumTestedMethods</a> ()</td></tr>
+<tr class="separator:ae7b066b649aa1374c410e49421345315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cae0e39467760c23a2aad8e893cc960"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a7cae0e39467760c23a2aad8e893cc960">getNumFunctions</a> ()</td></tr>
+<tr class="separator:a7cae0e39467760c23a2aad8e893cc960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae14fd7a14cce03c3ee67a5c8831303d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ae14fd7a14cce03c3ee67a5c8831303d3">getNumTestedFunctions</a> ()</td></tr>
+<tr class="separator:ae14fd7a14cce03c3ee67a5c8831303d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr class="memitem:a87275b0b8a18d0064ef7206184cff069"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a87275b0b8a18d0064ef7206184cff069">$name</a></td></tr>
+<tr class="separator:a87275b0b8a18d0064ef7206184cff069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20ad1de168f5e547e883e8ffd38eb97c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a20ad1de168f5e547e883e8ffd38eb97c">$path</a></td></tr>
+<tr class="separator:a20ad1de168f5e547e883e8ffd38eb97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa993be6434be5c5f02ca0c5ef17958f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#aaa993be6434be5c5f02ca0c5ef17958f">$pathArray</a></td></tr>
+<tr class="separator:aaa993be6434be5c5f02ca0c5ef17958f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3a81f5eb50708380760b7218d498a6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ac3a81f5eb50708380760b7218d498a6a">$parent</a></td></tr>
+<tr class="separator:ac3a81f5eb50708380760b7218d498a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5e9a806896b0f0f04ddfdefda3627e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#aea5e9a806896b0f0f04ddfdefda3627e">$id</a></td></tr>
+<tr class="separator:aea5e9a806896b0f0f04ddfdefda3627e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Base class for nodes in the code coverage information tree. </p>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a5cde3dfcd5db2070b00d56b207728978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cde3dfcd5db2070b00d56b207728978">&#9670;&nbsp;</a></span>__construct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::__construct </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">self&#160;</td>
+          <td class="paramname"><em>$parent</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a87275b0b8a18d0064ef7206184cff069">SebastianBergmann\CodeCoverage\Node\AbstractNode\$name</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ac3a81f5eb50708380760b7218d498a6a">SebastianBergmann\CodeCoverage\Node\AbstractNode\$parent</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a81c14516266456e859d021d07cd1c248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81c14516266456e859d021d07cd1c248">&#9670;&nbsp;</a></span>getClasses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getClasses </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the classes of this node. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#ac1b74919204c0c39486bdb618f891f02">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#ae709233c7e2a0adcf4e3d10c88aeb857">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a08b61250aeb5779d88a42f74fc700387">SebastianBergmann\CodeCoverage\Node\AbstractNode\getClassesAndTraits()</a>.</p>
+
+</div>
+</div>
+<a id="a08b61250aeb5779d88a42f74fc700387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08b61250aeb5779d88a42f74fc700387">&#9670;&nbsp;</a></span>getClassesAndTraits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getClassesAndTraits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the classes and traits of this node. </p>
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a81c14516266456e859d021d07cd1c248">SebastianBergmann\CodeCoverage\Node\AbstractNode\getClasses()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a16260718c7f0abcc646455c44c4052b3">SebastianBergmann\CodeCoverage\Node\AbstractNode\getTraits()</a>.</p>
+
+</div>
+</div>
+<a id="a0310ee1dfb23d7a7d97d517db6cba607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0310ee1dfb23d7a7d97d517db6cba607">&#9670;&nbsp;</a></span>getFunctions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getFunctions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the functions of this node. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#ad828c672e4478d33509356d90943f4ca">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#aeaa110266ca42a0319cf830df96ea6b8">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a8c1b83d9569caba8ccd288c50502fbe0">SebastianBergmann\CodeCoverage\Node\AbstractNode\getFunctionsAndMethods()</a>.</p>
+
+</div>
+</div>
+<a id="a8c1b83d9569caba8ccd288c50502fbe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c1b83d9569caba8ccd288c50502fbe0">&#9670;&nbsp;</a></span>getFunctionsAndMethods()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getFunctionsAndMethods </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the functions and methods of this node. </p>
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a0310ee1dfb23d7a7d97d517db6cba607">SebastianBergmann\CodeCoverage\Node\AbstractNode\getFunctions()</a>.</p>
+
+</div>
+</div>
+<a id="a79b24fb3314016a97050ced6f6795a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b24fb3314016a97050ced6f6795a3d">&#9670;&nbsp;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#aea5e9a806896b0f0f04ddfdefda3627e">SebastianBergmann\CodeCoverage\Node\AbstractNode\$id</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a87275b0b8a18d0064ef7206184cff069">SebastianBergmann\CodeCoverage\Node\AbstractNode\$name</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ac3a81f5eb50708380760b7218d498a6a">SebastianBergmann\CodeCoverage\Node\AbstractNode\$parent</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#accad979fc676cc231cf7a35825f60344">SebastianBergmann\CodeCoverage\Node\AbstractNode\getParent()</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Html_1_1Renderer.html#a0f68b0f53682e8d66835f9109dc44ca8">SebastianBergmann\CodeCoverage\Report\Html\Renderer\getPathToRoot()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#ae64c929e035051cb198db24be551e85a">SebastianBergmann\CodeCoverage\Node\File\processClasses()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#af6c3bb53f5d3c87d9e23666b036c19fb">SebastianBergmann\CodeCoverage\Node\File\processFunctions()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#a1b7a9a13acdbcb2469664edc763eb36a">SebastianBergmann\CodeCoverage\Node\File\processTraits()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Html_1_1Renderer.html#a34c5a12df8d828acd950b10b46169b49">SebastianBergmann\CodeCoverage\Report\Html\Renderer\setCommonTemplateVariables()</a>.</p>
+
+</div>
+</div>
+<a id="ae6d89548793018caa50d91aa1e0ce1e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6d89548793018caa50d91aa1e0ce1e9">&#9670;&nbsp;</a></span>getLineExecutedPercent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getLineExecutedPercent </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>$asString</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the percentage of executed lines.</p>
+<dl class="section return"><dt>Retorna</dt><dd>int|string </dd></dl>
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Percentage.html#a7db7a19ca408bdd76aadf2ab4e66602a">SebastianBergmann\CodeCoverage\Percentage\fromFractionAndTotal()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a90f2b85f08845d7fa6ee6cda51185bcf">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumExecutableLines()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a3a869e7dc13e80281b6c12f538660ff5">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumExecutedLines()</a>.</p>
+
+</div>
+</div>
+<a id="a8cf55b3ebf0a14ab16fce12629d4d651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cf55b3ebf0a14ab16fce12629d4d651">&#9670;&nbsp;</a></span>getLinesOfCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getLinesOfCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the LOC/CLOC/NCLOC of this node. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#a311146c4d9261d31e246b828481dd297">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#a5ff8b3b59d06eb9236a1369ee99f896e">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Xml_1_1Facade.html#a6f4e8f430eb5a69cb16e6c93003a4c52">SebastianBergmann\CodeCoverage\Report\Xml\Facade\setTotals()</a>.</p>
+
+</div>
+</div>
+<a id="a8dce684440726e83f98f4fb1ba4e8ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dce684440726e83f98f4fb1ba4e8ceb">&#9670;&nbsp;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a87275b0b8a18d0064ef7206184cff069">SebastianBergmann\CodeCoverage\Node\AbstractNode\$name</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Html_1_1Renderer.html#a6ef13a8626f1c95e6cba63ac598b6cc4">SebastianBergmann\CodeCoverage\Report\Html\Renderer\getActiveBreadcrumb()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Html_1_1Dashboard.html#a2e6dca0435a8ecac06432f48c90c2398">SebastianBergmann\CodeCoverage\Report\Html\Dashboard\getActiveBreadcrumb()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Html_1_1Renderer.html#ab4a4752b859f116177fcea53c422b4c7">SebastianBergmann\CodeCoverage\Report\Html\Renderer\getInactiveBreadcrumb()</a>.</p>
+
+</div>
+</div>
+<a id="a488bace519f34ac96128295e0c2a3d98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a488bace519f34ac96128295e0c2a3d98">&#9670;&nbsp;</a></span>getNumClasses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumClasses </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of classes. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#a9a8c320a2bfca6c9d9aec5cc96441132">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#aa00b4068fb297e23fd8643a7be2c25eb">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a42d8c4097c5ba1a9fb19233ed05d5e26">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumClassesAndTraits()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a6d76f9d9a5b81e551036f31b1f272339">SebastianBergmann\CodeCoverage\Node\AbstractNode\getTestedClassesPercent()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Xml_1_1Facade.html#a6f4e8f430eb5a69cb16e6c93003a4c52">SebastianBergmann\CodeCoverage\Report\Xml\Facade\setTotals()</a>.</p>
+
+</div>
+</div>
+<a id="a42d8c4097c5ba1a9fb19233ed05d5e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d8c4097c5ba1a9fb19233ed05d5e26">&#9670;&nbsp;</a></span>getNumClassesAndTraits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumClassesAndTraits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the number of classes and traits. </p>
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a488bace519f34ac96128295e0c2a3d98">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumClasses()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a4fca109a44ad797d29bb266467a7e5f9">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTraits()</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a446229d9059a2471bfeb49e78756ccf7">SebastianBergmann\CodeCoverage\Node\AbstractNode\getTestedClassesAndTraitsPercent()</a>.</p>
+
+</div>
+</div>
+<a id="a90f2b85f08845d7fa6ee6cda51185bcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90f2b85f08845d7fa6ee6cda51185bcf">&#9670;&nbsp;</a></span>getNumExecutableLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumExecutableLines </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of executable lines. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#a3d0871536f384cfb5f0a7ed7bdbed140">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#afc3f75f571791ab6b9f9e8a8c77ed76a">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ae6d89548793018caa50d91aa1e0ce1e9">SebastianBergmann\CodeCoverage\Node\AbstractNode\getLineExecutedPercent()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Xml_1_1Facade.html#a6f4e8f430eb5a69cb16e6c93003a4c52">SebastianBergmann\CodeCoverage\Report\Xml\Facade\setTotals()</a>.</p>
+
+</div>
+</div>
+<a id="a3a869e7dc13e80281b6c12f538660ff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a869e7dc13e80281b6c12f538660ff5">&#9670;&nbsp;</a></span>getNumExecutedLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumExecutedLines </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of executed lines. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#aa361e35df6dc24f51bdcc88e9cb46eb0">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#a6a029c7597cb0825a6192ef4fbc9da84">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ae6d89548793018caa50d91aa1e0ce1e9">SebastianBergmann\CodeCoverage\Node\AbstractNode\getLineExecutedPercent()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Xml_1_1Facade.html#a6f4e8f430eb5a69cb16e6c93003a4c52">SebastianBergmann\CodeCoverage\Report\Xml\Facade\setTotals()</a>.</p>
+
+</div>
+</div>
+<a id="a7cae0e39467760c23a2aad8e893cc960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cae0e39467760c23a2aad8e893cc960">&#9670;&nbsp;</a></span>getNumFunctions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumFunctions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of functions. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#a9de68c0849b6e56f1e355777134201d6">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#aa8aa69275e37d7cf48bd75864b3892d3">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#afdf355dac48cf3048c28b76e23162cdd">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumFunctionsAndMethods()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ab7424e0be6866b845cec68b5dfda5e40">SebastianBergmann\CodeCoverage\Node\AbstractNode\getTestedFunctionsPercent()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Xml_1_1Facade.html#a6f4e8f430eb5a69cb16e6c93003a4c52">SebastianBergmann\CodeCoverage\Report\Xml\Facade\setTotals()</a>.</p>
+
+</div>
+</div>
+<a id="afdf355dac48cf3048c28b76e23162cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdf355dac48cf3048c28b76e23162cdd">&#9670;&nbsp;</a></span>getNumFunctionsAndMethods()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumFunctionsAndMethods </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the number of functions and methods. </p>
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a7cae0e39467760c23a2aad8e893cc960">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumFunctions()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ac6cb1e312a8b031a9dfc93b93645ee23">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumMethods()</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a63e1594b21bface2fa92c2e4499e2969">SebastianBergmann\CodeCoverage\Node\AbstractNode\getTestedFunctionsAndMethodsPercent()</a>.</p>
+
+</div>
+</div>
+<a id="ac6cb1e312a8b031a9dfc93b93645ee23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6cb1e312a8b031a9dfc93b93645ee23">&#9670;&nbsp;</a></span>getNumMethods()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumMethods </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of methods. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#a466e0e3ca76ce06ecb5307091f42cb0c">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#a50a28703567577cf8a9fb3002d24b08b">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#afdf355dac48cf3048c28b76e23162cdd">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumFunctionsAndMethods()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ac26adf7fae46ac14249fc16bfe57ea4e">SebastianBergmann\CodeCoverage\Node\AbstractNode\getTestedMethodsPercent()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Xml_1_1Facade.html#a6f4e8f430eb5a69cb16e6c93003a4c52">SebastianBergmann\CodeCoverage\Report\Xml\Facade\setTotals()</a>.</p>
+
+</div>
+</div>
+<a id="a7dbb4f4fc89b1ee861a7c12d8199fb74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dbb4f4fc89b1ee861a7c12d8199fb74">&#9670;&nbsp;</a></span>getNumTestedClasses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumTestedClasses </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of tested classes. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#a8b54ef06b6cc9c821b9ce31ae6ede0d2">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#a8aecf28f8cb4ccadf5d9cfc0b67b6a9e">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a9b9e299fe7083c6c330d81e3ff2a82c7">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedClassesAndTraits()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a6d76f9d9a5b81e551036f31b1f272339">SebastianBergmann\CodeCoverage\Node\AbstractNode\getTestedClassesPercent()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Xml_1_1Facade.html#a6f4e8f430eb5a69cb16e6c93003a4c52">SebastianBergmann\CodeCoverage\Report\Xml\Facade\setTotals()</a>.</p>
+
+</div>
+</div>
+<a id="a9b9e299fe7083c6c330d81e3ff2a82c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b9e299fe7083c6c330d81e3ff2a82c7">&#9670;&nbsp;</a></span>getNumTestedClassesAndTraits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumTestedClassesAndTraits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the number of tested classes and traits. </p>
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a7dbb4f4fc89b1ee861a7c12d8199fb74">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedClasses()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#afe1260f064e46af49a0d8454ea796e35">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedTraits()</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a446229d9059a2471bfeb49e78756ccf7">SebastianBergmann\CodeCoverage\Node\AbstractNode\getTestedClassesAndTraitsPercent()</a>.</p>
+
+</div>
+</div>
+<a id="ae14fd7a14cce03c3ee67a5c8831303d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae14fd7a14cce03c3ee67a5c8831303d3">&#9670;&nbsp;</a></span>getNumTestedFunctions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumTestedFunctions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of tested functions. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#af1601a61b8df28126ab9b6fa6000e2cc">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#ae577b153f8519d54664526f37ac39ccd">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a8591fca7d1cc5ed3001f7495d872db99">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedFunctionsAndMethods()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ab7424e0be6866b845cec68b5dfda5e40">SebastianBergmann\CodeCoverage\Node\AbstractNode\getTestedFunctionsPercent()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Xml_1_1Facade.html#a6f4e8f430eb5a69cb16e6c93003a4c52">SebastianBergmann\CodeCoverage\Report\Xml\Facade\setTotals()</a>.</p>
+
+</div>
+</div>
+<a id="a8591fca7d1cc5ed3001f7495d872db99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8591fca7d1cc5ed3001f7495d872db99">&#9670;&nbsp;</a></span>getNumTestedFunctionsAndMethods()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumTestedFunctionsAndMethods </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the number of tested functions and methods. </p>
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ae14fd7a14cce03c3ee67a5c8831303d3">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedFunctions()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ae7b066b649aa1374c410e49421345315">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedMethods()</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a63e1594b21bface2fa92c2e4499e2969">SebastianBergmann\CodeCoverage\Node\AbstractNode\getTestedFunctionsAndMethodsPercent()</a>.</p>
+
+</div>
+</div>
+<a id="ae7b066b649aa1374c410e49421345315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7b066b649aa1374c410e49421345315">&#9670;&nbsp;</a></span>getNumTestedMethods()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumTestedMethods </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of tested methods. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#a49b4bf478b16456f10b4daed8413f8b3">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#aa3866e4d8a8c8d0efd810ace097e332f">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a8591fca7d1cc5ed3001f7495d872db99">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedFunctionsAndMethods()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ac26adf7fae46ac14249fc16bfe57ea4e">SebastianBergmann\CodeCoverage\Node\AbstractNode\getTestedMethodsPercent()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Xml_1_1Facade.html#a6f4e8f430eb5a69cb16e6c93003a4c52">SebastianBergmann\CodeCoverage\Report\Xml\Facade\setTotals()</a>.</p>
+
+</div>
+</div>
+<a id="afe1260f064e46af49a0d8454ea796e35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe1260f064e46af49a0d8454ea796e35">&#9670;&nbsp;</a></span>getNumTestedTraits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumTestedTraits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of tested traits. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#a7c3b4b8fe1ebb37bd810ded5fad4a2a1">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#ac07daceab892404c11c499c2c622c546">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a9b9e299fe7083c6c330d81e3ff2a82c7">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedClassesAndTraits()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ad0498ffdc903935f75d43fa796988518">SebastianBergmann\CodeCoverage\Node\AbstractNode\getTestedTraitsPercent()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Xml_1_1Facade.html#a6f4e8f430eb5a69cb16e6c93003a4c52">SebastianBergmann\CodeCoverage\Report\Xml\Facade\setTotals()</a>.</p>
+
+</div>
+</div>
+<a id="a4fca109a44ad797d29bb266467a7e5f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fca109a44ad797d29bb266467a7e5f9">&#9670;&nbsp;</a></span>getNumTraits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getNumTraits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of traits. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#a3ffe7df1b50ce9a2380d71f694f707c1">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#a69fec0895597d9500c428d032f120268">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a42d8c4097c5ba1a9fb19233ed05d5e26">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumClassesAndTraits()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ad0498ffdc903935f75d43fa796988518">SebastianBergmann\CodeCoverage\Node\AbstractNode\getTestedTraitsPercent()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Xml_1_1Facade.html#a6f4e8f430eb5a69cb16e6c93003a4c52">SebastianBergmann\CodeCoverage\Report\Xml\Facade\setTotals()</a>.</p>
+
+</div>
+</div>
+<a id="accad979fc676cc231cf7a35825f60344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accad979fc676cc231cf7a35825f60344">&#9670;&nbsp;</a></span>getParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getParent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ac3a81f5eb50708380760b7218d498a6a">SebastianBergmann\CodeCoverage\Node\AbstractNode\$parent</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a79b24fb3314016a97050ced6f6795a3d">SebastianBergmann\CodeCoverage\Node\AbstractNode\getId()</a>.</p>
+
+</div>
+</div>
+<a id="a936926cfc61366bd6672e71c8e1db659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a936926cfc61366bd6672e71c8e1db659">&#9670;&nbsp;</a></span>getPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a87275b0b8a18d0064ef7206184cff069">SebastianBergmann\CodeCoverage\Node\AbstractNode\$name</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a20ad1de168f5e547e883e8ffd38eb97c">SebastianBergmann\CodeCoverage\Node\AbstractNode\$path</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Builder.html#ad3c22a152dcde4b4153a701aa4eaebfc">SebastianBergmann\CodeCoverage\Node\Builder\addItems()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#a83cb765a4c24e24e5b09b25df0253dc9">SebastianBergmann\CodeCoverage\Node\File\calculateStatistics()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Html_1_1Renderer.html#a34c5a12df8d828acd950b10b46169b49">SebastianBergmann\CodeCoverage\Report\Html\Renderer\setCommonTemplateVariables()</a>.</p>
+
+</div>
+</div>
+<a id="a76440ae4707ce99fb724a66931e7e7ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76440ae4707ce99fb724a66931e7e7ef">&#9670;&nbsp;</a></span>getPathAsArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getPathAsArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#aaa993be6434be5c5f02ca0c5ef17958f">SebastianBergmann\CodeCoverage\Node\AbstractNode\$pathArray</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Report_1_1Html_1_1Renderer.html#afdd050a8a20210d877a624d2d1a738da">SebastianBergmann\CodeCoverage\Report\Html\Renderer\getBreadcrumbs()</a>.</p>
+
+</div>
+</div>
+<a id="a446229d9059a2471bfeb49e78756ccf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a446229d9059a2471bfeb49e78756ccf7">&#9670;&nbsp;</a></span>getTestedClassesAndTraitsPercent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getTestedClassesAndTraitsPercent </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>$asString</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the percentage of classes and traits that has been tested.</p>
+<dl class="section return"><dt>Retorna</dt><dd>int|string </dd></dl>
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Percentage.html#a7db7a19ca408bdd76aadf2ab4e66602a">SebastianBergmann\CodeCoverage\Percentage\fromFractionAndTotal()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a42d8c4097c5ba1a9fb19233ed05d5e26">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumClassesAndTraits()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a9b9e299fe7083c6c330d81e3ff2a82c7">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedClassesAndTraits()</a>.</p>
+
+</div>
+</div>
+<a id="a6d76f9d9a5b81e551036f31b1f272339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d76f9d9a5b81e551036f31b1f272339">&#9670;&nbsp;</a></span>getTestedClassesPercent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getTestedClassesPercent </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>$asString</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the percentage of classes that has been tested.</p>
+<dl class="section return"><dt>Retorna</dt><dd>int|string </dd></dl>
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Percentage.html#a7db7a19ca408bdd76aadf2ab4e66602a">SebastianBergmann\CodeCoverage\Percentage\fromFractionAndTotal()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a488bace519f34ac96128295e0c2a3d98">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumClasses()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a7dbb4f4fc89b1ee861a7c12d8199fb74">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedClasses()</a>.</p>
+
+</div>
+</div>
+<a id="a63e1594b21bface2fa92c2e4499e2969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63e1594b21bface2fa92c2e4499e2969">&#9670;&nbsp;</a></span>getTestedFunctionsAndMethodsPercent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getTestedFunctionsAndMethodsPercent </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>$asString</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the percentage of functions and methods that has been tested.</p>
+<dl class="section return"><dt>Retorna</dt><dd>int|string </dd></dl>
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Percentage.html#a7db7a19ca408bdd76aadf2ab4e66602a">SebastianBergmann\CodeCoverage\Percentage\fromFractionAndTotal()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#afdf355dac48cf3048c28b76e23162cdd">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumFunctionsAndMethods()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a8591fca7d1cc5ed3001f7495d872db99">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedFunctionsAndMethods()</a>.</p>
+
+</div>
+</div>
+<a id="ab7424e0be6866b845cec68b5dfda5e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7424e0be6866b845cec68b5dfda5e40">&#9670;&nbsp;</a></span>getTestedFunctionsPercent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getTestedFunctionsPercent </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>$asString</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the percentage of functions that has been tested.</p>
+<dl class="section return"><dt>Retorna</dt><dd>int|string </dd></dl>
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Percentage.html#a7db7a19ca408bdd76aadf2ab4e66602a">SebastianBergmann\CodeCoverage\Percentage\fromFractionAndTotal()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a7cae0e39467760c23a2aad8e893cc960">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumFunctions()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ae14fd7a14cce03c3ee67a5c8831303d3">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedFunctions()</a>.</p>
+
+</div>
+</div>
+<a id="ac26adf7fae46ac14249fc16bfe57ea4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac26adf7fae46ac14249fc16bfe57ea4e">&#9670;&nbsp;</a></span>getTestedMethodsPercent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getTestedMethodsPercent </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>$asString</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the percentage of methods that has been tested.</p>
+<dl class="section return"><dt>Retorna</dt><dd>int|string </dd></dl>
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Percentage.html#a7db7a19ca408bdd76aadf2ab4e66602a">SebastianBergmann\CodeCoverage\Percentage\fromFractionAndTotal()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ac6cb1e312a8b031a9dfc93b93645ee23">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumMethods()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#ae7b066b649aa1374c410e49421345315">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedMethods()</a>.</p>
+
+</div>
+</div>
+<a id="ad0498ffdc903935f75d43fa796988518"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0498ffdc903935f75d43fa796988518">&#9670;&nbsp;</a></span>getTestedTraitsPercent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getTestedTraitsPercent </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>$asString</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the percentage of traits that has been tested.</p>
+<dl class="section return"><dt>Retorna</dt><dd>int|string </dd></dl>
+
+<p class="reference">Referencias <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Percentage.html#a7db7a19ca408bdd76aadf2ab4e66602a">SebastianBergmann\CodeCoverage\Percentage\fromFractionAndTotal()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#afe1260f064e46af49a0d8454ea796e35">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTestedTraits()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a4fca109a44ad797d29bb266467a7e5f9">SebastianBergmann\CodeCoverage\Node\AbstractNode\getNumTraits()</a>.</p>
+
+</div>
+</div>
+<a id="a16260718c7f0abcc646455c44c4052b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16260718c7f0abcc646455c44c4052b3">&#9670;&nbsp;</a></span>getTraits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::getTraits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the traits of this node. </p>
+
+<p>Reimplementado por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#adb4305ece60d60e5032acd2f297e8afb">SebastianBergmann\CodeCoverage\Node\Directory</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#a750e027251527e6ae7bbd218b11fa910">SebastianBergmann\CodeCoverage\Node\File</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a08b61250aeb5779d88a42f74fc700387">SebastianBergmann\CodeCoverage\Node\AbstractNode\getClassesAndTraits()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Atributos</h2>
+<a id="aea5e9a806896b0f0f04ddfdefda3627e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea5e9a806896b0f0f04ddfdefda3627e">&#9670;&nbsp;</a></span>$id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::$id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a79b24fb3314016a97050ced6f6795a3d">SebastianBergmann\CodeCoverage\Node\AbstractNode\getId()</a>.</p>
+
+</div>
+</div>
+<a id="a87275b0b8a18d0064ef7206184cff069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87275b0b8a18d0064ef7206184cff069">&#9670;&nbsp;</a></span>$name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::$name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a5cde3dfcd5db2070b00d56b207728978">SebastianBergmann\CodeCoverage\Node\AbstractNode\__construct()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#a21fe4a73d364f3b12934e9428a766e85">SebastianBergmann\CodeCoverage\Node\File\__construct()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#a0bf6d2e88f4ca2ca082b72b51612d971">SebastianBergmann\CodeCoverage\Node\Directory\addDirectory()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1Directory.html#afba1fcbf5ad5271402a00d16166adaa3">SebastianBergmann\CodeCoverage\Node\Directory\addFile()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a79b24fb3314016a97050ced6f6795a3d">SebastianBergmann\CodeCoverage\Node\AbstractNode\getId()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a8dce684440726e83f98f4fb1ba4e8ceb">SebastianBergmann\CodeCoverage\Node\AbstractNode\getName()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a936926cfc61366bd6672e71c8e1db659">SebastianBergmann\CodeCoverage\Node\AbstractNode\getPath()</a>.</p>
+
+</div>
+</div>
+<a id="ac3a81f5eb50708380760b7218d498a6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3a81f5eb50708380760b7218d498a6a">&#9670;&nbsp;</a></span>$parent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::$parent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a5cde3dfcd5db2070b00d56b207728978">SebastianBergmann\CodeCoverage\Node\AbstractNode\__construct()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1File.html#a21fe4a73d364f3b12934e9428a766e85">SebastianBergmann\CodeCoverage\Node\File\__construct()</a>, <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a79b24fb3314016a97050ced6f6795a3d">SebastianBergmann\CodeCoverage\Node\AbstractNode\getId()</a> e <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#accad979fc676cc231cf7a35825f60344">SebastianBergmann\CodeCoverage\Node\AbstractNode\getParent()</a>.</p>
+
+</div>
+</div>
+<a id="a20ad1de168f5e547e883e8ffd38eb97c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ad1de168f5e547e883e8ffd38eb97c">&#9670;&nbsp;</a></span>$path</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::$path</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a936926cfc61366bd6672e71c8e1db659">SebastianBergmann\CodeCoverage\Node\AbstractNode\getPath()</a>.</p>
+
+</div>
+</div>
+<a id="aaa993be6434be5c5f02ca0c5ef17958f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa993be6434be5c5f02ca0c5ef17958f">&#9670;&nbsp;</a></span>$pathArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SebastianBergmann\CodeCoverage\Node\AbstractNode::$pathArray</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html#a76440ae4707ce99fb724a66931e7e7ef">SebastianBergmann\CodeCoverage\Node\AbstractNode\getPathAsArray()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<li>vendor/phpunit/php-code-coverage/src/Node/<a class="el" href="AbstractNode_8php.html">AbstractNode.php</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceSebastianBergmann.html">SebastianBergmann</a></li><li class="navelem"><a class="el" href="namespaceSebastianBergmann_1_1CodeCoverage.html">CodeCoverage</a></li><li class="navelem"><a class="el" href="namespaceSebastianBergmann_1_1CodeCoverage_1_1Node.html">Node</a></li><li class="navelem"><a class="el" href="classSebastianBergmann_1_1CodeCoverage_1_1Node_1_1AbstractNode.html">AbstractNode</a></li>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<map id="SebastianBergmann\Diff\Output\DiffOutputBuilderInterface" name="SebastianBergmann\Diff\Output\DiffOutputBuilderInterface">
+<area shape="rect" id="node1" title=" " alt="" coords="275,5,520,97"/>
+<area shape="rect" id="node2" href="$classSebastianBergmann_1_1Diff_1_1Output_1_1AbstractChunkOutputBuilder.html" title=" " alt="" coords="5,219,264,311"/>
+<area shape="rect" id="node4" href="$classSebastianBergmann_1_1Diff_1_1Output_1_1DiffOnlyOutputBuilder.html" title=" " alt="" coords="289,211,506,318"/>
+<area shape="rect" id="node5" href="$classSebastianBergmann_1_1Diff_1_1Output_1_1StrictUnifiedDiffOutputBuilder.html" title=" " alt="" coords="531,145,752,384"/>
+<area shape="rect" id="node3" href="$classSebastianBergmann_1_1Diff_1_1Output_1_1UnifiedDiffOutputBuilder.html" title=" " alt="" coords="18,432,251,612"/>
+</map>

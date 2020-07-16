@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bear API: Referência da Classe PHPUnit\Runner\BaseTestRunner</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bear API
+   </div>
+   <div id="projectbrief">Um manipulador de dados tabulares inspirados no Pandas/Python e no R.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classPHPUnit_1_1Runner_1_1BaseTestRunner.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#pub-attribs">Atributos Públicos</a> &#124;
+<a href="#pro-methods">Membros Protegidos</a> &#124;
+<a href="classPHPUnit_1_1Runner_1_1BaseTestRunner-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência da Classe PHPUnit\Runner\BaseTestRunner</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Diagrama de hierarquia para PHPUnit\Runner\BaseTestRunner:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classPHPUnit_1_1Runner_1_1BaseTestRunner__inherit__graph.png" border="0" usemap="#PHPUnit_0cRunner_0cBaseTestRunner_inherit__map" alt="Inheritance graph"/></div>
+<map name="PHPUnit_0cRunner_0cBaseTestRunner_inherit__map" id="PHPUnit_0cRunner_0cBaseTestRunner_inherit__map">
+<area shape="rect" title=" " alt="" coords="27,5,260,244"/>
+<area shape="rect" href="classPHPUnit_1_1TextUI_1_1TestRunner.html" title=" " alt="" coords="5,292,281,707"/>
+</map>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Diagrama de colaboração para PHPUnit\Runner\BaseTestRunner:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classPHPUnit_1_1Runner_1_1BaseTestRunner__coll__graph.png" border="0" usemap="#PHPUnit_0cRunner_0cBaseTestRunner_coll__map" alt="Collaboration graph"/></div>
+<map name="PHPUnit_0cRunner_0cBaseTestRunner_coll__map" id="PHPUnit_0cRunner_0cBaseTestRunner_coll__map">
+<area shape="rect" title=" " alt="" coords="5,263,239,384"/>
+<area shape="rect" title=" " alt="" coords="93,5,151,83"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:abdd909453bded3ee053d66964a2816e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#abdd909453bded3ee053d66964a2816e6">getLoader</a> ()</td></tr>
+<tr class="separator:abdd909453bded3ee053d66964a2816e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atributos Públicos</h2></td></tr>
+<tr class="memitem:ab82f4e7316e4051bddaff1e9e29be961"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#ab82f4e7316e4051bddaff1e9e29be961">STATUS_UNKNOWN</a> = -1</td></tr>
+<tr class="separator:ab82f4e7316e4051bddaff1e9e29be961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abedd16951dcc47a9793dde2aef6d3084"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#abedd16951dcc47a9793dde2aef6d3084">STATUS_PASSED</a> = 0</td></tr>
+<tr class="separator:abedd16951dcc47a9793dde2aef6d3084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c3eb2b679a1502831788a673a119454"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#a3c3eb2b679a1502831788a673a119454">STATUS_SKIPPED</a> = 1</td></tr>
+<tr class="separator:a3c3eb2b679a1502831788a673a119454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3a7ff09dbba34d7e5c7d909a87db67c"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#ad3a7ff09dbba34d7e5c7d909a87db67c">STATUS_INCOMPLETE</a> = 2</td></tr>
+<tr class="separator:ad3a7ff09dbba34d7e5c7d909a87db67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab79e7e55320df3fe040777186aa2c255"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#ab79e7e55320df3fe040777186aa2c255">STATUS_FAILURE</a> = 3</td></tr>
+<tr class="separator:ab79e7e55320df3fe040777186aa2c255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc4bce01bfdc3e47cfc1a94b41ef8cb"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#a4bc4bce01bfdc3e47cfc1a94b41ef8cb">STATUS_ERROR</a> = 4</td></tr>
+<tr class="separator:a4bc4bce01bfdc3e47cfc1a94b41ef8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4d61efc49640b0dc1462765055f753"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#a0e4d61efc49640b0dc1462765055f753">STATUS_RISKY</a> = 5</td></tr>
+<tr class="separator:a0e4d61efc49640b0dc1462765055f753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab865aefdcad423207aad93b55b82ef"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#aeab865aefdcad423207aad93b55b82ef">STATUS_WARNING</a> = 6</td></tr>
+<tr class="separator:aeab865aefdcad423207aad93b55b82ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3371616b24a476a64e4e9fda2d0717a"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#ad3371616b24a476a64e4e9fda2d0717a">SUITE_METHODNAME</a> = 'suite'</td></tr>
+<tr class="separator:ad3371616b24a476a64e4e9fda2d0717a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Membros Protegidos</h2></td></tr>
+<tr class="memitem:a198413d2853ab1852cfbf489ce38f2cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#a198413d2853ab1852cfbf489ce38f2cd">loadSuiteClass</a> (string $suiteClassFile)</td></tr>
+<tr class="separator:a198413d2853ab1852cfbf489ce38f2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a233e58cad31c7d6d932906ff9768cf1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#a233e58cad31c7d6d932906ff9768cf1d">clearStatus</a> ()</td></tr>
+<tr class="separator:a233e58cad31c7d6d932906ff9768cf1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e1b33f24ac46723060791775f1d40b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#a1e1b33f24ac46723060791775f1d40b3">runFailed</a> (string $message)</td></tr>
+<tr class="separator:a1e1b33f24ac46723060791775f1d40b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a233e58cad31c7d6d932906ff9768cf1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a233e58cad31c7d6d932906ff9768cf1d">&#9670;&nbsp;</a></span>clearStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PHPUnit\Runner\BaseTestRunner::clearStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Clears the status message. </p>
+
+</div>
+</div>
+<a id="abdd909453bded3ee053d66964a2816e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd909453bded3ee053d66964a2816e6">&#9670;&nbsp;</a></span>getLoader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PHPUnit\Runner\BaseTestRunner::getLoader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the loader to be used. </p>
+
+<p>Reimplementado por <a class="el" href="classPHPUnit_1_1TextUI_1_1TestRunner.html#a068cddc4b7c0ff7872171848d58b2228">PHPUnit\TextUI\TestRunner</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#a198413d2853ab1852cfbf489ce38f2cd">PHPUnit\Runner\BaseTestRunner\loadSuiteClass()</a>.</p>
+
+</div>
+</div>
+<a id="a198413d2853ab1852cfbf489ce38f2cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a198413d2853ab1852cfbf489ce38f2cd">&#9670;&nbsp;</a></span>loadSuiteClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PHPUnit\Runner\BaseTestRunner::loadSuiteClass </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$suiteClassFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the loaded ReflectionClass for a suite name. </p>
+
+<p class="reference">Referencias <a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html#abdd909453bded3ee053d66964a2816e6">PHPUnit\Runner\BaseTestRunner\getLoader()</a>.</p>
+
+</div>
+</div>
+<a id="a1e1b33f24ac46723060791775f1d40b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1b33f24ac46723060791775f1d40b3">&#9670;&nbsp;</a></span>runFailed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PHPUnit\Runner\BaseTestRunner::runFailed </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Override to define how to handle a failed loading of a test suite. </p>
+
+<p>Reimplementado por <a class="el" href="classPHPUnit_1_1TextUI_1_1TestRunner.html#a21833c9de5013865522360f76d93ecce">PHPUnit\TextUI\TestRunner</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Atributos</h2>
+<a id="a4bc4bce01bfdc3e47cfc1a94b41ef8cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc4bce01bfdc3e47cfc1a94b41ef8cb">&#9670;&nbsp;</a></span>STATUS_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PHPUnit\Runner\BaseTestRunner::STATUS_ERROR = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1TestDoxPrinter.html#a1dacfb3824f3c9d56c822706d4f6862a">PHPUnit\Util\TestDox\TestDoxPrinter\addError()</a>, <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1ResultPrinter.html#a10ac998f11c5b3ba70fbe34e9f901802">PHPUnit\Util\TestDox\ResultPrinter\addError()</a>, <a class="el" href="classPHPUnit_1_1Runner_1_1ResultCacheExtension.html#a341509a2da0832d9ee4de76fb01921c4">PHPUnit\Runner\ResultCacheExtension\executeAfterTestError()</a>, <a class="el" href="classPHPUnit_1_1Framework_1_1TestCase.html#a46c8ea618fdf84ecb310dd577e9550ee">PHPUnit\Framework\TestCase\hasFailed()</a> e <a class="el" href="classPHPUnit_1_1Framework_1_1TestCase.html#a15bcc84c258876db0f6971f978a49974">PHPUnit\Framework\TestCase\runBare()</a>.</p>
+
+</div>
+</div>
+<a id="ab79e7e55320df3fe040777186aa2c255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab79e7e55320df3fe040777186aa2c255">&#9670;&nbsp;</a></span>STATUS_FAILURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PHPUnit\Runner\BaseTestRunner::STATUS_FAILURE = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1TestDoxPrinter.html#abbcbfe1851a3882f8dad2e759dc7908c">PHPUnit\Util\TestDox\TestDoxPrinter\addFailure()</a>, <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1ResultPrinter.html#ae8d82dedb1f8700a03c30ba207de867b">PHPUnit\Util\TestDox\ResultPrinter\addFailure()</a>, <a class="el" href="classPHPUnit_1_1Runner_1_1ResultCacheExtension.html#a1fe0bd7b7264eed751b38a7df8178bdd">PHPUnit\Runner\ResultCacheExtension\executeAfterTestFailure()</a>, <a class="el" href="classPHPUnit_1_1Framework_1_1TestCase.html#a46c8ea618fdf84ecb310dd577e9550ee">PHPUnit\Framework\TestCase\hasFailed()</a> e <a class="el" href="classPHPUnit_1_1Framework_1_1TestCase.html#a15bcc84c258876db0f6971f978a49974">PHPUnit\Framework\TestCase\runBare()</a>.</p>
+
+</div>
+</div>
+<a id="ad3a7ff09dbba34d7e5c7d909a87db67c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3a7ff09dbba34d7e5c7d909a87db67c">&#9670;&nbsp;</a></span>STATUS_INCOMPLETE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PHPUnit\Runner\BaseTestRunner::STATUS_INCOMPLETE = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1TestDoxPrinter.html#a4bd2e7adebd32edb4d50032bfb743247">PHPUnit\Util\TestDox\TestDoxPrinter\addIncompleteTest()</a>, <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1ResultPrinter.html#aee8c52a1a387618913edf9465674b997">PHPUnit\Util\TestDox\ResultPrinter\addIncompleteTest()</a>, <a class="el" href="classPHPUnit_1_1Runner_1_1ResultCacheExtension.html#a9c065b059516fd87b0c3f8c0976d1fee">PHPUnit\Runner\ResultCacheExtension\executeAfterIncompleteTest()</a> e <a class="el" href="classPHPUnit_1_1Framework_1_1TestCase.html#a15bcc84c258876db0f6971f978a49974">PHPUnit\Framework\TestCase\runBare()</a>.</p>
+
+</div>
+</div>
+<a id="abedd16951dcc47a9793dde2aef6d3084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abedd16951dcc47a9793dde2aef6d3084">&#9670;&nbsp;</a></span>STATUS_PASSED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PHPUnit\Runner\BaseTestRunner::STATUS_PASSED = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1ResultPrinter.html#a4055ee7aa6e724726adb96a5cf1a5a72">PHPUnit\Util\TestDox\ResultPrinter\doEndClass()</a>, <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1TestDoxPrinter.html#aa3e9d107ad293453f0d035c48c04193b">PHPUnit\Util\TestDox\TestDoxPrinter\endTest()</a>, <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1CliTestDoxPrinter.html#abc5a889980c1175e92c5474f5a8dd933">PHPUnit\Util\TestDox\CliTestDoxPrinter\registerTestResult()</a>, <a class="el" href="classPHPUnit_1_1Framework_1_1TestCase.html#a15bcc84c258876db0f6971f978a49974">PHPUnit\Framework\TestCase\runBare()</a>, <a class="el" href="classPHPUnit_1_1Runner_1_1DefaultTestResultCache.html#a8e15428832c1fd937af2ee3530107d05">PHPUnit\Runner\DefaultTestResultCache\setState()</a>, <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1ResultPrinter.html#ab184f75b42b7b19083bf560adb13f7cf">PHPUnit\Util\TestDox\ResultPrinter\startTest()</a> e <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1TestDoxPrinter.html#a0cb0b5d7ea4a25b3438d7d55fb489f95">PHPUnit\Util\TestDox\TestDoxPrinter\testHasPassed()</a>.</p>
+
+</div>
+</div>
+<a id="a0e4d61efc49640b0dc1462765055f753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e4d61efc49640b0dc1462765055f753">&#9670;&nbsp;</a></span>STATUS_RISKY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PHPUnit\Runner\BaseTestRunner::STATUS_RISKY = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1TestDoxPrinter.html#a6240bdabd770bcfc30f700920ad923a4">PHPUnit\Util\TestDox\TestDoxPrinter\addRiskyTest()</a>, <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1ResultPrinter.html#a33675bd560cd44bd6ad1af90959bfe60">PHPUnit\Util\TestDox\ResultPrinter\addRiskyTest()</a>, <a class="el" href="classPHPUnit_1_1Runner_1_1ResultCacheExtension.html#a74627775a0a885d3828f3daf68e13106">PHPUnit\Runner\ResultCacheExtension\executeAfterRiskyTest()</a> e <a class="el" href="classPHPUnit_1_1Framework_1_1TestCase.html#aa1c8967de50be5f5cad9116434fd44aa">PHPUnit\Framework\TestCase\markAsRisky()</a>.</p>
+
+</div>
+</div>
+<a id="a3c3eb2b679a1502831788a673a119454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c3eb2b679a1502831788a673a119454">&#9670;&nbsp;</a></span>STATUS_SKIPPED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PHPUnit\Runner\BaseTestRunner::STATUS_SKIPPED = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1TestDoxPrinter.html#aaa028b798dad9a110c6153b64fd87eca">PHPUnit\Util\TestDox\TestDoxPrinter\addSkippedTest()</a>, <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1ResultPrinter.html#a5e5b04023dc02513077333fb0b6e4d75">PHPUnit\Util\TestDox\ResultPrinter\addSkippedTest()</a>, <a class="el" href="classPHPUnit_1_1Runner_1_1ResultCacheExtension.html#ac2a3f082b51f1e3db6ae32bc5dafa345">PHPUnit\Runner\ResultCacheExtension\executeAfterSkippedTest()</a>, <a class="el" href="classPHPUnit_1_1Framework_1_1TestCase.html#a44a455ab2cc4a7e046163a15b357b12d">PHPUnit\Framework\TestCase\markSkippedForMissingDependency()</a>, <a class="el" href="classPHPUnit_1_1Framework_1_1TestCase.html#aaa6413d5f50e30d15c610afc5dc11262">PHPUnit\Framework\TestCase\markSkippedForNotSpecifyingDependency()</a> e <a class="el" href="classPHPUnit_1_1Framework_1_1TestCase.html#a15bcc84c258876db0f6971f978a49974">PHPUnit\Framework\TestCase\runBare()</a>.</p>
+
+</div>
+</div>
+<a id="ab82f4e7316e4051bddaff1e9e29be961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab82f4e7316e4051bddaff1e9e29be961">&#9670;&nbsp;</a></span>STATUS_UNKNOWN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PHPUnit\Runner\BaseTestRunner::STATUS_UNKNOWN = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPHPUnit_1_1Runner_1_1NullTestResultCache.html#a2b52be4097a223b29b3f50821d5136cc">PHPUnit\Runner\NullTestResultCache\getState()</a> e <a class="el" href="classPHPUnit_1_1Runner_1_1DefaultTestResultCache.html#ab4854d3a9a45005499c2dfc2df3b3179">PHPUnit\Runner\DefaultTestResultCache\getState()</a>.</p>
+
+</div>
+</div>
+<a id="aeab865aefdcad423207aad93b55b82ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeab865aefdcad423207aad93b55b82ef">&#9670;&nbsp;</a></span>STATUS_WARNING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PHPUnit\Runner\BaseTestRunner::STATUS_WARNING = 6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1TestDoxPrinter.html#a8cb0261fca8c6ea2e8f0d8ce965dfa7e">PHPUnit\Util\TestDox\TestDoxPrinter\addWarning()</a>, <a class="el" href="classPHPUnit_1_1Util_1_1TestDox_1_1ResultPrinter.html#a75cddaebcfaf45af505d43a74ff4d03c">PHPUnit\Util\TestDox\ResultPrinter\addWarning()</a>, <a class="el" href="classPHPUnit_1_1Runner_1_1ResultCacheExtension.html#a849d41ea57b67dfede89dd95fb7690a0">PHPUnit\Runner\ResultCacheExtension\executeAfterTestWarning()</a>, <a class="el" href="classPHPUnit_1_1Framework_1_1TestCase.html#a15bcc84c258876db0f6971f978a49974">PHPUnit\Framework\TestCase\runBare()</a> e <a class="el" href="classPHPUnit_1_1Framework_1_1TestCase.html#a309bf197e63c4a01c9a8f2ffa660e7e9">PHPUnit\Framework\TestCase\warnAboutDependencyThatDoesNotExist()</a>.</p>
+
+</div>
+</div>
+<a id="ad3371616b24a476a64e4e9fda2d0717a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3371616b24a476a64e4e9fda2d0717a">&#9670;&nbsp;</a></span>SUITE_METHODNAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PHPUnit\Runner\BaseTestRunner::SUITE_METHODNAME = 'suite'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classPHPUnit_1_1Framework_1_1TestSuite.html#a9fe5c09889bc7ad1538509b067cf0c1f">PHPUnit\Framework\TestSuite\addTestFile()</a> e <a class="el" href="classPHPUnit_1_1Framework_1_1TestSuite.html#aa542cccc3fb7d99314398545cb6cc440">PHPUnit\Framework\TestSuite\addTestSuite()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<li>vendor/phpunit/phpunit/src/Runner/<a class="el" href="BaseTestRunner_8php.html">BaseTestRunner.php</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacePHPUnit.html">PHPUnit</a></li><li class="navelem"><a class="el" href="namespacePHPUnit_1_1Runner.html">Runner</a></li><li class="navelem"><a class="el" href="classPHPUnit_1_1Runner_1_1BaseTestRunner.html">BaseTestRunner</a></li>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<map id="PHPUnit\Util\Printer" name="PHPUnit\Util\Printer">
+<area shape="rect" id="node1" title=" " alt="" coords="561,5,710,127"/>
+<area shape="rect" id="node2" href="$classPHPUnit_1_1TextUI_1_1DefaultResultPrinter.html" title=" " alt="" coords="202,175,415,927"/>
+<area shape="rect" id="node6" href="$classPHPUnit_1_1Util_1_1Log_1_1JUnit.html" title=" " alt="" coords="439,321,610,780"/>
+<area shape="rect" id="node7" href="$classPHPUnit_1_1Util_1_1TestDox_1_1ResultPrinter.html" title=" " alt="" coords="635,277,860,824"/>
+<area shape="rect" id="node10" href="$classPHPUnit_1_1Util_1_1TestDox_1_1XmlResultPrinter.html" title=" " alt="" coords="885,402,1055,699"/>
+<area shape="rect" id="node3" href="$classPHPUnit_1_1Util_1_1Log_1_1TeamCity.html" title=" " alt="" coords="5,1055,228,1441"/>
+<area shape="rect" id="node4" href="$classPHPUnit_1_1Util_1_1TestDox_1_1TestDoxPrinter.html" title=" " alt="" coords="252,975,477,1521"/>
+<area shape="rect" id="node5" href="$classPHPUnit_1_1Util_1_1TestDox_1_1CliTestDoxPrinter.html" title=" " alt="" coords="233,1569,496,1940"/>
+<area shape="rect" id="node8" href="$classPHPUnit_1_1Util_1_1TestDox_1_1HtmlResultPrinter.html" title=" " alt="" coords="612,1143,771,1353"/>
+<area shape="rect" id="node9" href="$classPHPUnit_1_1Util_1_1TestDox_1_1TextResultPrinter.html" title=" " alt="" coords="795,1180,953,1316"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="PharIo\Manifest\ManifestElement" name="PharIo\Manifest\ManifestElement">
+<area shape="rect" id="node1" title=" " alt="" coords="1064,5,1249,171"/>
+<area shape="rect" id="node2" href="$classPharIo_1_1Manifest_1_1AuthorElement.html" title=" " alt="" coords="5,241,231,333"/>
+<area shape="rect" id="node3" href="$classPharIo_1_1Manifest_1_1BundlesElement.html" title=" " alt="" coords="254,248,489,325"/>
+<area shape="rect" id="node4" href="$classPharIo_1_1Manifest_1_1ComponentElement.html" title=" " alt="" coords="513,233,715,340"/>
+<area shape="rect" id="node5" href="$classPharIo_1_1Manifest_1_1ContainsElement.html" title=" " alt="" coords="739,219,926,355"/>
+<area shape="rect" id="node6" href="$classPharIo_1_1Manifest_1_1CopyrightElement.html" title=" " alt="" coords="951,233,1141,340"/>
+<area shape="rect" id="node7" href="$classPharIo_1_1Manifest_1_1ExtElement.html" title=" " alt="" coords="1166,248,1369,325"/>
+<area shape="rect" id="node8" href="$classPharIo_1_1Manifest_1_1ExtensionElement.html" title=" " alt="" coords="1393,233,1585,340"/>
+<area shape="rect" id="node9" href="$classPharIo_1_1Manifest_1_1LicenseElement.html" title=" " alt="" coords="1609,241,1840,333"/>
+<area shape="rect" id="node10" href="$classPharIo_1_1Manifest_1_1PhpElement.html" title=" " alt="" coords="1864,233,2071,340"/>
+<area shape="rect" id="node11" href="$classPharIo_1_1Manifest_1_1RequiresElement.html" title=" " alt="" coords="2095,241,2280,333"/>
+</map>

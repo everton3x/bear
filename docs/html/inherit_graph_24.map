@@ -1,0 +1,13 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="node1" href="$classPharIo_1_1Manifest_1_1ManifestElement.html" title=" " alt="" coords="5,267,191,309"/>
+<area shape="rect" id="node2" href="$classPharIo_1_1Manifest_1_1AuthorElement.html" title=" " alt="" coords="243,5,469,32"/>
+<area shape="rect" id="node3" href="$classPharIo_1_1Manifest_1_1BundlesElement.html" title=" " alt="" coords="239,56,473,83"/>
+<area shape="rect" id="node4" href="$classPharIo_1_1Manifest_1_1ComponentElement.html" title=" " alt="" coords="255,107,457,149"/>
+<area shape="rect" id="node5" href="$classPharIo_1_1Manifest_1_1ContainsElement.html" title=" " alt="" coords="263,173,449,214"/>
+<area shape="rect" id="node6" href="$classPharIo_1_1Manifest_1_1CopyrightElement.html" title=" " alt="" coords="261,238,451,279"/>
+<area shape="rect" id="node7" href="$classPharIo_1_1Manifest_1_1ExtElement.html" title=" " alt="" coords="255,304,457,331"/>
+<area shape="rect" id="node8" href="$classPharIo_1_1Manifest_1_1ExtensionElement.html" title=" " alt="" coords="260,355,452,397"/>
+<area shape="rect" id="node9" href="$classPharIo_1_1Manifest_1_1LicenseElement.html" title=" " alt="" coords="241,421,471,448"/>
+<area shape="rect" id="node10" href="$classPharIo_1_1Manifest_1_1PhpElement.html" title=" " alt="" coords="253,472,459,499"/>
+<area shape="rect" id="node11" href="$classPharIo_1_1Manifest_1_1RequiresElement.html" title=" " alt="" coords="263,523,449,565"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="PharIo\Manifest\Exception" name="PharIo\Manifest\Exception">
+<area shape="rect" id="node1" title=" " alt="" coords="939,5,1131,83"/>
+<area shape="rect" id="node2" href="$classPharIo_1_1Manifest_1_1InvalidApplicationNameException.html" title=" " alt="" coords="5,131,251,237"/>
+<area shape="rect" id="node3" href="$classPharIo_1_1Manifest_1_1InvalidEmailException.html" title=" " alt="" coords="275,138,485,230"/>
+<area shape="rect" id="node4" href="$classPharIo_1_1Manifest_1_1InvalidUrlException.html" title=" " alt="" coords="509,138,699,230"/>
+<area shape="rect" id="node5" href="$classPharIo_1_1Manifest_1_1ManifestDocumentException.html" title=" " alt="" coords="723,138,909,230"/>
+<area shape="rect" id="node6" href="$classPharIo_1_1Manifest_1_1ManifestDocumentLoadingException.html" title=" " alt="" coords="933,131,1137,237"/>
+<area shape="rect" id="node7" href="$classPharIo_1_1Manifest_1_1ManifestDocumentMapperException.html" title=" " alt="" coords="1161,138,1364,230"/>
+<area shape="rect" id="node8" href="$classPharIo_1_1Manifest_1_1ManifestElementException.html" title=" " alt="" coords="1389,138,1574,230"/>
+<area shape="rect" id="node9" href="$classPharIo_1_1Manifest_1_1ManifestLoaderException.html" title=" " alt="" coords="1598,138,1783,230"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="node1" href="$classSebastianBergmann_1_1Comparator_1_1Comparator.html" title=" " alt="" coords="5,268,240,309"/>
+<area shape="rect" id="node2" href="$classProphecy_1_1Comparator_1_1ClosureComparator.html" title=" " alt="" coords="324,104,487,145"/>
+<area shape="rect" id="node3" href="$classSebastianBergmann_1_1Comparator_1_1ArrayComparator.html" title=" " alt="" coords="288,169,523,211"/>
+<area shape="rect" id="node10" href="$classSebastianBergmann_1_1Comparator_1_1ResourceComparator.html" title=" " alt="" coords="288,235,523,276"/>
+<area shape="rect" id="node11" href="$classSebastianBergmann_1_1Comparator_1_1ScalarComparator.html" title=" " alt="" coords="288,300,523,341"/>
+<area shape="rect" id="node14" href="$classSebastianBergmann_1_1Comparator_1_1SplObjectStorageComparator.html" title=" " alt="" coords="288,365,523,407"/>
+<area shape="rect" id="node15" href="$classSebastianBergmann_1_1Comparator_1_1TypeComparator.html" title=" " alt="" coords="288,431,523,472"/>
+<area shape="rect" id="node4" href="$classSebastianBergmann_1_1Comparator_1_1ObjectComparator.html" title=" " alt="" coords="571,169,805,211"/>
+<area shape="rect" id="node5" href="$classProphecy_1_1Comparator_1_1ProphecyComparator.html" title=" " alt="" coords="889,5,1052,47"/>
+<area shape="rect" id="node6" href="$classSebastianBergmann_1_1Comparator_1_1DateTimeComparator.html" title=" " alt="" coords="853,71,1088,112"/>
+<area shape="rect" id="node7" href="$classSebastianBergmann_1_1Comparator_1_1DOMNodeComparator.html" title=" " alt="" coords="853,136,1088,177"/>
+<area shape="rect" id="node8" href="$classSebastianBergmann_1_1Comparator_1_1ExceptionComparator.html" title=" " alt="" coords="853,201,1088,243"/>
+<area shape="rect" id="node9" href="$classSebastianBergmann_1_1Comparator_1_1MockObjectComparator.html" title=" " alt="" coords="853,267,1088,308"/>
+<area shape="rect" id="node12" href="$classSebastianBergmann_1_1Comparator_1_1NumericComparator.html" title=" " alt="" coords="571,316,805,357"/>
+<area shape="rect" id="node13" href="$classSebastianBergmann_1_1Comparator_1_1DoubleComparator.html" title=" " alt="" coords="853,332,1088,373"/>
+</map>

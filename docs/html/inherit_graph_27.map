@@ -1,0 +1,5 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="node1" href="$interfacePharIo_1_1Manifest_1_1Requirement.html" title=" " alt="" coords="5,46,217,73"/>
+<area shape="rect" id="node2" href="$classPharIo_1_1Manifest_1_1PhpExtensionRequirement.html" title=" " alt="" coords="265,5,481,47"/>
+<area shape="rect" id="node3" href="$classPharIo_1_1Manifest_1_1PhpVersionRequirement.html" title=" " alt="" coords="273,71,473,112"/>
+</map>

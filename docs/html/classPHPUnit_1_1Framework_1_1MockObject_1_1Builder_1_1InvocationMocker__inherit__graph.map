@@ -1,0 +1,9 @@
+<map id="PHPUnit\Framework\MockObject\Builder\InvocationMocker" name="PHPUnit\Framework\MockObject\Builder\InvocationMocker">
+<area shape="rect" id="node1" title=" " alt="" coords="136,837,379,1149"/>
+<area shape="rect" id="node2" href="$interfacePHPUnit_1_1Framework_1_1MockObject_1_1Builder_1_1InvocationStubber.html" title=" " alt="" coords="5,580,248,789"/>
+<area shape="rect" id="node3" href="$interfacePHPUnit_1_1Framework_1_1MockObject_1_1Builder_1_1MethodNameMatch.html" title=" " alt="" coords="273,639,506,731"/>
+<area shape="rect" id="node4" href="$interfacePHPUnit_1_1Framework_1_1MockObject_1_1Builder_1_1ParametersMatch.html" title=" " alt="" coords="273,425,506,532"/>
+<area shape="rect" id="node5" href="$interfacePHPUnit_1_1Framework_1_1MockObject_1_1Builder_1_1Match.html" title=" " alt="" coords="273,285,506,377"/>
+<area shape="rect" id="node6" href="$interfacePHPUnit_1_1Framework_1_1MockObject_1_1Builder_1_1Stub.html" title=" " alt="" coords="273,145,506,237"/>
+<area shape="rect" id="node7" href="$interfacePHPUnit_1_1Framework_1_1MockObject_1_1Builder_1_1Identity.html" title=" " alt="" coords="273,5,506,97"/>
+</map>

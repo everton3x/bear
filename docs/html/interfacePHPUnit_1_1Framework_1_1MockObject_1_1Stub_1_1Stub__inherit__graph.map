@@ -1,0 +1,13 @@
+<map id="PHPUnit\Framework\MockObject\Stub\Stub" name="PHPUnit\Framework\MockObject\Stub\Stub">
+<area shape="rect" id="node1" title=" " alt="" coords="1035,131,1268,223"/>
+<area shape="rect" id="node3" href="$interfacePHPUnit_1_1Framework_1_1MockObject_1_1MockObject.html" title=" " alt="" coords="5,278,239,399"/>
+<area shape="rect" id="node4" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Stub_1_1ConsecutiveCalls.html" title=" " alt="" coords="263,271,496,407"/>
+<area shape="rect" id="node5" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Stub_1_1Exception.html" title=" " alt="" coords="520,278,753,399"/>
+<area shape="rect" id="node6" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Stub_1_1ReturnArgument.html" title=" " alt="" coords="777,278,1011,399"/>
+<area shape="rect" id="node7" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Stub_1_1ReturnCallback.html" title=" " alt="" coords="1035,278,1268,399"/>
+<area shape="rect" id="node8" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Stub_1_1ReturnReference.html" title=" " alt="" coords="1292,278,1525,399"/>
+<area shape="rect" id="node9" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Stub_1_1ReturnSelf.html" title=" " alt="" coords="1549,285,1783,392"/>
+<area shape="rect" id="node10" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Stub_1_1ReturnStub.html" title=" " alt="" coords="1807,278,2040,399"/>
+<area shape="rect" id="node11" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Stub_1_1ReturnValueMap.html" title=" " alt="" coords="2064,278,2297,399"/>
+<area shape="rect" id="node2" href="$interfacePHPUnit_1_1Framework_1_1SelfDescribing.html" title=" " alt="" coords="1026,5,1277,83"/>
+</map>

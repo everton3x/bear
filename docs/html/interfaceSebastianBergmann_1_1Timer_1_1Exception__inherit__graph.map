@@ -1,0 +1,5 @@
+<map id="SebastianBergmann\Timer\Exception" name="SebastianBergmann\Timer\Exception">
+<area shape="rect" id="node1" title=" " alt="" coords="135,5,329,97"/>
+<area shape="rect" id="node2" href="$classSebastianBergmann_1_1Timer_1_1NoActiveTimerException.html" title=" " alt="" coords="5,153,200,245"/>
+<area shape="rect" id="node3" href="$classSebastianBergmann_1_1Timer_1_1TimeSinceStartOfRequestNotAvailableException.html" title=" " alt="" coords="225,145,501,252"/>
+</map>

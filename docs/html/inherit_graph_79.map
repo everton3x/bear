@@ -1,0 +1,16 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="node1" href="$interfacePHPUnit_1_1Runner_1_1Hook.html" title=" " alt="" coords="5,144,168,171"/>
+<area shape="rect" id="node2" href="$interfacePHPUnit_1_1Runner_1_1AfterLastTestHook.html" title=" " alt="" coords="223,30,409,72"/>
+<area shape="rect" id="node4" href="$interfacePHPUnit_1_1Runner_1_1BeforeFirstTestHook.html" title=" " alt="" coords="216,137,416,178"/>
+<area shape="rect" id="node5" href="$interfacePHPUnit_1_1Runner_1_1TestHook.html" title=" " alt="" coords="221,284,411,311"/>
+<area shape="rect" id="node3" href="$classPHPUnit_1_1Runner_1_1ResultCacheExtension.html" title=" " alt="" coords="745,212,956,253"/>
+<area shape="rect" id="node6" href="$interfacePHPUnit_1_1Runner_1_1AfterIncompleteTestHook.html" title=" " alt="" coords="464,48,697,89"/>
+<area shape="rect" id="node7" href="$interfacePHPUnit_1_1Runner_1_1AfterRiskyTestHook.html" title=" " alt="" coords="483,113,678,154"/>
+<area shape="rect" id="node8" href="$interfacePHPUnit_1_1Runner_1_1AfterSkippedTestHook.html" title=" " alt="" coords="475,178,687,220"/>
+<area shape="rect" id="node9" href="$interfacePHPUnit_1_1Runner_1_1AfterSuccessfulTestHook.html" title=" " alt="" coords="466,244,695,285"/>
+<area shape="rect" id="node10" href="$interfacePHPUnit_1_1Runner_1_1AfterTestErrorHook.html" title=" " alt="" coords="487,309,674,350"/>
+<area shape="rect" id="node11" href="$interfacePHPUnit_1_1Runner_1_1AfterTestFailureHook.html" title=" " alt="" coords="487,374,674,416"/>
+<area shape="rect" id="node12" href="$interfacePHPUnit_1_1Runner_1_1AfterTestHook.html" title=" " alt="" coords="471,440,691,467"/>
+<area shape="rect" id="node13" href="$interfacePHPUnit_1_1Runner_1_1AfterTestWarningHook.html" title=" " alt="" coords="487,492,674,533"/>
+<area shape="rect" id="node14" href="$interfacePHPUnit_1_1Runner_1_1BeforeTestHook.html" title=" " alt="" coords="465,558,697,584"/>
+</map>

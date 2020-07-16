@@ -1,0 +1,12 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="node1" href="$interfaceProphecy_1_1Doubler_1_1ClassPatch_1_1ClassPatchInterface.html" title=" " alt="" coords="5,267,216,308"/>
+<area shape="rect" id="node2" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1DisableConstructorPatch.html" title=" " alt="" coords="281,5,492,47"/>
+<area shape="rect" id="node3" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1HhvmExceptionPatch.html" title=" " alt="" coords="281,71,492,112"/>
+<area shape="rect" id="node4" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1KeywordPatch.html" title=" " alt="" coords="281,136,492,177"/>
+<area shape="rect" id="node5" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1MagicCallPatch.html" title=" " alt="" coords="281,201,492,243"/>
+<area shape="rect" id="node6" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1ProphecySubjectPatch.html" title=" " alt="" coords="281,267,492,308"/>
+<area shape="rect" id="node7" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1ReflectionClassNewInstancePatch.html" title=" " alt="" coords="264,332,509,373"/>
+<area shape="rect" id="node8" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1SplFileInfoPatch.html" title=" " alt="" coords="281,397,492,439"/>
+<area shape="rect" id="node9" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1ThrowablePatch.html" title=" " alt="" coords="281,463,492,504"/>
+<area shape="rect" id="node10" href="$classProphecy_1_1Doubler_1_1ClassPatch_1_1TraversablePatch.html" title=" " alt="" coords="281,528,492,569"/>
+</map>

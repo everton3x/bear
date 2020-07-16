@@ -1,0 +1,5 @@
+var namespacephpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Formatter =
+[
+    [ "AlignFormatter", "classphpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Formatter_1_1AlignFormatter.html", "classphpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Formatter_1_1AlignFormatter" ],
+    [ "PassthroughFormatter", "classphpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Formatter_1_1PassthroughFormatter.html", "classphpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Formatter_1_1PassthroughFormatter" ]
+];

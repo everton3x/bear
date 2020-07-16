@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bear API: Prophecy</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bear API
+   </div>
+   <div id="projectbrief">Um manipulador de dados tabulares inspirados no Pandas/Python e no R.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('md_vendor_phpspec_prophecy_README.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title"><a class="el" href="namespaceProphecy.html">Prophecy</a> </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a href="https://packagist.org/packages/phpspec/prophecy"><object type="image/svg+xml" data="https://poser.pugx.org/phpspec/prophecy/version.svg" style="pointer-events: none;">Stable release</object></a> <a href="https://travis-ci.org/phpspec/prophecy"><object type="image/svg+xml" data="https://travis-ci.org/phpspec/prophecy.svg?branch=master" style="pointer-events: none;">Build Status</object></a></p>
+<p><a class="el" href="namespaceProphecy.html">Prophecy</a> is a highly opinionated yet very powerful and flexible PHP object mocking framework. Though initially it was created to fulfil phpspec2 needs, it is flexible enough to be used inside any testing framework out there with minimal effort.</p>
+<h1><a class="anchor" id="autotoc_md98"></a>
+A simple example</h1>
+<div class="fragment"><div class="line">&lt;?php</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>UserTest <span class="keyword">extends</span> <a class="code" href="classPHPUnit_1_1Framework_1_1TestCase.html">PHPUnit\Framework\TestCase</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">private</span> $prophet;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">public</span> <span class="keyword">function</span> testPasswordHashing()</div>
+<div class="line">    {</div>
+<div class="line">        $hasher = $this-&gt;prophet-&gt;<a class="code" href="classPHPUnit_1_1Framework_1_1TestCase.html#a773425b78c6d4f55e39245e1220f70bf">prophesize</a>(<span class="stringliteral">&#39;App\Security\Hasher&#39;</span>);</div>
+<div class="line">        $user   = <span class="keyword">new</span> App\Entity\User($hasher-&gt;reveal());</div>
+<div class="line"> </div>
+<div class="line">        $hasher-&gt;generateHash($user, <span class="stringliteral">&#39;qwerty&#39;</span>)-&gt;willReturn(<span class="stringliteral">&#39;hashed_pass&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">        $user-&gt;setPassword(<span class="stringliteral">&#39;qwerty&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">        $this-&gt;<a class="code" href="namespacePHPUnit_1_1Framework.html#a679194e64affc768684be47e9ad116e9">assertEquals</a>(<span class="stringliteral">&#39;hashed_pass&#39;</span>, $user-&gt;getPassword());</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">function</span> setUp()</div>
+<div class="line">    {</div>
+<div class="line">        $this-&gt;prophet = new \Prophecy\Prophet;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">protected</span> <span class="keyword">function</span> tearDown()</div>
+<div class="line">    {</div>
+<div class="line">        $this-&gt;prophet-&gt;checkPredictions();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md99"></a>
+Installation</h1>
+<h2><a class="anchor" id="autotoc_md100"></a>
+Prerequisites</h2>
+<p><a class="el" href="namespaceProphecy.html">Prophecy</a> requires PHP 7.2.0 or greater.</p>
+<h2><a class="anchor" id="autotoc_md101"></a>
+Setup through composer</h2>
+<p>First, add <a class="el" href="namespaceProphecy.html">Prophecy</a> to the list of dependencies inside your <code>composer.json</code>:</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    &quot;require-dev&quot;: {</div>
+<div class="line">        &quot;phpspec/prophecy&quot;: &quot;~1.0&quot;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Then simply install it with composer:</p>
+<div class="fragment"><div class="line">$&gt; composer install --prefer-dist</div>
+</div><!-- fragment --><p>You can read more about <a class="el" href="namespaceComposer.html">Composer</a> on its <a href="http://getcomposer.org">official webpage</a>.</p>
+<h1><a class="anchor" id="autotoc_md102"></a>
+How to use it</h1>
+<p>First of all, in <a class="el" href="namespaceProphecy.html">Prophecy</a> every word has a logical meaning, even the name of the library itself (<a class="el" href="namespaceProphecy.html">Prophecy</a>). When you start feeling that, you'll become very fluid with this tool.</p>
+<p>For example, <a class="el" href="namespaceProphecy.html">Prophecy</a> has been named that way because it concentrates on describing the future behavior of objects with very limited knowledge about them. But as with any other prophecy, those object prophecies can't create themselves - there should be a Prophet:</p>
+<div class="fragment"><div class="line">$prophet = <span class="keyword">new</span> <a class="code" href="classProphecy_1_1Prophet.html">Prophecy\Prophet</a>;</div>
+</div><!-- fragment --><p>The Prophet creates prophecies by <em>prophesizing</em> them:</p>
+<div class="fragment"><div class="line">$prophecy = $prophet-&gt;prophesize();</div>
+</div><!-- fragment --><p>The result of the <code>prophesize()</code> method call is a new object of class <code>ObjectProphecy</code>. Yes, that's your specific object prophecy, which describes how your object would behave in the near future. But first, you need to specify which object you're talking about, right?</p>
+<div class="fragment"><div class="line">$prophecy-&gt;willExtend(<span class="stringliteral">&#39;stdClass&#39;</span>);</div>
+<div class="line">$prophecy-&gt;willImplement(<span class="stringliteral">&#39;SessionHandlerInterface&#39;</span>);</div>
+</div><!-- fragment --><p>There are 2 interesting calls - <code>willExtend</code> and <code>willImplement</code>. The first one tells object prophecy that our object should extend specific class, the second one says that it should implement some interface. Obviously, objects in PHP can implement multiple interfaces, but extend only one parent class.</p>
+<h2><a class="anchor" id="autotoc_md103"></a>
+Dummies</h2>
+<p>Ok, now we have our object prophecy. What can we do with it? First of all, we can get our object <em>dummy</em> by revealing its prophecy:</p>
+<div class="fragment"><div class="line">$dummy = $prophecy-&gt;reveal();</div>
+</div><!-- fragment --><p>The <code>$dummy</code> variable now holds a special dummy object. Dummy objects are objects that extend and/or implement preset classes/interfaces by overriding all their public methods. The key point about dummies is that they do not hold any logic - they just do nothing. Any method of the dummy will always return <code>null</code> and the dummy will never throw any exceptions. Dummy is your friend if you don't care about the actual behavior of this double and just need a token object to satisfy a method typehint.</p>
+<p>You need to understand one thing - a dummy is not a prophecy. Your object prophecy is still assigned to <code>$prophecy</code> variable and in order to manipulate with your expectations, you should work with it. <code>$dummy</code> is a dummy - a simple php object that tries to fulfil your prophecy.</p>
+<h2><a class="anchor" id="autotoc_md104"></a>
+Stubs</h2>
+<p>Ok, now we know how to create basic prophecies and reveal dummies from them. That's awesome if we don't care about our <em>doubles</em> (objects that reflect originals) interactions. If we do, we need to use <em>stubs</em> or <em>mocks</em>.</p>
+<p>A stub is an object double, which doesn't have any expectations about the object behavior, but when put in specific environment, behaves in specific way. Ok, I know, it's cryptic, but bear with me for a minute. Simply put, a stub is a dummy, which depending on the called method signature does different things (has logic). To create stubs in <a class="el" href="namespaceProphecy.html">Prophecy</a>:</p>
+<div class="fragment"><div class="line">$prophecy-&gt;read(<span class="stringliteral">&#39;123&#39;</span>)-&gt;willReturn(<span class="stringliteral">&#39;value&#39;</span>);</div>
+</div><!-- fragment --><p>Oh wow. We've just made an arbitrary call on the object prophecy? Yes, we did. And this call returned us a new object instance of class <code>MethodProphecy</code>. Yep, that's a specific method with arguments prophecy. Method prophecies give you the ability to create method promises or predictions. We'll talk about method predictions later in the <em>Mocks</em> section.</p>
+<h3><a class="anchor" id="autotoc_md105"></a>
+Promises</h3>
+<p>Promises are logical blocks, that represent your fictional methods in prophecy terms and they are handled by the <code>MethodProphecy::will(PromiseInterface $promise)</code> method. As a matter of fact, the call that we made earlier (&lsquo;willReturn('value&rsquo;)`) is a simple shortcut to:</p>
+<div class="fragment"><div class="line">$prophecy-&gt;read(<span class="stringliteral">&#39;123&#39;</span>)-&gt;will(<span class="keyword">new</span> <a class="code" href="namespaceProphecy.html">Prophecy</a>\Promise\ReturnPromise(array(<span class="stringliteral">&#39;value&#39;</span>)));</div>
+</div><!-- fragment --><p>This promise will cause any call to our double's <code>read()</code> method with exactly one argument - &lsquo;'123&rsquo;<code>to always return</code>'value'`. But that's only for this promise, there's plenty others you can use:</p>
+<ul>
+<li><code>ReturnPromise</code> or <code>-&gt;willReturn(1)</code> - returns a value from a method call</li>
+<li><code>ReturnArgumentPromise</code> or <code>-&gt;willReturnArgument($index)</code> - returns the nth method argument from call</li>
+<li><code>ThrowPromise</code> or <code>-&gt;willThrow($exception)</code> - causes the method to throw specific exception</li>
+<li><code>CallbackPromise</code> or <code>-&gt;will($callback)</code> - gives you a quick way to define your own custom logic</li>
+</ul>
+<p>Keep in mind, that you can always add even more promises by implementing <code><a class="el" href="namespaceProphecy.html">Prophecy</a>\Promise\PromiseInterface</code>.</p>
+<h3><a class="anchor" id="autotoc_md106"></a>
+Method prophecies idempotency</h3>
+<p><a class="el" href="namespaceProphecy.html">Prophecy</a> enforces same method prophecies and, as a consequence, same promises and predictions for the same method calls with the same arguments. This means:</p>
+<div class="fragment"><div class="line">$methodProphecy1 = $prophecy-&gt;read(<span class="stringliteral">&#39;123&#39;</span>);</div>
+<div class="line">$methodProphecy2 = $prophecy-&gt;read(<span class="stringliteral">&#39;123&#39;</span>);</div>
+<div class="line">$methodProphecy3 = $prophecy-&gt;read(<span class="stringliteral">&#39;321&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">$methodProphecy1 === $methodProphecy2;</div>
+<div class="line">$methodProphecy1 !== $methodProphecy3;</div>
+</div><!-- fragment --><p>That's interesting, right? Now you might ask me how would you define more complex behaviors where some method call changes behavior of others. In <a class="el" href="namespacePHPUnit.html">PHPUnit</a> or Mockery you do that by predicting how many times your method will be called. In <a class="el" href="namespaceProphecy.html">Prophecy</a>, you'll use promises for that:</p>
+<div class="fragment"><div class="line">$user-&gt;getName()-&gt;willReturn(<span class="keyword">null</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// For PHP 5.4</span></div>
+<div class="line">$user-&gt;setName(<span class="stringliteral">&#39;everzet&#39;</span>)-&gt;will(<span class="keyword">function</span> () {</div>
+<div class="line">    $this-&gt;getName()-&gt;willReturn(<span class="stringliteral">&#39;everzet&#39;</span>);</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// For PHP 5.3</span></div>
+<div class="line">$user-&gt;setName(<span class="stringliteral">&#39;everzet&#39;</span>)-&gt;will(<span class="keyword">function</span> ($args, $user) {</div>
+<div class="line">    $user-&gt;getName()-&gt;willReturn(<span class="stringliteral">&#39;everzet&#39;</span>);</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Or</span></div>
+<div class="line">$user-&gt;setName(<span class="stringliteral">&#39;everzet&#39;</span>)-&gt;will(<span class="keyword">function</span> ($args) use ($user) {</div>
+<div class="line">    $user-&gt;getName()-&gt;willReturn(<span class="stringliteral">&#39;everzet&#39;</span>);</div>
+<div class="line">});</div>
+</div><!-- fragment --><p>And now it doesn't matter how many times or in which order your methods are called. What matters is their behaviors and how well you faked it.</p>
+<p>Note: If the method is called several times, you can use the following syntax to return different values for each call:</p>
+<div class="fragment"><div class="line">$prophecy-&gt;read(<span class="stringliteral">&#39;123&#39;</span>)-&gt;willReturn(1, 2, 3);</div>
+</div><!-- fragment --><p>This feature is actually not recommended for most cases. Relying on the order of calls for the same arguments tends to make test fragile, as adding one more call can break everything.</p>
+<h3><a class="anchor" id="autotoc_md107"></a>
+Arguments wildcarding</h3>
+<p>The previous example is awesome (at least I hope it is for you), but that's not optimal enough. We hardcoded &lsquo;'everzet&rsquo;<code>in our expectation. Isn't there a better way? In fact there is, but it involves understanding what this</code>'everzet'` actually is.</p>
+<p>You see, even if method arguments used during method prophecy creation look like simple method arguments, in reality they are not. They are argument token wildcards. As a matter of fact, &lsquo;-&gt;setName('everzet&rsquo;)` looks like a simple call just because <a class="el" href="namespaceProphecy.html">Prophecy</a> automatically transforms it under the hood into:</p>
+<div class="fragment"><div class="line">$user-&gt;setName(<span class="keyword">new</span> <a class="code" href="namespaceProphecy.html">Prophecy</a>\Argument\Token\ExactValueToken(<span class="stringliteral">&#39;everzet&#39;</span>));</div>
+</div><!-- fragment --><p>Those argument tokens are simple PHP classes, that implement <code><a class="el" href="namespaceProphecy.html">Prophecy</a>\Argument\Token\TokenInterface</code> and tell <a class="el" href="namespaceProphecy.html">Prophecy</a> how to compare real arguments with your expectations. And yes, those classnames are damn big. That's why there's a shortcut class <code><a class="el" href="namespaceProphecy.html">Prophecy</a>\Argument</code>, which you can use to create tokens like that:</p>
+<div class="fragment"><div class="line">use <a class="code" href="namespaceProphecy_1_1Argument.html">Prophecy\Argument</a>;</div>
+<div class="line"> </div>
+<div class="line">$user-&gt;setName(Argument::exact(<span class="stringliteral">&#39;everzet&#39;</span>));</div>
+</div><!-- fragment --><p><code>ExactValueToken</code> is not very useful in our case as it forced us to hardcode the username. That's why <a class="el" href="namespaceProphecy.html">Prophecy</a> comes bundled with a bunch of other tokens:</p>
+<ul>
+<li><code>IdenticalValueToken</code> or <code>Argument::is($value)</code> - checks that the argument is identical to a specific value</li>
+<li><code>ExactValueToken</code> or <code>Argument::exact($value)</code> - checks that the argument matches a specific value</li>
+<li><code>TypeToken</code> or <code>Argument::type($typeOrClass)</code> - checks that the argument matches a specific type or classname</li>
+<li><code>ObjectStateToken</code> or <code>Argument::which($method, $value)</code> - checks that the argument method returns a specific value</li>
+<li><code>CallbackToken</code> or <code>Argument::that(callback)</code> - checks that the argument matches a custom callback</li>
+<li><code>AnyValueToken</code> or <code><a class="el" href="namespacePHPUnit_1_1Framework.html#a983efa3efc54014e956d9e0ee2254e8a">Argument::any()</a></code> - matches any argument</li>
+<li><code>AnyValuesToken</code> or <code>Argument::cetera()</code> - matches any arguments to the rest of the signature</li>
+<li><code>StringContainsToken</code> or <code>Argument::containingString($value)</code> - checks that the argument contains a specific string value</li>
+</ul>
+<p>And you can add even more by implementing <code>TokenInterface</code> with your own custom classes.</p>
+<p>So, let's refactor our initial <code>{set,get}Name()</code> logic with argument tokens:</p>
+<div class="fragment"><div class="line">use <a class="code" href="namespaceProphecy_1_1Argument.html">Prophecy\Argument</a>;</div>
+<div class="line"> </div>
+<div class="line">$user-&gt;getName()-&gt;willReturn(<span class="keyword">null</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// For PHP 5.4</span></div>
+<div class="line">$user-&gt;setName(Argument::type(<span class="stringliteral">&#39;string&#39;</span>))-&gt;will(<span class="keyword">function</span> ($args) {</div>
+<div class="line">    $this-&gt;getName()-&gt;willReturn($args[0]);</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// For PHP 5.3</span></div>
+<div class="line">$user-&gt;setName(Argument::type(<span class="stringliteral">&#39;string&#39;</span>))-&gt;will(<span class="keyword">function</span> ($args, $user) {</div>
+<div class="line">    $user-&gt;getName()-&gt;willReturn($args[0]);</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Or</span></div>
+<div class="line">$user-&gt;setName(Argument::type(<span class="stringliteral">&#39;string&#39;</span>))-&gt;will(<span class="keyword">function</span> ($args) use ($user) {</div>
+<div class="line">    $user-&gt;getName()-&gt;willReturn($args[0]);</div>
+<div class="line">});</div>
+</div><!-- fragment --><p>That's it. Now our <code>{set,get}Name()</code> prophecy will work with any string argument provided to it. We've just described how our stub object should behave, even though the original object could have no behavior whatsoever.</p>
+<p>One last bit about arguments now. You might ask, what happens in case of:</p>
+<div class="fragment"><div class="line">use <a class="code" href="namespaceProphecy_1_1Argument.html">Prophecy\Argument</a>;</div>
+<div class="line"> </div>
+<div class="line">$user-&gt;getName()-&gt;willReturn(<span class="keyword">null</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// For PHP 5.4</span></div>
+<div class="line">$user-&gt;setName(Argument::type(<span class="stringliteral">&#39;string&#39;</span>))-&gt;will(<span class="keyword">function</span> ($args) {</div>
+<div class="line">    $this-&gt;getName()-&gt;willReturn($args[0]);</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// For PHP 5.3</span></div>
+<div class="line">$user-&gt;setName(Argument::type(<span class="stringliteral">&#39;string&#39;</span>))-&gt;will(<span class="keyword">function</span> ($args, $user) {</div>
+<div class="line">    $user-&gt;getName()-&gt;willReturn($args[0]);</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Or</span></div>
+<div class="line">$user-&gt;setName(Argument::type(<span class="stringliteral">&#39;string&#39;</span>))-&gt;will(<span class="keyword">function</span> ($args) use ($user) {</div>
+<div class="line">    $user-&gt;getName()-&gt;willReturn($args[0]);</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">$user-&gt;setName(<a class="code" href="namespacePHPUnit_1_1Framework.html#a983efa3efc54014e956d9e0ee2254e8a">Argument::any</a>())-&gt;will(<span class="keyword">function</span> () {</div>
+<div class="line">});</div>
+</div><!-- fragment --><p>Nothing. Your stub will continue behaving the way it did before. That's because of how arguments wildcarding works. Every argument token type has a different score level, which wildcard then uses to calculate the final arguments match score and use the method prophecy promise that has the highest score. In this case, <code>Argument::type()</code> in case of success scores <code>5</code> and <code><a class="el" href="namespacePHPUnit_1_1Framework.html#a983efa3efc54014e956d9e0ee2254e8a">Argument::any()</a></code> scores <code>3</code>. So the type token wins, as does the first <code>setName()</code> method prophecy and its promise. The simple rule of thumb - more precise token always wins.</p>
+<h3><a class="anchor" id="autotoc_md108"></a>
+Getting stub objects</h3>
+<p>Ok, now we know how to define our prophecy method promises, let's get our stub from it:</p>
+<div class="fragment"><div class="line">$stub = $prophecy-&gt;reveal();</div>
+</div><!-- fragment --><p>As you might see, the only difference between how we get dummies and stubs is that with stubs we describe every object conversation instead of just agreeing with <code>null</code> returns (object being <em>dummy</em>). As a matter of fact, after you define your first promise (method call), <a class="el" href="namespaceProphecy.html">Prophecy</a> will force you to define all the communications - it throws the <code>UnexpectedCallException</code> for any call you didn't describe with object prophecy before calling it on a stub.</p>
+<h2><a class="anchor" id="autotoc_md109"></a>
+Mocks</h2>
+<p>Now we know how to define doubles without behavior (dummies) and doubles with behavior, but no expectations (stubs). What's left is doubles for which we have some expectations. These are called mocks and in <a class="el" href="namespaceProphecy.html">Prophecy</a> they look almost exactly the same as stubs, except that they define <em>predictions</em> instead of <em>promises</em> on method prophecies:</p>
+<div class="fragment"><div class="line">$entityManager-&gt;flush()-&gt;shouldBeCalled();</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md110"></a>
+Predictions</h3>
+<p>The <code>shouldBeCalled()</code> method here assigns <code>CallPrediction</code> to our method prophecy. Predictions are a delayed behavior check for your prophecies. You see, during the entire lifetime of your doubles, <a class="el" href="namespaceProphecy.html">Prophecy</a> records every single call you're making against it inside your code. After that, <a class="el" href="namespaceProphecy.html">Prophecy</a> can use this collected information to check if it matches defined predictions. You can assign predictions to method prophecies using the <code>MethodProphecy::should(PredictionInterface $prediction)</code> method. As a matter of fact, the <code>shouldBeCalled()</code> method we used earlier is just a shortcut to:</p>
+<div class="fragment"><div class="line">$entityManager-&gt;flush()-&gt;should(<span class="keyword">new</span> <a class="code" href="namespaceProphecy.html">Prophecy</a>\Prediction\CallPrediction());</div>
+</div><!-- fragment --><p>It checks if your method of interest (that matches both the method name and the arguments wildcard) was called 1 or more times. If the prediction failed then it throws an exception. When does this check happen? Whenever you call <code>checkPredictions()</code> on the main Prophet object:</p>
+<div class="fragment"><div class="line">$prophet-&gt;checkPredictions();</div>
+</div><!-- fragment --><p>In <a class="el" href="namespacePHPUnit.html">PHPUnit</a>, you would want to put this call into the <code>tearDown()</code> method. If no predictions are defined, it would do nothing. So it won't harm to call it after every test.</p>
+<p>There are plenty more predictions you can play with:</p>
+<ul>
+<li><code>CallPrediction</code> or <code>shouldBeCalled()</code> - checks that the method has been called 1 or more times</li>
+<li><code>NoCallsPrediction</code> or <code>shouldNotBeCalled()</code> - checks that the method has not been called</li>
+<li><code>CallTimesPrediction</code> or <code>shouldBeCalledTimes($count)</code> - checks that the method has been called <code>$count</code> times</li>
+<li><code>CallbackPrediction</code> or <code>should($callback)</code> - checks the method against your own custom callback</li>
+</ul>
+<p>Of course, you can always create your own custom prediction any time by implementing <code>PredictionInterface</code>.</p>
+<h2><a class="anchor" id="autotoc_md111"></a>
+Spies</h2>
+<p>The last bit of awesomeness in <a class="el" href="namespaceProphecy.html">Prophecy</a> is out-of-the-box spies support. As I said in the previous section, <a class="el" href="namespaceProphecy.html">Prophecy</a> records every call made during the double's entire lifetime. This means you don't need to record predictions in order to check them. You can also do it manually by using the <code>MethodProphecy::shouldHave(PredictionInterface $prediction)</code> method:</p>
+<div class="fragment"><div class="line">$em = $prophet-&gt;prophesize(<span class="stringliteral">&#39;Doctrine\ORM\EntityManager&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">$controller-&gt;createUser($em-&gt;reveal());</div>
+<div class="line"> </div>
+<div class="line">$em-&gt;flush()-&gt;shouldHaveBeenCalled();</div>
+</div><!-- fragment --><p>Such manipulation with doubles is called spying. And with <a class="el" href="namespaceProphecy.html">Prophecy</a> it just works. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div class="ttc" id="anamespacePHPUnit_1_1Framework_html_a679194e64affc768684be47e9ad116e9"><div class="ttname"><a href="namespacePHPUnit_1_1Framework.html#a679194e64affc768684be47e9ad116e9">PHPUnit\Framework\assertEquals</a></div><div class="ttdeci">assertEquals($expected, $actual, string $message='')</div><div class="ttdef"><b>Definition:</b> Functions.php:218</div></div>
+<div class="ttc" id="anamespaceProphecy_html"><div class="ttname"><a href="namespaceProphecy.html">Prophecy</a></div></div>
+<div class="ttc" id="aclassPHPUnit_1_1Framework_1_1TestCase_html"><div class="ttname"><a href="classPHPUnit_1_1Framework_1_1TestCase.html">PHPUnit\Framework\TestCase</a></div><div class="ttdef"><b>Definition:</b> TestCase.php:59</div></div>
+<div class="ttc" id="aclassProphecy_1_1Prophet_html"><div class="ttname"><a href="classProphecy_1_1Prophet.html">Prophecy\Prophet</a></div><div class="ttdef"><b>Definition:</b> Prophet.php:31</div></div>
+<div class="ttc" id="anamespacePHPUnit_1_1Framework_html_a983efa3efc54014e956d9e0ee2254e8a"><div class="ttname"><a href="namespacePHPUnit_1_1Framework.html#a983efa3efc54014e956d9e0ee2254e8a">PHPUnit\Framework\any</a></div><div class="ttdeci">any()</div><div class="ttdef"><b>Definition:</b> Functions.php:2199</div></div>
+<div class="ttc" id="aclassPHPUnit_1_1Framework_1_1TestCase_html_a773425b78c6d4f55e39245e1220f70bf"><div class="ttname"><a href="classPHPUnit_1_1Framework_1_1TestCase.html#a773425b78c6d4f55e39245e1220f70bf">PHPUnit\Framework\TestCase\prophesize</a></div><div class="ttdeci">prophesize(?string $classOrInterface=null)</div><div class="ttdef"><b>Definition:</b> TestCase.php:1817</div></div>
+<div class="ttc" id="anamespaceProphecy_1_1Argument_html"><div class="ttname"><a href="namespaceProphecy_1_1Argument.html">Prophecy\Argument</a></div><div class="ttdef"><b>Definition:</b> ArgumentsWildcard.php:12</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

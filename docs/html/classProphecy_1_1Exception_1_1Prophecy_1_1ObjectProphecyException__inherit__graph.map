@@ -1,0 +1,11 @@
+<map id="Prophecy\Exception\Prophecy\ObjectProphecyException" name="Prophecy\Exception\Prophecy\ObjectProphecyException">
+<area shape="rect" id="node1" title=" " alt="" coords="122,285,378,392"/>
+<area shape="rect" id="node5" href="$classProphecy_1_1Exception_1_1Call_1_1UnexpectedCallException.html" title=" " alt="" coords="5,440,228,576"/>
+<area shape="rect" id="node6" href="$classProphecy_1_1Exception_1_1Prophecy_1_1MethodProphecyException.html" title=" " alt="" coords="252,455,515,561"/>
+<area shape="rect" id="node2" title=" " alt="" coords="78,153,219,230"/>
+<area shape="rect" id="node3" href="$interfaceProphecy_1_1Exception_1_1Prophecy_1_1ProphecyException.html" title=" " alt="" coords="244,145,459,237"/>
+<area shape="rect" id="node4" href="$interfaceProphecy_1_1Exception_1_1Exception.html" title=" " alt="" coords="276,5,427,97"/>
+<area shape="rect" id="node7" href="$classProphecy_1_1Exception_1_1Prediction_1_1NoCallsException.html" title=" " alt="" coords="163,639,372,731"/>
+<area shape="rect" id="node8" href="$classProphecy_1_1Exception_1_1Prediction_1_1UnexpectedCallsException.html" title=" " alt="" coords="397,624,602,745"/>
+<area shape="rect" id="node9" href="$classProphecy_1_1Exception_1_1Prediction_1_1UnexpectedCallsCountException.html" title=" " alt="" coords="397,793,602,915"/>
+</map>

@@ -1,260 +1,346 @@
 <?php
 
+use Bear\DataFrame;
+use Bear\Exception\InvalidDataStructureException;
+use Bear\Exception\OutOfBoundsException;
+use PHPUnit\Framework\TestCase;
+
 /**
- * TEstes para DataFrame class
+ * Testes para DataFrame class
  *
  * @author everton
  */
-class DataFrameTest extends PHPUnit\Framework\TestCase
+class DataFrameTest extends TestCase
 {
 
-    protected array $data = [
-        [
-            'id' => 1,
-            'name' => 'Fulano',
-            'age' => 20
-        ],
-        [
-            'id' => 2,
-            'name' => 'Sicrano',
-            'age' => 30
-        ],
-        [
-            'id' => 3,
-            'name' => 'Beltrano',
-            'age' => 40
-        ]
+    protected array $df_1 = [
+        [1, 'John', 39],
+        [2, 'Mary', 37],
+        [3, 'Paul', 12]
     ];
 
-    public function testGetColumnNames()
+    public function testConstructEmpty()
     {
-        $df = new \Bear\DataFrame($this->data);
-
-        $this->assertEquals(['id', 'name', 'age'], $df->getColumnNames());
+        $this->assertInstanceOf(DataFrame::class, new DataFrame([]));
     }
 
-    public function testCheckStructure()
+    public function testConstructor()
     {
-        $df = new \Bear\DataFrame($this->data);
-
-        $this->assertTrue($df->checkStructure());
+        $df = new DataFrame($this->df_1);
+        $this->assertInstanceOf(DataFrame::class, $df);
+        $this->assertEquals($this->df_1, $df->get());
     }
 
-    public function testSum()
+    public function testConstructBadStructure()
     {
-        $df = new \Bear\DataFrame($this->data);
-
-        $this->assertEquals(90, $df->sum('age'));
-        $this->assertEquals(90, $df->sum(2));
-    }
-
-    public function testGetColumnNameByIndex()
-    {
-        $df = new \Bear\DataFrame($this->data);
-        $this->assertEquals('id', $df->getColumnNameByIndex(0));
-        $this->assertEquals('name', $df->getColumnNameByIndex(1));
-        $this->assertEquals('age', $df->getColumnNameByIndex(2));
-    }
-
-    public function testLines()
-    {
-
-        $line0 = [
-            'id' => 1,
-            'name' => 'Fulano',
-            'age' => 20
-        ];
-        $line1 = [
-            'id' => 2,
-            'name' => 'Sicrano',
-            'age' => 30
-        ];
-        $line2 = [
-            'id' => 3,
-            'name' => 'Beltrano',
-            'age' => 40
-        ];
-
-        $df = new \Bear\DataFrame($this->data);
-
-        $df1 = new \Bear\DataFrame([$line1]);
-        $this->assertEquals($df1, $df->lines(1));
-
-        $df2 = new \Bear\DataFrame([$line1, $line2]);
-        $this->assertEquals($df2, $df->lines([1, 2]));
-
-        $df3 = new \Bear\DataFrame([$line0, $line1]);
-        $this->assertEquals($df3, $df->lines('0:1'));
-
-        $df4 = new \Bear\DataFrame([$line0, $line2]);
-        $this->assertEquals($df4, $df->lines('0,2'));
-    }
-
-    public function testColumns()
-    {
-        $df = new \Bear\DataFrame($this->data);
-
-        $df1 = new \Bear\DataFrame([
-            [
-                'name' => 'Fulano',
-                'age' => 20
-            ],
-            [
-                'name' => 'Sicrano',
-                'age' => 30
-            ],
-            [
-                'name' => 'Beltrano',
-                'age' => 40
-            ]
+        $this->expectException(InvalidDataStructureException::class);
+        $dfFail = new DataFrame([
+            [1, 'John', 39],
+            [2, 'Mary'], //esta linha tem menos colunas
+            [3, 'Paul', 12]
         ]);
-        $this->assertEquals($df1, $df->columns('1:2'));
-
-        $df2 = new \Bear\DataFrame([
-            [
-                'name' => 'Fulano',
-                'age' => 20
-            ],
-            [
-                'name' => 'Sicrano',
-                'age' => 30
-            ],
-            [
-                'name' => 'Beltrano',
-                'age' => 40
-            ]
-        ]);
-        $this->assertEquals($df2, $df->columns('name:age'));
-
-        $df3 = new \Bear\DataFrame([
-            [
-                'id' => 1,
-                'age' => 20
-            ],
-            [
-                'id' => 2,
-                'age' => 30
-            ],
-            [
-                'id' => 3,
-                'age' => 40
-            ]
-        ]);
-        $this->assertEquals($df3, $df->columns('0,2'));
-
-        $df4 = new \Bear\DataFrame([
-            [
-                'id' => 1,
-                'age' => 20
-            ],
-            [
-                'id' => 2,
-                'age' => 30
-            ],
-            [
-                'id' => 3,
-                'age' => 40
-            ]
-        ]);
-        $this->assertEquals($df4, $df->columns('id,age'));
-
-        $df5 = new \Bear\DataFrame([
-            [
-                'id' => 1,
-                'age' => 20
-            ],
-            [
-                'id' => 2,
-                'age' => 30
-            ],
-            [
-                'id' => 3,
-                'age' => 40
-            ]
-        ]);
-        $this->assertEquals($df5, $df->columns([0, 2]));
-
-        $df6 = new \Bear\DataFrame([
-            [
-                'id' => 1,
-                'age' => 20
-            ],
-            [
-                'id' => 2,
-                'age' => 30
-            ],
-            [
-                'id' => 3,
-                'age' => 40
-            ]
-        ]);
-        $this->assertEquals($df6, $df->columns(['id', 'age']));
-
-        $df7 = new \Bear\DataFrame([
-            [
-                'age' => 20
-            ],
-            [
-                'age' => 30
-            ],
-            [
-                'age' => 40
-            ]
-        ]);
-        $this->assertEquals($df7, $df->columns(2));
-
-        $df8 = new \Bear\DataFrame([
-            [
-                'age' => 20
-            ],
-            [
-                'age' => 30
-            ],
-            [
-                'age' => 40
-            ]
-        ]);
-        $this->assertEquals($df8, $df->columns('age'));
     }
 
-    public function testCell()
+    public function testCountRows()
     {
-        $df = new \Bear\DataFrame($this->data);
-
-        $this->assertEquals('Sicrano', $df->cell(1, 'name'));
+        $df = new DataFrame($this->df_1);
+        $this->assertEquals(3, $df->countRows());
     }
 
-    public function testSize()
+    public function testCountRowsDataFrameEmpty()
     {
-        $df = new \Bear\DataFrame($this->data);
-
-        $this->assertEquals(3, $df->size());
+        $df = new DataFrame([]);
+        $this->assertEquals(0, $df->countRows());
     }
 
-    public function testGetIterator()
+    public function testCountColumns()
     {
-        $df = new \Bear\DataFrame($this->data);
-
-        $this->assertInstanceOf(ArrayIterator::class, $df->getIterator());
+        $df = new DataFrame($this->df_1);
+        $this->assertEquals(3, $df->countColumns());
     }
 
-    public function testIterateArray()
+    public function testCountColumnsDataFrameEmpty()
     {
-        $df = new \Bear\DataFrame($this->data);
+        $df = new DataFrame([]);
+        $this->assertEquals(0, $df->countColumns());
+    }
 
+    public function testGetColumnsNames()
+    {
+        $df = new DataFrame($this->df_1);
+        $colNames = ['id', 'name', 'age'];
+        $df->setColumnNames($colNames);
+        $this->assertEquals($colNames, $df->getColumnNames());
+    }
+
+    public function testGetColumnsNamesDataFrameEmpty()
+    {
+        $df = new DataFrame([]);
+        $this->assertEquals([], $df->getColumnNames());
+    }
+
+    public function testGet()
+    {
+        $df = new DataFrame($this->df_1);
+        $this->assertEquals($this->df_1, $df->get());
+    }
+
+    public function testGetDataFrameEmpty()
+    {
+        $df = new DataFrame([]);
+        $this->assertEquals([], $df->get());
+    }
+
+    public function testGetAndSetColNames()
+    {
+        $df = new DataFrame($this->df_1);
+        $colNames = ['cod', 'nome', 'idade'];
+        $this->assertInstanceOf(DataFrame::class, $df->setColumnNames($colNames));
+        $this->assertEquals($colNames, $df->getColumnNames());
+    }
+
+    public function testGetColumnsByIndex()
+    {
+        $df = new DataFrame($this->df_1);
+//        $df->setColumnNames(['id', 'name', 'age']);
+        $df2 = $df->getColumnsByIndex([0, 2]);
+        $this->assertInstanceOf(DataFrame::class, $df2);
         $this->assertEquals([
-            'id' => 1,
-            'name' => 'Fulano',
-            'age' => 20
-            ],
-            $df->iterate(false)
-        );
+            [0 => 1, 2 => 39],
+            [0 => 2, 2 => 37],
+            [0 => 3, 2 => 12]
+            ], $df2->get());
+    }
+
+    public function testGetColumnsByIndexFail()
+    {
+        $df = new DataFrame($this->df_1);
+        $this->expectException(OutOfBoundsException::class);
+        $df2 = $df->getColumnsByIndex([0, 3]);
+    }
+
+    public function testGetColumnsByName()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $df2 = $df->getColumnsByName(['id', 'age']);
+        $this->assertInstanceOf(DataFrame::class, $df2);
+        $this->assertEquals([
+            ['id' => 1, 'age' => 39],
+            ['id' => 2, 'age' => 37],
+            ['id' => 3, 'age' => 12]
+            ], $df2->get());
+    }
+
+    public function testGetColumnsByNameFail()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $this->expectException(OutOfBoundsException::class);
+        $df2 = $df->getColumnsByName(['id', 'unknow']);
+    }
+
+    public function testGetColumnsRangeByIndex()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $df2 = $df->getColumnsRangeByIndex(1, 2);
+        $this->assertInstanceOf(DataFrame::class, $df2);
+        $this->assertEquals([
+            ['name' => 'John', 'age' => 39],
+            ['name' => 'Mary', 'age' => 37],
+            ['name' => 'Paul', 'age' => 12]
+            ], $df2->get());
+    }
+
+    public function testGetColumnsRangeByIndexEndStartOrderFail()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $this->expectException(InvalidArgumentException::class);
+        $df2 = $df->getColumnsRangeByIndex(2, 1);
+    }
+
+    public function testGetColumnsRangeByIndexStartFail()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $this->expectException(OutOfBoundsException::class);
+        $df2 = $df->getColumnsRangeByIndex(4, 2);
+    }
+
+    public function testGetColumnsRangeByIndexEndFail()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $this->expectException(OutOfBoundsException::class);
+        $df2 = $df->getColumnsRangeByIndex(0, 4);
+    }
+
+    public function testGetColumnsRangeByIndexNotEndKey()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $df2 = $df->getColumnsRangeByIndex(1);
+        $this->assertInstanceOf(DataFrame::class, $df2);
+        $this->assertEquals([
+            ['name' => 'John', 'age' => 39],
+            ['name' => 'Mary', 'age' => 37],
+            ['name' => 'Paul', 'age' => 12]
+            ], $df2->get());
+    }
+
+    public function testGetColumnsRangeByIndexNotStartKey()
+    {
+        $df = new DataFrame($this->df_1);
+        $df2 = $df->getColumnsRangeByIndex(null, 1);
+        $this->assertInstanceOf(DataFrame::class, $df2);
+        $this->assertEquals([
+            [1, 'John'],
+            [2, 'Mary'],
+            [3, 'Paul']
+            ], $df2->get());
+    }
+
+    public function testGetColumnsRangeByName()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $df2 = $df->getColumnsRangeByName('name', 'age');
+        $this->assertInstanceOf(DataFrame::class, $df2);
+        $this->assertEquals([
+            ['name' => 'John', 'age' => 39],
+            ['name' => 'Mary', 'age' => 37],
+            ['name' => 'Paul', 'age' => 12]
+            ], $df2->get());
+    }
+
+    public function testGetColumnsRangeByNameNotEndKey()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $df2 = $df->getColumnsRangeByName('name');
+        $this->assertInstanceOf(DataFrame::class, $df2);
+        $this->assertEquals([
+            ['name' => 'John', 'age' => 39],
+            ['name' => 'Mary', 'age' => 37],
+            ['name' => 'Paul', 'age' => 12]
+            ], $df2->get());
+    }
+
+    public function testGetColumnsRangeByNameNotStartKey()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $df2 = $df->getColumnsRangeByName(null, 'name');
+        $this->assertInstanceOf(DataFrame::class, $df2);
+        $this->assertEquals([
+            ['id' => 1, 'name' => 'John'],
+            ['id' => 2, 'name' => 'Mary'],
+            ['id' => 3, 'name' => 'Paul']
+            ], $df2->get());
     }
     
-    public function testIterateObject()
+    public function testGetColumnsRangeByNameStartFail()
     {
-        $df = new \Bear\DataFrame($this->data);
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $this->expectException(OutOfBoundsException::class);
+        $df2 = $df->getColumnsRangeByName('unknow', 'age');
+    }
 
-        $this->assertEquals(1, $df->iterate(true)->id);
+    public function testGetColumnsRangeByNameEndFail()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $this->expectException(OutOfBoundsException::class);
+        $df2 = $df->getColumnsRangeByName('name', 'unknow');
+    }
+
+    public function testSetColumnNamesFail()
+    {
+        $df = new DataFrame($this->df_1);
+        $this->expectException(InvalidArgumentException::class);
+        $df->setColumnNames(['id', 'name']);
+    }
+    
+    public function testGetRows()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $df2 = $df->getRows([1,2]);
+        $this->assertInstanceOf(DataFrame::class, $df2);
+        $this->assertEquals([
+            ['id' => 2, 'name' => 'Mary', 'age'=>37],
+            ['id' => 3, 'name' => 'Paul', 'age'=>12]
+            ], $df2->get());
+    }
+    
+    public function testGetRowsFails()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $this->expectException(OutOfBoundsException::class);
+        $df2 = $df->getRows([1,4]);
+    }
+    
+    public function testGetRowRange()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $df2 = $df->getRowRange(1,2);
+        $this->assertInstanceOf(DataFrame::class, $df2);
+        $this->assertEquals([
+            ['id' => 2, 'name' => 'Mary', 'age'=>37],
+            ['id' => 3, 'name' => 'Paul', 'age'=>12]
+            ], $df2->get());
+    }
+    
+    public function testGetRowRangeNoStart()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $df2 = $df->getRowRange(null,1);
+        $this->assertInstanceOf(DataFrame::class, $df2);
+        $this->assertEquals([
+            ['id' => 1, 'name' => 'John', 'age'=>39],
+            ['id' => 2, 'name' => 'Mary', 'age'=>37]
+            ], $df2->get());
+    }
+    
+    public function testGetRowRangeNoEnd()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $df2 = $df->getRowRange(1,null);
+        $this->assertInstanceOf(DataFrame::class, $df2);
+        $this->assertEquals([
+            ['id' => 2, 'name' => 'Mary', 'age'=>37],
+            ['id' => 3, 'name' => 'Paul', 'age'=>12]
+            ], $df2->get());
+    }
+    
+    public function testGetRowRangeFailStart()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $this->expectException(OutOfBoundsException::class);
+        $df2 = $df->getRowRange(4,8);
+    }
+    
+    public function testGetRowRangeFailEnd()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $this->expectException(OutOfBoundsException::class);
+        $df2 = $df->getRowRange(0,8);
+    }
+    
+    public function testGetRowRangeFailEndStart()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+        $this->expectException(InvalidArgumentException::class);
+        $df2 = $df->getRowRange(2,1);
     }
 }

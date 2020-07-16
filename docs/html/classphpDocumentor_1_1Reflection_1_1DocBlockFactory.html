@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bear API: Referência da Classe phpDocumentor\Reflection\DocBlockFactory</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bear API
+   </div>
+   <div id="projectbrief">Um manipulador de dados tabulares inspirados no Pandas/Python e no R.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#pub-static-methods">Membros Públicos Estáticos</a> &#124;
+<a href="#pri-methods">Membros Privados</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a> &#124;
+<a href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência da Classe phpDocumentor\Reflection\DocBlockFactory</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Diagrama de hierarquia para phpDocumentor\Reflection\DocBlockFactory:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classphpDocumentor_1_1Reflection_1_1DocBlockFactory__inherit__graph.png" border="0" usemap="#phpDocumentor_0cReflection_0cDocBlockFactory_inherit__map" alt="Inheritance graph"/></div>
+<map name="phpDocumentor_0cReflection_0cDocBlockFactory_inherit__map" id="phpDocumentor_0cReflection_0cDocBlockFactory_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,160,213,384"/>
+<area shape="rect" href="interfacephpDocumentor_1_1Reflection_1_1DocBlockFactoryInterface.html" title=" " alt="" coords="12,5,207,112"/>
+</map>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Diagrama de colaboração para phpDocumentor\Reflection\DocBlockFactory:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classphpDocumentor_1_1Reflection_1_1DocBlockFactory__coll__graph.png" border="0" usemap="#phpDocumentor_0cReflection_0cDocBlockFactory_coll__map" alt="Collaboration graph"/></div>
+<map name="phpDocumentor_0cReflection_0cDocBlockFactory_coll__map" id="phpDocumentor_0cReflection_0cDocBlockFactory_coll__map">
+<area shape="rect" title=" " alt="" coords="5,160,213,384"/>
+<area shape="rect" href="interfacephpDocumentor_1_1Reflection_1_1DocBlockFactoryInterface.html" title=" " alt="" coords="12,5,207,112"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:a1e2861fee418fa9c6b6524a0881e03fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a1e2861fee418fa9c6b6524a0881e03fb">__construct</a> (<a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlock_1_1DescriptionFactory.html">DescriptionFactory</a> $descriptionFactory, <a class="el" href="interfacephpDocumentor_1_1Reflection_1_1DocBlock_1_1TagFactory.html">TagFactory</a> $tagFactory)</td></tr>
+<tr class="separator:a1e2861fee418fa9c6b6524a0881e03fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8134ed4a00589ade1883c36764d5b892"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a8134ed4a00589ade1883c36764d5b892">create</a> ($docblock, ?<a class="el" href="classphpDocumentor_1_1Reflection_1_1Types_1_1Context.html">Types\Context</a> $context=null, ?<a class="el" href="classphpDocumentor_1_1Reflection_1_1Location.html">Location</a> $location=null)</td></tr>
+<tr class="separator:a8134ed4a00589ade1883c36764d5b892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b0ff50259e04d64542592066c4b7e9a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a0b0ff50259e04d64542592066c4b7e9a">registerTagHandler</a> (string $tagName, string $handler)</td></tr>
+<tr class="separator:a0b0ff50259e04d64542592066c4b7e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Membros Públicos Estáticos</h2></td></tr>
+<tr class="memitem:a2200f2d8d8684feb2256caab648451f5"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a2200f2d8d8684feb2256caab648451f5">createInstance</a> (array $additionalTags=[])</td></tr>
+<tr class="separator:a2200f2d8d8684feb2256caab648451f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Membros Privados</h2></td></tr>
+<tr class="memitem:ae6c23eca92ca027be76c5fd2e9d6fd25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#ae6c23eca92ca027be76c5fd2e9d6fd25">stripDocComment</a> (string $comment)</td></tr>
+<tr class="separator:ae6c23eca92ca027be76c5fd2e9d6fd25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae57d796b74683b9288a294edce6f478"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#aae57d796b74683b9288a294edce6f478">splitDocBlock</a> (string $comment)</td></tr>
+<tr class="separator:aae57d796b74683b9288a294edce6f478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a474469787964587126e0e2f2fe39816f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a474469787964587126e0e2f2fe39816f">parseTagBlock</a> (string $tags, <a class="el" href="classphpDocumentor_1_1Reflection_1_1Types_1_1Context.html">Types\Context</a> $context)</td></tr>
+<tr class="separator:a474469787964587126e0e2f2fe39816f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a265e46fbf0ba98985154b6d83df1a8c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a265e46fbf0ba98985154b6d83df1a8c4">splitTagBlockIntoTagLines</a> (string $tags)</td></tr>
+<tr class="separator:a265e46fbf0ba98985154b6d83df1a8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b8581d1ca7b368de115ac9ee326a8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a12b8581d1ca7b368de115ac9ee326a8d">filterTagBlock</a> (string $tags)</td></tr>
+<tr class="separator:a12b8581d1ca7b368de115ac9ee326a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr class="memitem:a3f8c54f931754dfd8ae78e2b896841b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a3f8c54f931754dfd8ae78e2b896841b6">$descriptionFactory</a></td></tr>
+<tr class="separator:a3f8c54f931754dfd8ae78e2b896841b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2dcb5f6ece8191387ee5e60505683a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#aa2dcb5f6ece8191387ee5e60505683a6">$tagFactory</a></td></tr>
+<tr class="separator:aa2dcb5f6ece8191387ee5e60505683a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a1e2861fee418fa9c6b6524a0881e03fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e2861fee418fa9c6b6524a0881e03fb">&#9670;&nbsp;</a></span>__construct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">phpDocumentor\Reflection\DocBlockFactory::__construct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlock_1_1DescriptionFactory.html">DescriptionFactory</a>&#160;</td>
+          <td class="paramname"><em>$descriptionFactory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfacephpDocumentor_1_1Reflection_1_1DocBlock_1_1TagFactory.html">TagFactory</a>&#160;</td>
+          <td class="paramname"><em>$tagFactory</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes this factory with the required subcontractors. </p>
+
+<p class="reference">Referencias <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a3f8c54f931754dfd8ae78e2b896841b6">phpDocumentor\Reflection\DocBlockFactory\$descriptionFactory</a> e <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#aa2dcb5f6ece8191387ee5e60505683a6">phpDocumentor\Reflection\DocBlockFactory\$tagFactory</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a8134ed4a00589ade1883c36764d5b892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8134ed4a00589ade1883c36764d5b892">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">phpDocumentor\Reflection\DocBlockFactory::create </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$docblock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">?<a class="el" href="classphpDocumentor_1_1Reflection_1_1Types_1_1Context.html">Types\Context</a>&#160;</td>
+          <td class="paramname"><em>$context</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">?<a class="el" href="classphpDocumentor_1_1Reflection_1_1Location.html">Location</a>&#160;</td>
+          <td class="paramname"><em>$location</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">object&#160;|&#160;string</td><td class="paramname">$docblock</td><td>A string containing the <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlock.html">DocBlock</a> to parse or an object supporting the getDocComment method (such as a ReflectionClass object). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implementa <a class="el" href="interfacephpDocumentor_1_1Reflection_1_1DocBlockFactoryInterface.html#af6eb38f0d9c6ee3fdaf9572e97c57ec3">phpDocumentor\Reflection\DocBlockFactoryInterface</a>.</p>
+
+<p class="reference">Referencias <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#aae57d796b74683b9288a294edce6f478">phpDocumentor\Reflection\DocBlockFactory\splitDocBlock()</a>, <a class="el" href="classWebmozart_1_1Assert_1_1Assert.html#af9e2e2a845cdee28dd1e2f6569b42fde">Webmozart\Assert\Assert\string()</a>, <a class="el" href="classWebmozart_1_1Assert_1_1Assert.html#a3bdfc9d5bde10507531d03f22a6c93fd">Webmozart\Assert\Assert\stringNotEmpty()</a> e <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#ae6c23eca92ca027be76c5fd2e9d6fd25">phpDocumentor\Reflection\DocBlockFactory\stripDocComment()</a>.</p>
+
+</div>
+</div>
+<a id="a2200f2d8d8684feb2256caab648451f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2200f2d8d8684feb2256caab648451f5">&#9670;&nbsp;</a></span>createInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static phpDocumentor\Reflection\DocBlockFactory::createInstance </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$additionalTags</em> = <code>[]</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Factory method for easy instantiation.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array&lt;string,class-string&lt;Tag&gt;&gt;</td><td>$additionalTags </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implementa <a class="el" href="interfacephpDocumentor_1_1Reflection_1_1DocBlockFactoryInterface.html#a7d78f45a9abe6a019ab6de9500b8637d">phpDocumentor\Reflection\DocBlockFactoryInterface</a>.</p>
+
+<p class="reference">Referencias <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a3f8c54f931754dfd8ae78e2b896841b6">phpDocumentor\Reflection\DocBlockFactory\$descriptionFactory</a> e <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#aa2dcb5f6ece8191387ee5e60505683a6">phpDocumentor\Reflection\DocBlockFactory\$tagFactory</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classProphecy_1_1PhpDocumentor_1_1ClassTagRetriever.html#a1f2d599dc00ecef049c99cda45c93c1b">Prophecy\PhpDocumentor\ClassTagRetriever\__construct()</a>.</p>
+
+</div>
+</div>
+<a id="a12b8581d1ca7b368de115ac9ee326a8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b8581d1ca7b368de115ac9ee326a8d">&#9670;&nbsp;</a></span>filterTagBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">phpDocumentor\Reflection\DocBlockFactory::filterTagBlock </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$tags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a474469787964587126e0e2f2fe39816f">phpDocumentor\Reflection\DocBlockFactory\parseTagBlock()</a>.</p>
+
+</div>
+</div>
+<a id="a474469787964587126e0e2f2fe39816f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a474469787964587126e0e2f2fe39816f">&#9670;&nbsp;</a></span>parseTagBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">phpDocumentor\Reflection\DocBlockFactory::parseTagBlock </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$tags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classphpDocumentor_1_1Reflection_1_1Types_1_1Context.html">Types\Context</a>&#160;</td>
+          <td class="paramname"><em>$context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates the tag objects.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$tags</td><td>Tag block to parse. </td></tr>
+    <tr><td class="paramtype">Types\Context</td><td class="paramname">$context</td><td>Context of the parsed Tag</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlock.html">DocBlock</a>\Tag[] </dd></dl>
+
+<p class="reference">Referencias <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a12b8581d1ca7b368de115ac9ee326a8d">phpDocumentor\Reflection\DocBlockFactory\filterTagBlock()</a> e <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a265e46fbf0ba98985154b6d83df1a8c4">phpDocumentor\Reflection\DocBlockFactory\splitTagBlockIntoTagLines()</a>.</p>
+
+</div>
+</div>
+<a id="a0b0ff50259e04d64542592066c4b7e9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b0ff50259e04d64542592066c4b7e9a">&#9670;&nbsp;</a></span>registerTagHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">phpDocumentor\Reflection\DocBlockFactory::registerTagHandler </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$tagName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class-string&lt;Tag&gt;</td><td>$handler </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aae57d796b74683b9288a294edce6f478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae57d796b74683b9288a294edce6f478">&#9670;&nbsp;</a></span>splitDocBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">phpDocumentor\Reflection\DocBlockFactory::splitDocBlock </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$comment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Splits the <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlock.html">DocBlock</a> into a template marker, summary, description and block of tags.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$comment</td><td>Comment to split into the sub-parts.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>string[] containing the template marker (if any), summary, description and a string containing the tags.</dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>Mike van Riel <a href="#" onclick="location.href='mai'+'lto:'+'me@'+'mi'+'kev'+'an'+'rie'+'l.'+'com'; return false;">me@mi<span style="display: none;">.nosp@m.</span>keva<span style="display: none;">.nosp@m.</span>nriel<span style="display: none;">.nosp@m.</span>.com</a> for extending the regex with template marker support.</dd>
+<dd>
+Richard van Velzen (@_richardJ) Special thanks to Richard for the regex responsible for the split. </dd></dl>
+
+<p class="reference">Referencias <a class="el" href="classWebmozart_1_1Assert_1_1Assert.html#af9e2e2a845cdee28dd1e2f6569b42fde">Webmozart\Assert\Assert\string()</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a8134ed4a00589ade1883c36764d5b892">phpDocumentor\Reflection\DocBlockFactory\create()</a>.</p>
+
+</div>
+</div>
+<a id="a265e46fbf0ba98985154b6d83df1a8c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a265e46fbf0ba98985154b6d83df1a8c4">&#9670;&nbsp;</a></span>splitTagBlockIntoTagLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">phpDocumentor\Reflection\DocBlockFactory::splitTagBlockIntoTagLines </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$tags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Retorna</dt><dd>string[] </dd></dl>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a474469787964587126e0e2f2fe39816f">phpDocumentor\Reflection\DocBlockFactory\parseTagBlock()</a>.</p>
+
+</div>
+</div>
+<a id="ae6c23eca92ca027be76c5fd2e9d6fd25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6c23eca92ca027be76c5fd2e9d6fd25">&#9670;&nbsp;</a></span>stripDocComment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">phpDocumentor\Reflection\DocBlockFactory::stripDocComment </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$comment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Strips the asterisks from the <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlock.html">DocBlock</a> comment.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$comment</td><td>String containing the comment text. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referencias <a class="el" href="classWebmozart_1_1Assert_1_1Assert.html#af9e2e2a845cdee28dd1e2f6569b42fde">Webmozart\Assert\Assert\string()</a>.</p>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a8134ed4a00589ade1883c36764d5b892">phpDocumentor\Reflection\DocBlockFactory\create()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Atributos</h2>
+<a id="a3f8c54f931754dfd8ae78e2b896841b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f8c54f931754dfd8ae78e2b896841b6">&#9670;&nbsp;</a></span>$descriptionFactory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">phpDocumentor\Reflection\DocBlockFactory::$descriptionFactory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a1e2861fee418fa9c6b6524a0881e03fb">phpDocumentor\Reflection\DocBlockFactory\__construct()</a> e <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a2200f2d8d8684feb2256caab648451f5">phpDocumentor\Reflection\DocBlockFactory\createInstance()</a>.</p>
+
+</div>
+</div>
+<a id="aa2dcb5f6ece8191387ee5e60505683a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2dcb5f6ece8191387ee5e60505683a6">&#9670;&nbsp;</a></span>$tagFactory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">phpDocumentor\Reflection\DocBlockFactory::$tagFactory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado(a) por <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a1e2861fee418fa9c6b6524a0881e03fb">phpDocumentor\Reflection\DocBlockFactory\__construct()</a> e <a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a2200f2d8d8684feb2256caab648451f5">phpDocumentor\Reflection\DocBlockFactory\createInstance()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<li>vendor/phpdocumentor/reflection-docblock/src/<a class="el" href="DocBlockFactory_8php.html">DocBlockFactory.php</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacephpDocumentor.html">phpDocumentor</a></li><li class="navelem"><a class="el" href="namespacephpDocumentor_1_1Reflection.html">Reflection</a></li><li class="navelem"><a class="el" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html">DocBlockFactory</a></li>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

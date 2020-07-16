@@ -1,0 +1,10 @@
+<map id="PHPUnit\Framework\IncompleteTestError" name="PHPUnit\Framework\IncompleteTestError">
+<area shape="rect" id="node1" title=" " alt="" coords="293,565,522,657"/>
+<area shape="rect" id="node2" href="$classPHPUnit_1_1Framework_1_1AssertionFailedError.html" title=" " alt="" coords="169,425,387,517"/>
+<area shape="rect" id="node3" href="$classPHPUnit_1_1Framework_1_1Exception.html" title=" " alt="" coords="5,256,225,377"/>
+<area shape="rect" id="node4" title=" " alt="" coords="45,131,186,208"/>
+<area shape="rect" id="node5" href="$interfacePHPUnit_1_1Exception.html" title=" " alt="" coords="284,131,427,208"/>
+<area shape="rect" id="node6" title=" " alt="" coords="401,5,491,83"/>
+<area shape="rect" id="node8" href="$interfacePHPUnit_1_1Framework_1_1IncompleteTest.html" title=" " alt="" coords="411,433,665,510"/>
+<area shape="rect" id="node7" href="$interfacePHPUnit_1_1Framework_1_1SelfDescribing.html" title=" " alt="" coords="250,278,501,355"/>
+</map>

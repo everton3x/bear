@@ -1,0 +1,7 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,172,105"/>
+<area shape="rect" id="node2" href="$classPHPUnit_1_1Runner_1_1Filter_1_1GroupFilterIterator.html" title=" " alt="" coords="220,37,383,79"/>
+<area shape="rect" id="node5" href="$classPHPUnit_1_1Runner_1_1Filter_1_1NameFilterIterator.html" title=" " alt="" coords="220,103,383,144"/>
+<area shape="rect" id="node3" href="$classPHPUnit_1_1Runner_1_1Filter_1_1ExcludeGroupFilterIterator.html" title=" " alt="" coords="431,5,628,47"/>
+<area shape="rect" id="node4" href="$classPHPUnit_1_1Runner_1_1Filter_1_1IncludeGroupFilterIterator.html" title=" " alt="" coords="433,71,626,112"/>
+</map>

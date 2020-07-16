@@ -1,0 +1,11 @@
+<map id="PHPUnit\Framework\MockObject\Rule\InvocationOrder" name="PHPUnit\Framework\MockObject\Rule\InvocationOrder">
+<area shape="rect" id="node1" title=" " alt="" coords="648,145,881,296"/>
+<area shape="rect" id="node4" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Rule_1_1AnyInvokedCount.html" title=" " alt="" coords="5,359,239,495"/>
+<area shape="rect" id="node5" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Rule_1_1InvokedAtIndex.html" title=" " alt="" coords="263,344,496,509"/>
+<area shape="rect" id="node6" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Rule_1_1InvokedAtLeastCount.html" title=" " alt="" coords="520,351,753,502"/>
+<area shape="rect" id="node7" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Rule_1_1InvokedAtLeastOnce.html" title=" " alt="" coords="777,359,1011,495"/>
+<area shape="rect" id="node8" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Rule_1_1InvokedAtMostCount.html" title=" " alt="" coords="1035,351,1268,502"/>
+<area shape="rect" id="node9" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1Rule_1_1InvokedCount.html" title=" " alt="" coords="1292,344,1525,509"/>
+<area shape="rect" id="node2" href="$interfacePHPUnit_1_1Framework_1_1SelfDescribing.html" title=" " alt="" coords="506,13,757,90"/>
+<area shape="rect" id="node3" href="$interfacePHPUnit_1_1Framework_1_1MockObject_1_1Verifiable.html" title=" " alt="" coords="781,5,1015,97"/>
+</map>

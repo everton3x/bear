@@ -1,0 +1,4 @@
+var namespacephpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Factory =
+[
+    [ "StaticMethod", "interfacephpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Factory_1_1StaticMethod.html", "interfacephpDocumentor_1_1Reflection_1_1DocBlock_1_1Tags_1_1Factory_1_1StaticMethod" ]
+];

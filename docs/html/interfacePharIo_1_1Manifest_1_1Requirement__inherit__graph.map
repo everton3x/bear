@@ -1,0 +1,5 @@
+<map id="PharIo\Manifest\Requirement" name="PharIo\Manifest\Requirement">
+<area shape="rect" id="node1" title=" " alt="" coords="123,5,335,83"/>
+<area shape="rect" id="node2" href="$classPharIo_1_1Manifest_1_1PhpExtensionRequirement.html" title=" " alt="" coords="5,131,221,237"/>
+<area shape="rect" id="node3" href="$classPharIo_1_1Manifest_1_1PhpVersionRequirement.html" title=" " alt="" coords="245,131,445,237"/>
+</map>

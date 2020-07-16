@@ -1,0 +1,11 @@
+<map id="PHPUnit\Framework\SyntheticError" name="PHPUnit\Framework\SyntheticError">
+<area shape="rect" id="node1" title=" " alt="" coords="179,565,397,731"/>
+<area shape="rect" id="node8" href="$classPHPUnit_1_1Framework_1_1PHPTAssertionFailedError.html" title=" " alt="" coords="33,779,284,885"/>
+<area shape="rect" id="node9" href="$classPHPUnit_1_1Framework_1_1SyntheticSkippedError.html" title=" " alt="" coords="309,786,526,878"/>
+<area shape="rect" id="node2" href="$classPHPUnit_1_1Framework_1_1AssertionFailedError.html" title=" " alt="" coords="179,425,397,517"/>
+<area shape="rect" id="node3" href="$classPHPUnit_1_1Framework_1_1Exception.html" title=" " alt="" coords="49,256,269,377"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,131,147,208"/>
+<area shape="rect" id="node5" href="$interfacePHPUnit_1_1Exception.html" title=" " alt="" coords="171,131,314,208"/>
+<area shape="rect" id="node6" title=" " alt="" coords="197,5,288,83"/>
+<area shape="rect" id="node7" href="$interfacePHPUnit_1_1Framework_1_1SelfDescribing.html" title=" " alt="" coords="293,278,544,355"/>
+</map>

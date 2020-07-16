@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bear API: sebastian/diff</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bear API
+   </div>
+   <div id="projectbrief">Um manipulador de dados tabulares inspirados no Pandas/Python e no R.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('md_vendor_sebastian_diff_README.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">sebastian/diff </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a href="https://github.com/sebastianbergmann/diff/actions"><object type="image/svg+xml" data="https://github.com/sebastianbergmann/diff/workflows/CI/badge.svg" style="pointer-events: none;">CI Status</object></a> <a href="https://shepherd.dev/github/sebastianbergmann/diff"><object type="image/svg+xml" data="https://shepherd.dev/github/sebastianbergmann/diff/coverage.svg" style="pointer-events: none;">Type Coverage</object></a></p>
+<p>Diff implementation for PHP, factored out of <a class="el" href="namespacePHPUnit.html">PHPUnit</a> into a stand-alone component.</p>
+<h1><a class="anchor" id="autotoc_md392"></a>
+Installation</h1>
+<p>You can add this library as a local, per-project dependency to your project using <a href="https://getcomposer.org/">Composer</a>:</p>
+<div class="fragment"><div class="line">composer require sebastian/diff</div>
+</div><!-- fragment --><p>If you only need this library during development, for instance to run your project's test suite, then you should add it as a development-time dependency:</p>
+<div class="fragment"><div class="line">composer require --dev sebastian/diff</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md393"></a>
+Usage</h2>
+<h3><a class="anchor" id="autotoc_md394"></a>
+Generating diff</h3>
+<p>The <code>Differ</code> class can be used to generate a textual representation of the difference between two strings:</p>
+<div class="fragment"><div class="line">&lt;?php</div>
+<div class="line">use <a class="code" href="classSebastianBergmann_1_1Diff_1_1Differ.html">SebastianBergmann\Diff\Differ</a>;</div>
+<div class="line"> </div>
+<div class="line">$differ = <span class="keyword">new</span> Differ;</div>
+<div class="line">print $differ-&gt;<a class="code" href="classSebastianBergmann_1_1Diff_1_1Differ.html#ab217d7e0f922b2cf8c08f3f2e0588c09">diff</a>(<span class="stringliteral">&#39;foo&#39;</span>, <span class="stringliteral">&#39;bar&#39;</span>);</div>
+</div><!-- fragment --><p>The code above yields the output below: </p><div class="fragment"><div class="line">--- Original</div>
+<div class="line">+++ New</div>
+<div class="line">@@ @@</div>
+<div class="line">-foo</div>
+<div class="line">+bar</div>
+</div><!-- fragment --><p>There are three output builders available in this package:</p>
+<h3><a class="anchor" id="autotoc_md395"></a>
+UnifiedDiffOutputBuilder</h3>
+<p>This is default builder, which generates the output close to udiff and is used by <a class="el" href="namespacePHPUnit.html">PHPUnit</a>.</p>
+<div class="fragment"><div class="line">&lt;?php</div>
+<div class="line"> </div>
+<div class="line">use <a class="code" href="classSebastianBergmann_1_1Diff_1_1Differ.html">SebastianBergmann\Diff\Differ</a>;</div>
+<div class="line">use <a class="code" href="classSebastianBergmann_1_1Diff_1_1Output_1_1UnifiedDiffOutputBuilder.html">SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder</a>;</div>
+<div class="line"> </div>
+<div class="line">$builder = <span class="keyword">new</span> UnifiedDiffOutputBuilder(</div>
+<div class="line">    <span class="stringliteral">&quot;--- Original\n+++ New\n&quot;</span>, <span class="comment">// custom header</span></div>
+<div class="line">    <span class="keyword">false</span>                      <span class="comment">// do not add line numbers to the diff </span></div>
+<div class="line">);</div>
+<div class="line"> </div>
+<div class="line">$differ = <span class="keyword">new</span> Differ($builder);</div>
+<div class="line">print $differ-&gt;diff(<span class="stringliteral">&#39;foo&#39;</span>, <span class="stringliteral">&#39;bar&#39;</span>);</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md396"></a>
+StrictUnifiedDiffOutputBuilder</h3>
+<p>Generates (strict) Unified diff's (unidiffs) with hunks, similar to <code>diff -u</code> and compatible with <code>patch</code> and <code>git apply</code>.</p>
+<p>```php &lt;?php</p>
+<p>use <a class="el" href="namespaceSebastianBergmann.html">SebastianBergmann</a>\Diff\Differ; use <a class="el" href="namespaceSebastianBergmann.html">SebastianBergmann</a>\Diff\Output\StrictUnifiedDiffOutputBuilder;</p>
+<p>$builder = new StrictUnifiedDiffOutputBuilder([ 'collapseRanges' =&gt; true, // ranges of length one are rendered with the trailing <code>,1</code> 'commonLineThreshold' =&gt; 6, // number of same lines before ending a new hunk and creating a new one (if needed) 'contextLines' =&gt; 3, // like <code>diff: -u, -U NUM, --unified[=NUM]</code>, for patch/git apply compatibility best to keep at least @ 3 'fromFile' =&gt; null, 'fromFileDate' =&gt; null, 'toFile' =&gt; null, 'toFileDate' =&gt; null, ]);</p>
+<p>$differ = new Differ($builder); print $differ-&gt;diff('foo', 'bar'); </p><div class="fragment"><div class="line">#### DiffOnlyOutputBuilder</div>
+<div class="line"> </div>
+<div class="line">Output only the lines that differ.</div>
+<div class="line"> </div>
+<div class="line">```php</div>
+<div class="line">&lt;?php</div>
+<div class="line"> </div>
+<div class="line">use SebastianBergmann\Diff\Differ;</div>
+<div class="line">use SebastianBergmann\Diff\Output\DiffOnlyOutputBuilder;</div>
+<div class="line"> </div>
+<div class="line">$builder = new DiffOnlyOutputBuilder(</div>
+<div class="line">    &quot;--- Original\n+++ New\n&quot;</div>
+<div class="line">);</div>
+<div class="line"> </div>
+<div class="line">$differ = new Differ($builder);</div>
+<div class="line">print $differ-&gt;diff(&#39;foo&#39;, &#39;bar&#39;);</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md397"></a>
+DiffOutputBuilderInterface</h3>
+<p>You can pass any output builder to the <code>Differ</code> class as longs as it implements the <code>DiffOutputBuilderInterface</code>.</p>
+<h3><a class="anchor" id="autotoc_md398"></a>
+Parsing diff</h3>
+<p>The <code>Parser</code> class can be used to parse a unified diff into an object graph:</p>
+<div class="fragment"><div class="line">use <a class="code" href="classSebastianBergmann_1_1Diff_1_1Parser.html">SebastianBergmann\Diff\Parser</a>;</div>
+<div class="line">use SebastianBergmann\Git;</div>
+<div class="line"> </div>
+<div class="line">$git = <span class="keyword">new</span> Git(<span class="stringliteral">&#39;/usr/local/src/money&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">$diff = $git-&gt;getDiff(</div>
+<div class="line">  <span class="stringliteral">&#39;948a1a07768d8edd10dcefa8315c1cbeffb31833&#39;</span>,</div>
+<div class="line">  <span class="stringliteral">&#39;c07a373d2399f3e686234c4f7f088d635eb9641b&#39;</span></div>
+<div class="line">);</div>
+<div class="line"> </div>
+<div class="line">$parser = <span class="keyword">new</span> Parser;</div>
+<div class="line"> </div>
+<div class="line">print_r($parser-&gt;parse($diff));</div>
+</div><!-- fragment --><p>The code above yields the output below: </p><pre class="fragment">Array
+(
+    [0] =&gt; SebastianBergmann\Diff\Diff Object
+        (
+            [from:SebastianBergmann\Diff\Diff:private] =&gt; a/tests/MoneyTest.php
+            [to:SebastianBergmann\Diff\Diff:private] =&gt; b/tests/MoneyTest.php
+            [chunks:SebastianBergmann\Diff\Diff:private] =&gt; Array
+                (
+                    [0] =&gt; SebastianBergmann\Diff\Chunk Object
+                        (
+                            [start:SebastianBergmann\Diff\Chunk:private] =&gt; 87
+                            [startRange:SebastianBergmann\Diff\Chunk:private] =&gt; 7
+                            [end:SebastianBergmann\Diff\Chunk:private] =&gt; 87
+                            [endRange:SebastianBergmann\Diff\Chunk:private] =&gt; 7
+                            [lines:SebastianBergmann\Diff\Chunk:private] =&gt; Array
+                                (
+                                    [0] =&gt; SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] =&gt; 3
+                                            [content:SebastianBergmann\Diff\Line:private] =&gt;      * @covers SebastianBergmann\Money\Money::add
+                                        )
+
+                                    [1] =&gt; SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] =&gt; 3
+                                            [content:SebastianBergmann\Diff\Line:private] =&gt;      * @covers SebastianBergmann\Money\Money::newMoney
+                                        )
+
+                                    [2] =&gt; SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] =&gt; 3
+                                            [content:SebastianBergmann\Diff\Line:private] =&gt;      */
+                                        )
+
+                                    [3] =&gt; SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] =&gt; 2
+                                            [content:SebastianBergmann\Diff\Line:private] =&gt;     public function testAnotherMoneyWithSameCurrencyObjectCanBeAdded()
+                                        )
+
+                                    [4] =&gt; SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] =&gt; 1
+                                            [content:SebastianBergmann\Diff\Line:private] =&gt;     public function testAnotherMoneyObjectWithSameCurrencyCanBeAdded()
+                                        )
+
+                                    [5] =&gt; SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] =&gt; 3
+                                            [content:SebastianBergmann\Diff\Line:private] =&gt;     {
+                                        )
+
+                                    [6] =&gt; SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] =&gt; 3
+                                            [content:SebastianBergmann\Diff\Line:private] =&gt;         $a = new Money(1, new Currency('EUR'));
+                                        )
+
+                                    [7] =&gt; SebastianBergmann\Diff\Line Object
+                                        (
+                                            [type:SebastianBergmann\Diff\Line:private] =&gt; 3
+                                            [content:SebastianBergmann\Diff\Line:private] =&gt;         $b = new Money(2, new Currency('EUR'));
+                                        )
+                                )
+                        )
+                )
+        )
+)
+</pre> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassSebastianBergmann_1_1Diff_1_1Parser_html"><div class="ttname"><a href="classSebastianBergmann_1_1Diff_1_1Parser.html">SebastianBergmann\Diff\Parser</a></div><div class="ttdef"><b>Definition:</b> Parser.php:21</div></div>
+<div class="ttc" id="aclassSebastianBergmann_1_1Diff_1_1Differ_html_ab217d7e0f922b2cf8c08f3f2e0588c09"><div class="ttname"><a href="classSebastianBergmann_1_1Diff_1_1Differ.html#ab217d7e0f922b2cf8c08f3f2e0588c09">SebastianBergmann\Diff\Differ\diff</a></div><div class="ttdeci">diff($from, $to, LongestCommonSubsequenceCalculator $lcs=null)</div><div class="ttdef"><b>Definition:</b> Differ.php:85</div></div>
+<div class="ttc" id="aclassSebastianBergmann_1_1Diff_1_1Output_1_1UnifiedDiffOutputBuilder_html"><div class="ttname"><a href="classSebastianBergmann_1_1Diff_1_1Output_1_1UnifiedDiffOutputBuilder.html">SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder</a></div><div class="ttdef"><b>Definition:</b> UnifiedDiffOutputBuilder.php:27</div></div>
+<div class="ttc" id="aclassSebastianBergmann_1_1Diff_1_1Differ_html"><div class="ttname"><a href="classSebastianBergmann_1_1Diff_1_1Differ.html">SebastianBergmann\Diff\Differ</a></div><div class="ttdef"><b>Definition:</b> Differ.php:36</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

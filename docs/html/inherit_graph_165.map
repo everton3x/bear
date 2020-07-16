@@ -1,0 +1,7 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="node1" href="$interfaceProphecy_1_1Prediction_1_1PredictionInterface.html" title=" " alt="" coords="5,104,156,145"/>
+<area shape="rect" id="node2" href="$classProphecy_1_1Prediction_1_1CallbackPrediction.html" title=" " alt="" coords="207,5,357,47"/>
+<area shape="rect" id="node3" href="$classProphecy_1_1Prediction_1_1CallPrediction.html" title=" " alt="" coords="207,71,357,112"/>
+<area shape="rect" id="node4" href="$classProphecy_1_1Prediction_1_1CallTimesPrediction.html" title=" " alt="" coords="204,136,360,177"/>
+<area shape="rect" id="node5" href="$classProphecy_1_1Prediction_1_1NoCallsPrediction.html" title=" " alt="" coords="207,201,357,243"/>
+</map>

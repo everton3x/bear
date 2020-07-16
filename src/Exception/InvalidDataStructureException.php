@@ -17,7 +17,7 @@ class InvalidDataStructureException extends Exception
     
     /**
      *
-     * @var array lista de colunas na linha com etrutura inválida.
+     * @var array lista de colunas na linha com estrutura inválida.
      */
     protected array $columns;
     

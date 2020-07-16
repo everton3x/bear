@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bear API: README</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bear API
+   </div>
+   <div id="projectbrief">Um manipulador de dados tabulares inspirados no Pandas/Python e no R.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('md_vendor_phpdocumentor_reflection-docblock_README.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">README </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a href="https://opensource.org/licenses/MIT"><object type="image/svg+xml" data="https://img.shields.io/badge/License-MIT-yellow.svg" style="pointer-events: none;">License: MIT</object></a> <object type="image/svg+xml" data="https://github.com/phpDocumentor/ReflectionDocBlock/workflows/Qa%20workflow/badge.svg" style="pointer-events: none;">Qa workflow</object> <a href="https://coveralls.io/github/phpDocumentor/ReflectionDocBlock?branch=master"><object type="image/svg+xml" data="https://img.shields.io/coveralls/github/phpDocumentor/ReflectionDocBlock.svg" style="pointer-events: none;">Coveralls Coverage</object></a> <a href="https://scrutinizer-ci.com/g/phpDocumentor/ReflectionDocBlock/?branch=master"><object type="image/svg+xml" data="https://img.shields.io/scrutinizer/coverage/g/phpDocumentor/ReflectionDocBlock.svg" style="pointer-events: none;">Scrutinizer Code Coverage</object></a> <a href="https://scrutinizer-ci.com/g/phpDocumentor/ReflectionDocBlock/?branch=master"><object type="image/svg+xml" data="https://img.shields.io/scrutinizer/g/phpDocumentor/ReflectionDocBlock.svg" style="pointer-events: none;">Scrutinizer Code Quality</object></a> <a href="https://packagist.org/packages/phpdocumentor/reflection-docblock"><object type="image/svg+xml" data="https://img.shields.io/packagist/v/phpdocumentor/reflection-docblock.svg" style="pointer-events: none;">Stable Version</object></a> <a href="https://packagist.org/packages/phpdocumentor/reflection-docblock"><object type="image/svg+xml" data="https://img.shields.io/packagist/vpre/phpdocumentor/reflection-docblock.svg" style="pointer-events: none;">Unstable Version</object></a></p>
+<h1><a class="anchor" id="autotoc_md49"></a>
+ReflectionDocBlock</h1>
+<h2><a class="anchor" id="autotoc_md50"></a>
+Introduction</h2>
+<p>The ReflectionDocBlock component of <a class="el" href="namespacephpDocumentor.html">phpDocumentor</a> provides a DocBlock parser that is 100% compatible with the <a href="http://phpdoc.org/docs/latest">PHPDoc standard</a>.</p>
+<p>With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.</p>
+<h2><a class="anchor" id="autotoc_md51"></a>
+Installation</h2>
+<div class="fragment"><div class="line">composer require phpdocumentor/reflection-docblock</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md52"></a>
+Usage</h2>
+<p>In order to parse the DocBlock one needs a DocBlockFactory that can be instantiated using its <code>createInstance</code> factory method like this:</p>
+<div class="fragment"><div class="line">$factory  = <a class="code" href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a2200f2d8d8684feb2256caab648451f5">\phpDocumentor\Reflection\DocBlockFactory::createInstance</a>();</div>
+</div><!-- fragment --><p>Then we can use the <code>create</code> method of the factory to interpret the DocBlock. Please note that it is also possible to provide a class that has the <code>getDocComment()</code> method, such as an object of type <code>ReflectionClass</code>, the create method will read that if it exists.</p>
+<div class="fragment"><div class="line">$docComment = &lt;&lt;&lt;DOCCOMMENT</div>
+<div class="line">DOCCOMMENT;</div>
+<div class="line"> </div>
+<div class="line">$docblock = $factory-&gt;create($docComment);</div>
+</div><!-- fragment --><p>The <code>create</code> method will yield an object of type <code>\<a class="el" href="namespacephpDocumentor.html">phpDocumentor</a>\Reflection\DocBlock</code> whose methods can be queried:</p>
+<div class="fragment"><div class="line"><span class="comment">// Contains the summary for this DocBlock</span></div>
+<div class="line">$summary = $docblock-&gt;getSummary();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Contains \phpDocumentor\Reflection\DocBlock\Description object</span></div>
+<div class="line">$description = $docblock-&gt;getDescription();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// You can either cast it to string</span></div>
+<div class="line">$description = (string) $docblock-&gt;getDescription();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Or use the render method to get a string representation of the Description.</span></div>
+<div class="line">$description = $docblock-&gt;getDescription()-&gt;render();</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>For more examples it would be best to review the scripts in the <a href="/examples"><code>/examples</code> folder</a>. </p>
+</blockquote>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassphpDocumentor_1_1Reflection_1_1DocBlockFactory_html_a2200f2d8d8684feb2256caab648451f5"><div class="ttname"><a href="classphpDocumentor_1_1Reflection_1_1DocBlockFactory.html#a2200f2d8d8684feb2256caab648451f5">phpDocumentor\Reflection\DocBlockFactory\createInstance</a></div><div class="ttdeci">static createInstance(array $additionalTags=[])</div><div class="ttdef"><b>Definition:</b> DocBlockFactory.php:57</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<map id="SebastianBergmann\CodeCoverage\RuntimeException" name="SebastianBergmann\CodeCoverage\RuntimeException">
+<area shape="rect" id="node1" title=" " alt="" coords="447,145,699,237"/>
+<area shape="rect" id="node4" href="$classSebastianBergmann_1_1CodeCoverage_1_1CoveredCodeNotExecutedException.html" title=" " alt="" coords="5,307,264,399"/>
+<area shape="rect" id="node5" href="$classSebastianBergmann_1_1CodeCoverage_1_1DirectoryCouldNotBeCreatedException.html" title=" " alt="" coords="289,307,567,399"/>
+<area shape="rect" id="node6" href="$classSebastianBergmann_1_1CodeCoverage_1_1MissingCoversAnnotationException.html" title=" " alt="" coords="592,307,848,399"/>
+<area shape="rect" id="node7" href="$classSebastianBergmann_1_1CodeCoverage_1_1UnintentionallyCoveredCodeException.html" title=" " alt="" coords="872,285,1149,421"/>
+<area shape="rect" id="node2" title=" " alt="" coords="392,13,533,90"/>
+<area shape="rect" id="node3" href="$interfaceSebastianBergmann_1_1CodeCoverage_1_1Exception.html" title=" " alt="" coords="558,5,810,97"/>
+</map>

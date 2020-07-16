@@ -1,0 +1,8 @@
+<map id="PHPUnit\Framework\MockObject\Exception" name="PHPUnit\Framework\MockObject\Exception">
+<area shape="rect" id="node1" title=" " alt="" coords="431,131,664,223"/>
+<area shape="rect" id="node3" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1BadMethodCallException.html" title=" " alt="" coords="5,278,239,370"/>
+<area shape="rect" id="node4" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1ConfigurableMethodsAlreadyInitializedException.html" title=" " alt="" coords="263,271,541,377"/>
+<area shape="rect" id="node5" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1IncompatibleReturnValueException.html" title=" " alt="" coords="565,278,820,370"/>
+<area shape="rect" id="node6" href="$classPHPUnit_1_1Framework_1_1MockObject_1_1RuntimeException.html" title=" " alt="" coords="844,278,1077,370"/>
+<area shape="rect" id="node2" title=" " alt="" coords="502,5,593,83"/>
+</map>
