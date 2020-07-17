@@ -149,7 +149,7 @@ class DataFrame
     protected function checkDataStructure(): void
     {
         $numCols = count($this->colNames);
-
+        
         foreach ($this->data as $rowId => $row) {
             if (count($row) !== $numCols) {
                 throw new InvalidDataStructureException($rowId, array_keys($row));

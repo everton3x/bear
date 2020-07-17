@@ -33,12 +33,6 @@ class CsvReader extends CsvAbstract implements ReaderInterface
     
     /**
      *
-     * @var callable Função para filtro de linhas.
-     */
-    protected $filter = null;
-    
-    /**
-     *
      * @var int Número máximo de linhas a serem lidas.
      */
     protected int $readLength = 0;
@@ -49,7 +43,12 @@ class CsvReader extends CsvAbstract implements ReaderInterface
      */
     protected int $length = 0;
 
-
+    /**
+     * Cria uma nova instância do reader.
+     * 
+     * @param string $filename
+     * @throws InvalidResourceException
+     */
     public function __construct(string $filename)
     {
         $this->handle = @fopen($filename, 'r');
@@ -60,49 +59,90 @@ class CsvReader extends CsvAbstract implements ReaderInterface
         
     }
 
+    /**
+     * Informa se o reader está configurado para considerar o arquivo csv com 
+     * uma linha de cabeçalho ou não.
+     * 
+     * @return bool
+     * @see CsvReader::toggleHasHead()
+     */
     public function hasHead(): bool
     {
         return $this->hasHead;
     }
+    
+    /**
+     * consfigura o reader para considerar ou não o arquivo csv com uma linha de
+     * cabeçalho.
+     * 
+     * @param bool $toggle
+     * @return \Bear\Reader\CsvReader
+     * @see CsvReader::hasHead()
+     */
     public function toggleHasHead(bool $toggle): CsvReader
     {
         $this->hasHead = $toggle;
         return $this;
     }
     
+    /**
+     * Configura por qual linha a importação deve começar (incluindo a linha de
+     * cabeçalho, se houver).
+     * 
+     * @param int $startIn
+     * @return \Bear\Reader\CsvReader
+     * @see CsvReader::getStartIn()
+     */
     public function setStartIn(int $startIn): CsvReader
     {
         $this->startIn = $startIn;
         return $this;
     }
     
+    /**
+     * Indica qual linha o reader começará a leitura, incluindo linha de 
+     * cabeçalho, se houver.
+     * 
+     * @return int
+     * @see CsvReader::setStartIn()
+     */
     public function getStartIn(): int
     {
         return $this->startIn;
     }
     
+    /**
+     * Configura o tamanho da linha que será lido. Se não configurado, a leitura 
+     * para na primeira quebra de linha encontrada.
+     * 
+     * @param int $readLength
+     * @return \Bear\Reader\CsvReader
+     * @see CsvReader::getReadLength()
+     */
     public function setReadLength(int $readLength): CsvReader
     {
         $this->readLength = $readLength;
         return $this;
     }
     
+    /**
+     * Indica o tamanho de linha que será lido. Se zero, a leitura para na 
+     * primeira quebra de linha encontrada.
+     * 
+     * @return int
+     * @see CsvReader::setReadLength()
+     */
     public function getReadLength(): int
     {
         return $this->readLength;
     }
     
-    public function setFilter(callable $filter): CsvReader
-    {
-        $this->filter = $filter;
-        return $this;
-    }
-    
-    public function getFilter(): callable
-    {
-        return $this->filter;
-    }
-    
+    /**
+     * Faz a leitura do arquivo CSV conforme as configurações do reader.
+     * 
+     * @return DataFrame
+     * @throws ParseException
+     */
     public function read(): DataFrame
     {
         $data = [];
@@ -111,7 +151,12 @@ class CsvReader extends CsvAbstract implements ReaderInterface
         //pula as linhas do início
         if($this->startIn !== 0){
             for ($i = 0; $i < $this->startIn; $i++) {
-                fgets($this->handle, $this->readLength);//pula as linhas
+                //pula as linhas
+                if($this->readLength === 0){
+                    fgets($this->handle);
+                }else{
+                    fgets($this->handle, $this->readLength);
+                }
             }
         }
         
@@ -123,14 +168,12 @@ class CsvReader extends CsvAbstract implements ReaderInterface
         }
         
         while (false !== ($buffer = fgetcsv($this->handle, $this->readLength, $this->delimiter, $this->enclosure, $this->escape))) {
-            if(true !== $this->filter(join($this->delimiter, $buffer))){
-                $data[] = $buffer;
-            }
+            $data[] = $buffer;
         }
         
         $df = new DataFrame($data);
         
-        if($colNames === []){
+        if($colNames !== []){
             $df->setColumnNames($colNames);
         }
         
