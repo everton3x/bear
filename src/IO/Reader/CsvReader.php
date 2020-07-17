@@ -1,10 +1,10 @@
 <?php
+
 namespace Bear\IO\Reader;
 
+use Exception;
 use Bear\IO\CsvAbstract;
 use Bear\DataFrame;
-use Bear\Exception\InvalidResourceException;
-use Bear\Exception\ParseException;
 
 /**
  * Carrega um data frame a partir de um arquivo CSV
@@ -15,54 +15,49 @@ class CsvReader extends CsvAbstract implements ReaderInterface
 {
     /**
      *
-     * @var handle Ponteiro para o arquivo csv.
+     * @var resource Ponteiro para o arquivo csv.
      */
     protected $handle = null;
-    
-    /**
+/**
      *
      * @var bool Indica se o arquivo possui cabeçalhos.
      */
     protected bool $hasHead = true;
-    
-    /**
+/**
      *
      * @var int Indica a primeira linha para importar.
      */
     protected int $startIn = 0;
-    
-    /**
+/**
      *
      * @var int Número máximo de linhas a serem lidas.
      */
     protected int $readLength = 0;
-    
-    /**
+/**
      *
      * @var int Tamanho da linha para ser usado em fgetcsv()
      */
     protected int $length = 0;
-
-    /**
+/**
      * Cria uma nova instância do reader.
-     * 
+     *
      * @param string $filename
-     * @throws InvalidResourceException
+     * @throws Exception
      */
     public function __construct(string $filename)
     {
-        $this->handle = @fopen($filename, 'r');
-        
-        if($this->handle === false){
-            throw new InvalidResourceException($filename);
+        $handle = @fopen($filename, 'r');
+        if ($handle === false) {
+            throw new Exception(sprintf('Arquivo [%s] inacessível.', $filename));
         }
         
+        $this->handle = $handle;
     }
 
     /**
-     * Informa se o reader está configurado para considerar o arquivo csv com 
+     * Informa se o reader está configurado para considerar o arquivo csv com
      * uma linha de cabeçalho ou não.
-     * 
+     *
      * @return bool
      * @see CsvReader::toggleHasHead()
      */
@@ -74,9 +69,9 @@ class CsvReader extends CsvAbstract implements ReaderInterface
     /**
      * consfigura o reader para considerar ou não o arquivo csv com uma linha de
      * cabeçalho.
-     * 
+     *
      * @param bool $toggle
-     * @return \Bear\Reader\CsvReader
+     * @return CsvReader
      * @see CsvReader::hasHead()
      */
     public function toggleHasHead(bool $toggle): CsvReader
@@ -88,9 +83,9 @@ class CsvReader extends CsvAbstract implements ReaderInterface
     /**
      * Configura por qual linha a importação deve começar (incluindo a linha de
      * cabeçalho, se houver).
-     * 
+     *
      * @param int $startIn
-     * @return \Bear\Reader\CsvReader
+     * @return CsvReader
      * @see CsvReader::getStartIn()
      */
     public function setStartIn(int $startIn): CsvReader
@@ -100,9 +95,9 @@ class CsvReader extends CsvAbstract implements ReaderInterface
     }
     
     /**
-     * Indica qual linha o reader começará a leitura, incluindo linha de 
+     * Indica qual linha o reader começará a leitura, incluindo linha de
      * cabeçalho, se houver.
-     * 
+     *
      * @return int
      * @see CsvReader::setStartIn()
      */
@@ -112,11 +107,11 @@ class CsvReader extends CsvAbstract implements ReaderInterface
     }
     
     /**
-     * Configura o tamanho da linha que será lido. Se não configurado, a leitura 
+     * Configura o tamanho da linha que será lido. Se não configurado, a leitura
      * para na primeira quebra de linha encontrada.
-     * 
+     *
      * @param int $readLength
-     * @return \Bear\Reader\CsvReader
+     * @return CsvReader
      * @see CsvReader::getReadLength()
      */
     public function setReadLength(int $readLength): CsvReader
@@ -126,9 +121,9 @@ class CsvReader extends CsvAbstract implements ReaderInterface
     }
     
     /**
-     * Indica o tamanho de linha que será lido. Se zero, a leitura para na 
+     * Indica o tamanho de linha que será lido. Se zero, a leitura para na
      * primeira quebra de linha encontrada.
-     * 
+     *
      * @return int
      * @see CsvReader::setReadLength()
      */
@@ -139,9 +134,9 @@ class CsvReader extends CsvAbstract implements ReaderInterface
     
     /**
      * Faz a leitura do arquivo CSV conforme as configurações do reader.
-     * 
+     *
      * @return DataFrame
-     * @throws ParseException
+     * @throws Exception
      */
     public function read(): DataFrame
     {
@@ -149,31 +144,52 @@ class CsvReader extends CsvAbstract implements ReaderInterface
         $colNames = [];
         
         //pula as linhas do início
-        if($this->startIn !== 0){
-            for ($i = 0; $i < $this->startIn; $i++) {
-                //pula as linhas
-                if($this->readLength === 0){
+        if ($this->startIn !== 0) {
+            for (
+                $i = 0; $i < $this->startIn;
+                $i++
+            ) {
+            //pula as linhas
+                if ($this->readLength === 0) {
                     fgets($this->handle);
-                }else{
+                }
+                
+                if ($this->readLength > 0) {
                     fgets($this->handle, $this->readLength);
                 }
             }
         }
         
-        if($this->hasHead){
-            $colNames = fgetcsv($this->handle, $this->readLength, $this->delimiter, $this->enclosure, $this->escape);
-            if($colNames === false){
-                throw new ParseException(sprintf('%s::%s on %s', __CLASS__, __METHOD__, 'csv header'));
-            }
+        if ($this->hasHead) {
+            $colNames = (array) fgetcsv(
+                $this->handle,
+                $this->readLength,
+                $this->delimiter,
+                $this->enclosure,
+                $this->escape
+            );
+            
+            //não coberto por teste porque não sei (ainda) como causar um erro na leitura da linha neste ponto
+            // @codeCoverageIgnoreStart
+            if ($colNames === []) {
+                throw new Exception('Falha ao ler o cabeçalho dos dados.');
+            }// @codeCoverageIgnoreEnd
         }
-        
-        while (false !== ($buffer = fgetcsv($this->handle, $this->readLength, $this->delimiter, $this->enclosure, $this->escape))) {
-            $data[] = $buffer;
+
+        while (
+            false !== ($buffer = fgetcsv(
+                $this->handle,
+                $this->readLength,
+                $this->delimiter,
+                $this->enclosure,
+                $this->escape
+            ))
+        ) {
+            $data[] = (array) $buffer;
         }
-        
+
         $df = new DataFrame($data);
-        
-        if($colNames !== []){
+        if ($colNames !== [] && $data !== []) {
             $df->setColumnNames($colNames);
         }
         

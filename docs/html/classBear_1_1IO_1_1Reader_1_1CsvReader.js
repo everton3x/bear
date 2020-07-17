@@ -1,0 +1,25 @@
+var classBear_1_1IO_1_1Reader_1_1CsvReader =
+[
+    [ "__construct", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#ac71e880942df1687c13d6b735024f84b", null ],
+    [ "getDelimiter", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#abf4294a1eae0e29f5d9ae2110c39a0e7", null ],
+    [ "getEnclosure", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#aec1e315047a91ae4940da6ed8dea4f00", null ],
+    [ "getEscape", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#ab80b048e0466f17a6974be7bdd50f4c3", null ],
+    [ "getReadLength", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#a57ae508720267931cacc52b44b6b7307", null ],
+    [ "getStartIn", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#a32255b3bf6ff1d7c5551f45c4dbcaba6", null ],
+    [ "hasHead", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#ae563cd3101f53c896f5fc1a20c84690e", null ],
+    [ "read", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#a314e5c93c538ea30c9a7690b2fc777d9", null ],
+    [ "setDelimiter", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#ab84e6e884be4d9d5f47faedb168d3fa2", null ],
+    [ "setEnclosure", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#a0f7b87bf82a3be52af2b4a0cdc6ea603", null ],
+    [ "setEscape", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#afc35bf0fec5c4f0b7550015325b0fe1b", null ],
+    [ "setReadLength", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#a25f46a74c1d82b1b31ace86b73700e97", null ],
+    [ "setStartIn", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#aabc658e045edbec4e63e8a55a458f25c", null ],
+    [ "toggleHasHead", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#a5495535b49f01a9ca603dd2ea2217296", null ],
+    [ "$delimiter", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#ab077cda2d1ba9d41bffc4e91c3dd3f71", null ],
+    [ "$enclosure", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#a3e47fdc6f655aff10d7b2283c4879902", null ],
+    [ "$escape", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#a7c98b9470360aa734871b58c6a99f202", null ],
+    [ "$handle", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#a403c8fa006d049e92e78ace183aea89d", null ],
+    [ "$hasHead", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#abe33e30d6862e038aa34a721e631260c", null ],
+    [ "$length", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#a379f4cc7b38e3e2c23b7e3079c0966e5", null ],
+    [ "$readLength", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#a51ed71237a7bcaa56debd12302afa2e1", null ],
+    [ "$startIn", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#a00f1b1576d2ad2ce166fffe8f17122e9", null ]
+];

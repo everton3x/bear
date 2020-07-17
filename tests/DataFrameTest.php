@@ -1,6 +1,5 @@
 <?php
 
-use Exception;
 use Bear\DataFrame;
 use PHPUnit\Framework\TestCase;
 

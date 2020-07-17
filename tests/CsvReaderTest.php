@@ -1,6 +1,5 @@
 <?php
 
-use Exception;
 use Bear\IO\Reader\CsvReader;
 use PHPUnit\Framework\TestCase;
 
@@ -29,7 +28,7 @@ class CsvReaderTest extends TestCase
         $reader = new CsvReader('./tests/assets/sample1.csv');
         $this->assertTrue($reader->hasHead());
     }
-
+    
     public function testToggleHasHead()
     {
         $reader = new CsvReader('./tests/assets/sample1.csv');
@@ -47,8 +46,8 @@ class CsvReaderTest extends TestCase
     public function testSetGetReadLength()
     {
         $reader = new CsvReader('./tests/assets/sample1.csv');
-        $this->assertInstanceOf(CsvReader::class, $reader->setReadLength(1));
-        $this->assertEquals(1, $reader->getReadLength());
+        $this->assertInstanceOf(CsvReader::class, $reader->setReadLength(111));
+        $this->assertEquals(111, $reader->getReadLength());
     }
 
     public function testRead()
@@ -64,10 +63,43 @@ class CsvReaderTest extends TestCase
             $df->get());
     }
     
+    public function testReadEmptyDataFrameWithNoHead()
+    {
+        $reader = new CsvReader('./tests/assets/sample4.csv');
+        $reader->toggleHasHead(false);
+        $df = $reader->read();
+        $this->assertInstanceOf(\Bear\DataFrame::class, $df);
+        $this->assertEquals([],$df->get());
+    }
+    
+    public function testReadEmptyDataFrameWithHead()
+    {
+        $reader = new CsvReader('./tests/assets/sample5.csv');
+        $reader->toggleHasHead(true);
+        $df = $reader->read();
+        $this->assertInstanceOf(\Bear\DataFrame::class, $df);
+        $this->assertEquals([],$df->get());
+    }
+    
     public function testReadStartIn()
     {
         $reader = new CsvReader('./tests/assets/sample2.csv');
         $reader->setStartIn(2);
+        $df = $reader->read();
+        $this->assertInstanceOf(\Bear\DataFrame::class, $df);
+        $this->assertEquals([
+                ['id' => 1, 'name' => 'John', 'age' => 39],
+                ['id' => 2, 'name' => 'Mary', 'age' => 37],
+                ['id' => 3, 'name' => 'Paul', 'age' => 12]
+            ],
+            $df->get());
+    }
+    
+    public function testReadStartInWithLength()
+    {
+        $reader = new CsvReader('./tests/assets/sample2.csv');
+        $reader->setStartIn(2);
+        $reader->setReadLength(111);
         $df = $reader->read();
         $this->assertInstanceOf(\Bear\DataFrame::class, $df);
         $this->assertEquals([

@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('classBear_1_1DataFrame.html',''); init
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classBear_1_1DataFrame__coll__graph.png" border="0" usemap="#Bear_0cDataFrame_coll__map" alt="Collaboration graph"/></div>
 <map name="Bear_0cDataFrame_coll__map" id="Bear_0cDataFrame_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,228,317"/>
+<area shape="rect" title=" " alt="" coords="5,5,228,347"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -128,6 +128,10 @@ Membros Públicos</h2></td></tr>
 <tr class="separator:a568c9955ddb21d468b1e28ca88e99611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8340f751fceb0c047d938581337671f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBear_1_1DataFrame.html#aa8340f751fceb0c047d938581337671f">getRowRange</a> (?int $start=null, ?int $end=null)</td></tr>
 <tr class="separator:aa8340f751fceb0c047d938581337671f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a736e2b42990278bfa3f77af8cc222dd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBear_1_1DataFrame.html#a736e2b42990278bfa3f77af8cc222dd9">mergeByRows</a> (<a class="el" href="classBear_1_1DataFrame.html">DataFrame</a> $df)</td></tr>
+<tr class="separator:a736e2b42990278bfa3f77af8cc222dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f40d3024f0b29d0565f2da95c3d7569"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBear_1_1DataFrame.html#a2f40d3024f0b29d0565f2da95c3d7569">mergeByColumns</a> (<a class="el" href="classBear_1_1DataFrame.html">DataFrame</a> $df)</td></tr>
+<tr class="separator:a2f40d3024f0b29d0565f2da95c3d7569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Membros Protegidos</h2></td></tr>
@@ -189,7 +193,7 @@ Atributos Protegidos</h2></td></tr>
 <p>Também é possível fornecer um array vazio. Neste caso, o data frame não terá nomes de colunas nem dados e <a class="el" href="classBear_1_1DataFrame.html#adb0057fee7216134f9ff80babdce983d">DataFrame::get()</a> e <a class="el" href="classBear_1_1DataFrame.html#aed3e11b7dbc8a76dea0151cdd6ad4006">DataFrame::getColumnNames()</a> retornam um array vazio.</p>
 <dl class="exception"><dt>Exceções</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">InvalidDataStructureException</td><td></td></tr>
+    <tr><td class="paramname">Exception</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -263,7 +267,7 @@ Atributos Protegidos</h2></td></tr>
 <dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
 <dl class="exception"><dt>Exceções</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">InvalidDataStructureException</td><td></td></tr>
+    <tr><td class="paramname">Exception</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -306,6 +310,8 @@ Atributos Protegidos</h2></td></tr>
 </div><div class="memdoc">
 <p>Conta o número de linhas do data frame.</p>
 <dl class="section return"><dt>Retorna</dt><dd>int </dd></dl>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classBear_1_1DataFrame.html#a2f40d3024f0b29d0565f2da95c3d7569">Bear\DataFrame\mergeByColumns()</a>.</p>
 
 </div>
 </div>
@@ -385,6 +391,8 @@ Atributos Protegidos</h2></td></tr>
 <dl class="section return"><dt>Retorna</dt><dd>array </dd></dl>
 <dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classBear_1_1DataFrame.html#a228d951985567604f1d8fece9fb6a70f">DataFrame::assembleDataFrame()</a> </dd></dl>
 
+<p class="reference">Referenciado(a) por <a class="el" href="classBear_1_1DataFrame.html#a2f40d3024f0b29d0565f2da95c3d7569">Bear\DataFrame\mergeByColumns()</a> e <a class="el" href="classBear_1_1DataFrame.html#a736e2b42990278bfa3f77af8cc222dd9">Bear\DataFrame\mergeByRows()</a>.</p>
+
 </div>
 </div>
 <a id="aed3e11b7dbc8a76dea0151cdd6ad4006"></a>
@@ -404,6 +412,8 @@ Atributos Protegidos</h2></td></tr>
 <p>Fornece uma arrya com os nomes de colunas.</p>
 <dl class="section return"><dt>Retorna</dt><dd>array </dd></dl>
 <dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classBear_1_1DataFrame.html#ae4645e984c4afb75c5e77bf56c64eb65">DataFrame::$colNames</a> </dd></dl>
+
+<p class="reference">Referenciado(a) por <a class="el" href="classBear_1_1DataFrame.html#a2f40d3024f0b29d0565f2da95c3d7569">Bear\DataFrame\mergeByColumns()</a> e <a class="el" href="classBear_1_1DataFrame.html#a736e2b42990278bfa3f77af8cc222dd9">Bear\DataFrame\mergeByRows()</a>.</p>
 
 </div>
 </div>
@@ -429,10 +439,10 @@ Atributos Protegidos</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>\Bear\DataFrame </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classBear_1_1DataFrame.html">DataFrame</a> </dd></dl>
 <dl class="exception"><dt>Exceções</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">OutOfBoundsException</td><td></td></tr>
+    <tr><td class="paramname">Exception</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -461,10 +471,10 @@ Atributos Protegidos</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>\Bear\DataFrame </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classBear_1_1DataFrame.html">DataFrame</a> </dd></dl>
 <dl class="exception"><dt>Exceções</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">OutOfBoundsException</td><td></td></tr>
+    <tr><td class="paramname">Exception</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -504,11 +514,10 @@ Atributos Protegidos</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>\Bear\DataFrame </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classBear_1_1DataFrame.html">DataFrame</a> </dd></dl>
 <dl class="exception"><dt>Exceções</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">OutOfBoundsException</td><td></td></tr>
-    <tr><td class="paramname">InvalidArgumentException</td><td></td></tr>
+    <tr><td class="paramname">Exception</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -548,10 +557,10 @@ Atributos Protegidos</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>\Bear\DataFrame </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classBear_1_1DataFrame.html">DataFrame</a> </dd></dl>
 <dl class="exception"><dt>Exceções</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">OutOfBoundsException</td><td></td></tr>
+    <tr><td class="paramname">Exception</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -583,6 +592,21 @@ Atributos Protegidos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Retorna um data frame com uma faixa de linhas entre $start e $end.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">int&#160;|&#160;null</td><td class="paramname">$start</td><td></td></tr>
+    <tr><td class="paramtype">int&#160;|&#160;null</td><td class="paramname">$end</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classBear_1_1DataFrame.html">DataFrame</a> </dd></dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -608,13 +632,84 @@ Atributos Protegidos</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>\Bear\DataFrame </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classBear_1_1DataFrame.html">DataFrame</a> </dd></dl>
 <dl class="exception"><dt>Exceções</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">OutOfBoundsException</td><td></td></tr>
+    <tr><td class="paramname">Exception</td><td></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a2f40d3024f0b29d0565f2da95c3d7569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f40d3024f0b29d0565f2da95c3d7569">&#9670;&nbsp;</a></span>mergeByColumns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bear\DataFrame::mergeByColumns </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBear_1_1DataFrame.html">DataFrame</a>&#160;</td>
+          <td class="paramname"><em>$df</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mescla um data frame com o data frame atual acrescentando colunas à esquerda.</p>
+<p>É necessário que ambos os data frames tenham o mesmo número de linhas.</p>
+<p>Não pode haver colunas com os mesmos nomes nos dois data frames.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype"><a class="el" href="classBear_1_1DataFrame.html">DataFrame</a></td><td class="paramname">$df</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classBear_1_1DataFrame.html">DataFrame</a> </dd></dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referencias <a class="el" href="classBear_1_1DataFrame.html#a349a7c10a0c60b77c3d3cc01f1aa1056">Bear\DataFrame\countRows()</a>, <a class="el" href="classBear_1_1DataFrame.html#adb0057fee7216134f9ff80babdce983d">Bear\DataFrame\get()</a> e <a class="el" href="classBear_1_1DataFrame.html#aed3e11b7dbc8a76dea0151cdd6ad4006">Bear\DataFrame\getColumnNames()</a>.</p>
+
+</div>
+</div>
+<a id="a736e2b42990278bfa3f77af8cc222dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a736e2b42990278bfa3f77af8cc222dd9">&#9670;&nbsp;</a></span>mergeByRows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bear\DataFrame::mergeByRows </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBear_1_1DataFrame.html">DataFrame</a>&#160;</td>
+          <td class="paramname"><em>$df</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mescla um data frame ao data frame atual pelas linhas.</p>
+<p>As colunas dos dois data frames precisam ser da mesma quantidade e com os mesmos nomes.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype"><a class="el" href="classBear_1_1DataFrame.html">DataFrame</a></td><td class="paramname">$df</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classBear_1_1DataFrame.html">DataFrame</a> </dd></dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referencias <a class="el" href="classBear_1_1DataFrame.html#adb0057fee7216134f9ff80babdce983d">Bear\DataFrame\get()</a> e <a class="el" href="classBear_1_1DataFrame.html#aed3e11b7dbc8a76dea0151cdd6ad4006">Bear\DataFrame\getColumnNames()</a>.</p>
 
 </div>
 </div>
@@ -641,10 +736,10 @@ Atributos Protegidos</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>\Bear\DataFrame </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classBear_1_1DataFrame.html">DataFrame</a> </dd></dl>
 <dl class="exception"><dt>Exceções</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">InvalidArgumentException</td><td></td></tr>
+    <tr><td class="paramname">Exception</td><td></td></tr>
   </table>
   </dd>
 </dl>

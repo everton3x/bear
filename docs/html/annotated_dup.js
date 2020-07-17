@@ -1,5 +1,4 @@
 var annotated_dup =
 [
-    [ "Bear", "namespaceBear.html", "namespaceBear" ],
-    [ "DataFrameTest", "classDataFrameTest.html", "classDataFrameTest" ]
+    [ "Bear", "namespaceBear.html", "namespaceBear" ]
 ];

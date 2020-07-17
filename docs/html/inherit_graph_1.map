@@ -1,9 +1,5 @@
 <map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
-<area shape="rect" id="node1" title=" " alt="" coords="5,177,92,203"/>
-<area shape="rect" id="node2" href="$classBear_1_1Exception_1_1InvalidColumnNameException.html" title=" " alt="" coords="145,5,363,47"/>
-<area shape="rect" id="node3" href="$classBear_1_1Exception_1_1InvalidDataStructureException.html" title=" " alt="" coords="155,71,353,112"/>
-<area shape="rect" id="node4" href="$classBear_1_1Exception_1_1InvalidPatternException.html" title=" " alt="" coords="147,136,361,177"/>
-<area shape="rect" id="node5" href="$classBear_1_1Exception_1_1InvalidResourceException.html" title=" " alt="" coords="140,201,368,243"/>
-<area shape="rect" id="node6" href="$classBear_1_1Exception_1_1OutOfBoundsException.html" title=" " alt="" coords="149,267,359,308"/>
-<area shape="rect" id="node7" href="$classBear_1_1Exception_1_1OutOfRangeException.html" title=" " alt="" coords="153,332,355,373"/>
+<area shape="rect" id="node1" href="$classBear_1_1IO_1_1CsvAbstract.html" title=" " alt="" coords="43,5,195,32"/>
+<area shape="rect" id="node2" href="$classBear_1_1IO_1_1Reader_1_1CsvReader.html" title=" " alt="" coords="281,31,476,57"/>
+<area shape="rect" id="node3" href="$interfaceBear_1_1IO_1_1Reader_1_1ReaderInterface.html" title=" " alt="" coords="5,56,233,83"/>
 </map>

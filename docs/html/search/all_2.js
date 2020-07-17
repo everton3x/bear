@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['assembledataframe_15',['assembleDataFrame',['../classBear_1_1DataFrame.html#a228d951985567604f1d8fece9fb6a70f',1,'Bear::DataFrame']]]
+  ['assembledataframe_11',['assembleDataFrame',['../classBear_1_1DataFrame.html#a228d951985567604f1d8fece9fb6a70f',1,'Bear::DataFrame']]]
 ];

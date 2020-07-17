@@ -15,6 +15,8 @@ var classBear_1_1DataFrame =
     [ "getColumnsRangeByName", "classBear_1_1DataFrame.html#ae8ddc9213897e26e3d1b33ed8b4892b3", null ],
     [ "getRowRange", "classBear_1_1DataFrame.html#aa8340f751fceb0c047d938581337671f", null ],
     [ "getRows", "classBear_1_1DataFrame.html#a568c9955ddb21d468b1e28ca88e99611", null ],
+    [ "mergeByColumns", "classBear_1_1DataFrame.html#a2f40d3024f0b29d0565f2da95c3d7569", null ],
+    [ "mergeByRows", "classBear_1_1DataFrame.html#a736e2b42990278bfa3f77af8cc222dd9", null ],
     [ "setColumnNames", "classBear_1_1DataFrame.html#a92cbfa262d7fd72afbd366d145b69378", null ],
     [ "$colNames", "classBear_1_1DataFrame.html#ae4645e984c4afb75c5e77bf56c64eb65", null ],
     [ "$data", "classBear_1_1DataFrame.html#aa25677469bf0e63fe5d403a28305268a", null ]
