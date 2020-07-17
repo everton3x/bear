@@ -1,6 +1,6 @@
 <?php
 
-namespace Bear\Reader;
+namespace Bear\IO\Reader;
 
 use Bear\DataFrame;
 

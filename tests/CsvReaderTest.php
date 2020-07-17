@@ -1,7 +1,7 @@
 <?php
 
 use Bear\Exception\InvalidResourceException;
-use Bear\Reader\CsvReader;
+use Bear\IO\Reader\CsvReader;
 use PHPUnit\Framework\TestCase;
 
 /**

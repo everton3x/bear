@@ -1,7 +1,9 @@
 <?php
 namespace Bear;
 
+use Bear\Exception\InvalidColumnNameException;
 use Bear\Exception\InvalidDataStructureException;
+use Bear\Exception\InvalidRowCountException;
 use Bear\Exception\OutOfBoundsException;
 use InvalidArgumentException;
 
@@ -211,7 +213,7 @@ class DataFrame
      * Precisa respeitar a ordem e a quantidade das colunas no data frame.
      * 
      * @param array $colNames
-     * @return \Bear\DataFrame
+     * @return DataFrame
      * @throws InvalidArgumentException
      * @see DataFrame::$colNames
      * @see DataFrame::getColumnNames()
@@ -231,7 +233,7 @@ class DataFrame
      * Fornece um data frame com as colunas selecionadas pelo nome.
      * 
      * @param array $columns
-     * @return \Bear\DataFrame
+     * @return DataFrame
      * @throws OutOfBoundsException
      */
     public function getColumnsByName(array $columns): DataFrame
@@ -254,7 +256,7 @@ class DataFrame
      * dentro do data frame).
      * 
      * @param array $columns
-     * @return \Bear\DataFrame
+     * @return DataFrame
      * @throws OutOfBoundsException
      */
     public function getColumnsByIndex(array $columns): DataFrame
@@ -283,7 +285,7 @@ class DataFrame
      * 
      * @param int|null $start
      * @param int|null $end
-     * @return \Bear\DataFrame
+     * @return DataFrame
      * @throws OutOfBoundsException
      * @throws InvalidArgumentException
      */
@@ -333,7 +335,7 @@ class DataFrame
      * 
      * @param string|null $start
      * @param string|null $end
-     * @return \Bear\DataFrame
+     * @return DataFrame
      * @throws OutOfBoundsException
      */
     public function getColumnsRangeByName(?string $start = null, ?string $end = null): DataFrame
@@ -362,7 +364,7 @@ class DataFrame
      * fornecida.
      * 
      * @param array $rows
-     * @return \Bear\DataFrame
+     * @return DataFrame
      * @throws OutOfBoundsException
      */
     public function getRows(array $rows): DataFrame
@@ -381,6 +383,15 @@ class DataFrame
         return $df;
     }
     
+    /**
+     * Retorna um data frame com uma faixa de linhas entre $start e $end.
+     * 
+     * @param int|null $start
+     * @param int|null $end
+     * @return DataFrame
+     * @throws InvalidArgumentException
+     * @throws OutOfBoundsException
+     */
     public function getRowRange(?int $start = null, ?int $end = null): DataFrame
     {
         if(is_null($start)){
@@ -404,5 +415,64 @@ class DataFrame
         }
         
         return $this->getRows(range($start, $end, 1));
+    }
+    
+    /**
+     * Mescla um data frame ao data frame atual pelas linhas.
+     * 
+     * As colunas dos dois data frames precisam ser da mesma quantidade e com 
+     * os mesmos nomes.
+     * 
+     * @param DataFrame $df
+     * @return DataFrame
+     * @throws InvalidColumnNameException
+     */
+    public function mergeByRows(DataFrame $df): DataFrame
+    {
+        //verifica se as colunas são as mesmas em tamanho e rótulo
+        if($this->colNames !== $df->getColumnNames()){
+            throw new InvalidColumnNameException(join(', ', $df->getColumnNames()));
+        }
+        
+        $data = array_merge($this->get(), $df->get());
+        $newdf = new DataFrame($data);
+        $newdf->setColumnNames($this->colNames);
+        return $newdf;
+    }
+    
+    /**
+     * Mescla um data frame com o data frame atual acrescentando colunas à 
+     * esquerda.
+     * 
+     * É necessário que ambos os data frames tenham o mesmo número de linhas.
+     * 
+     * Não pode haver colunas com os mesmos nomes nos dois data frames.
+     * 
+     * @param \Bear\DataFrame $df
+     * @return \Bear\DataFrame
+     * @throws InvalidRowCountException
+     * @throws InvalidColumnNameException
+     */
+    public function mergeByColumns(DataFrame $df): DataFrame
+    {
+        //verifica se os data frames tem o mesmo número de linhas
+        if($this->countRows() !== $df->countRows()){
+            throw new InvalidRowCountException($df->countRows());
+        }
+        
+        //verifica se os nomes de colunas são iguais
+        if(array_intersect($this->colNames, $df->getColumnNames())){
+            throw new InvalidColumnNameException(join(', ', $df->getColumnNames()));
+        }
+        
+        $data = $this->get();
+        $new = $df->get();
+        foreach ($data as $index => $row){
+            $data[$index] = array_merge($row, $new[$index]);
+        }
+        
+        $newdf = new DataFrame($data);
+        $newdf->setColumnNames(array_merge($this->colNames, $df->getColumnNames()));
+        return $newdf;
     }
 }

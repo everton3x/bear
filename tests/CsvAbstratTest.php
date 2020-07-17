@@ -1,7 +1,7 @@
 <?php
 
-use Bear\Base\CsvAbstract;
-use Bear\Reader\CsvReader;
+use Bear\IO\CsvAbstract;
+use Bear\IO\Reader\CsvReader;
 use PHPUnit\Framework\TestCase;
 
 /**

@@ -1,7 +1,7 @@
 <?php
-namespace Bear\Reader;
+namespace Bear\IO\Reader;
 
-use Bear\Base\CsvAbstract;
+use Bear\IO\CsvAbstract;
 use Bear\DataFrame;
 use Bear\Exception\InvalidResourceException;
 use Bear\Exception\ParseException;

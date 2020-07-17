@@ -1,6 +1,6 @@
 <?php
 
-namespace Bear\Base;
+namespace Bear\IO;
 
 /**
  * Classe base para trabalhar com arquivos csv

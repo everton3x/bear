@@ -1,7 +1,9 @@
 <?php
 
 use Bear\DataFrame;
+use Bear\Exception\InvalidColumnNameException;
 use Bear\Exception\InvalidDataStructureException;
+use Bear\Exception\InvalidRowCountException;
 use Bear\Exception\OutOfBoundsException;
 use PHPUnit\Framework\TestCase;
 
@@ -17,6 +19,16 @@ class DataFrameTest extends TestCase
         [1, 'John', 39],
         [2, 'Mary', 37],
         [3, 'Paul', 12]
+    ];
+    protected array $df_2 = [
+        [4, 'Jack', 30],
+        [5, 'Mart', 20],
+        [6, 'Phill', 10]
+    ];
+    protected array $df_3 = [
+        ['m'],
+        ['f'],
+        ['m']
     ];
 
     public function testConstructEmpty()
@@ -240,7 +252,7 @@ class DataFrameTest extends TestCase
             ['id' => 3, 'name' => 'Paul']
             ], $df2->get());
     }
-    
+
     public function testGetColumnsRangeByNameStartFail()
     {
         $df = new DataFrame($this->df_1);
@@ -263,84 +275,152 @@ class DataFrameTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         $df->setColumnNames(['id', 'name']);
     }
-    
+
     public function testGetRows()
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $df2 = $df->getRows([1,2]);
+        $df2 = $df->getRows([1, 2]);
         $this->assertInstanceOf(DataFrame::class, $df2);
         $this->assertEquals([
-            ['id' => 2, 'name' => 'Mary', 'age'=>37],
-            ['id' => 3, 'name' => 'Paul', 'age'=>12]
+            ['id' => 2, 'name' => 'Mary', 'age' => 37],
+            ['id' => 3, 'name' => 'Paul', 'age' => 12]
             ], $df2->get());
     }
-    
+
     public function testGetRowsFails()
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
         $this->expectException(OutOfBoundsException::class);
-        $df2 = $df->getRows([1,4]);
+        $df2 = $df->getRows([1, 4]);
     }
-    
+
     public function testGetRowRange()
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $df2 = $df->getRowRange(1,2);
+        $df2 = $df->getRowRange(1, 2);
         $this->assertInstanceOf(DataFrame::class, $df2);
         $this->assertEquals([
-            ['id' => 2, 'name' => 'Mary', 'age'=>37],
-            ['id' => 3, 'name' => 'Paul', 'age'=>12]
+            ['id' => 2, 'name' => 'Mary', 'age' => 37],
+            ['id' => 3, 'name' => 'Paul', 'age' => 12]
             ], $df2->get());
     }
-    
+
     public function testGetRowRangeNoStart()
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $df2 = $df->getRowRange(null,1);
+        $df2 = $df->getRowRange(null, 1);
         $this->assertInstanceOf(DataFrame::class, $df2);
         $this->assertEquals([
-            ['id' => 1, 'name' => 'John', 'age'=>39],
-            ['id' => 2, 'name' => 'Mary', 'age'=>37]
+            ['id' => 1, 'name' => 'John', 'age' => 39],
+            ['id' => 2, 'name' => 'Mary', 'age' => 37]
             ], $df2->get());
     }
-    
+
     public function testGetRowRangeNoEnd()
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $df2 = $df->getRowRange(1,null);
+        $df2 = $df->getRowRange(1, null);
         $this->assertInstanceOf(DataFrame::class, $df2);
         $this->assertEquals([
-            ['id' => 2, 'name' => 'Mary', 'age'=>37],
-            ['id' => 3, 'name' => 'Paul', 'age'=>12]
+            ['id' => 2, 'name' => 'Mary', 'age' => 37],
+            ['id' => 3, 'name' => 'Paul', 'age' => 12]
             ], $df2->get());
     }
-    
+
     public function testGetRowRangeFailStart()
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
         $this->expectException(OutOfBoundsException::class);
-        $df2 = $df->getRowRange(4,8);
+        $df2 = $df->getRowRange(4, 8);
     }
-    
+
     public function testGetRowRangeFailEnd()
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
         $this->expectException(OutOfBoundsException::class);
-        $df2 = $df->getRowRange(0,8);
+        $df2 = $df->getRowRange(0, 8);
     }
-    
+
     public function testGetRowRangeFailEndStart()
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
         $this->expectException(InvalidArgumentException::class);
-        $df2 = $df->getRowRange(2,1);
+        $df2 = $df->getRowRange(2, 1);
+    }
+
+    public function testMergeByRows()
+    {
+        $df = new DataFrame($this->df_1);
+        $df2 = new DataFrame($this->df_2);
+        $merged = $df->mergeByRows($df2);
+        $this->assertInstanceOf(DataFrame::class, $merged);
+        $this->assertEquals(array_merge($this->df_1, $this->df_2), $merged->get());
+    }
+
+    public function testMergeByRowsNumColsFail()
+    {
+        $df = new DataFrame($this->df_1);
+        $df2 = new DataFrame([
+            [4, 'Jack'],
+            [5, 'Mart'],
+            [6, 'Phill']
+        ]);
+        $this->expectException(InvalidColumnNameException::class);
+        $merged = $df->mergeByRows($df2);
+    }
+
+    public function testMergeByRowsColNamesFail()
+    {
+        $df = new DataFrame($this->df_1);
+        $df2 = new DataFrame($this->df_2);
+        $df2->setColumnNames(['cod', 'nome', 'idade']);
+        $this->expectException(InvalidColumnNameException::class);
+        $merged = $df->mergeByRows($df2);
+    }
+
+    public function testMergeByColumns()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['cod', 'nome', 'idade']);
+        $df2 = new DataFrame($this->df_3);
+        $df2->setColumnNames(['sexo']);
+        $merged = $df->mergeByColumns($df2);
+        $this->assertInstanceOf(DataFrame::class, $merged);
+        $this->assertEquals(
+            [
+                ['cod' => 1, 'nome' => 'John', 'idade' => 39, 'sexo' => 'm'],
+                ['cod' => 2, 'nome' => 'Mary', 'idade' => 37, 'sexo' => 'f'],
+                ['cod' => 3, 'nome' => 'Paul', 'idade' => 12, 'sexo' => 'm']
+            ],
+            $merged->get());
+    }
+    
+    public function testMergeByColumnsNoColNames()
+    {
+        $df = new DataFrame($this->df_1);
+        $df2 = new DataFrame($this->df_3);
+        $this->expectException(InvalidColumnNameException::class);
+        $merged = $df->mergeByColumns($df2);
+    }
+
+    public function testMergeByColumnsFail()
+    {
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['cod', 'nome', 'idade']);
+        $df2 = new DataFrame([
+            ['m'],
+            ['m']
+        ]);
+        $df2->setColumnNames(['sexo']);
+        $this->expectException(InvalidRowCountException::class);
+        $merged = $df->mergeByColumns($df2);
     }
 }
