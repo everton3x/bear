@@ -1,8 +1,11 @@
 <?php
+
 namespace Bear\IO\Writer;
 
 use Bear\DataFrame;
 use Bear\IO\CsvAbstract;
+use Bear\IO\Reader\CsvReader;
+use Exception;
 
 /**
  * Escreve um data frame para arquivo csv.
@@ -16,24 +19,21 @@ class CsvWriter extends CsvAbstract implements WriterInterface
      * @var resource Ponteiro para o arquivo csv.
      */
     protected $handle = null;
-    
-    /**
+/**
      *
-     * @var bool Indica se o data frame será salvo com os nomes das colunas 
+     * @var bool Indica se o data frame será salvo com os nomes das colunas
      * na primeira linha.
      */
     protected bool $hasHead = true;
-
-
-    /**
+/**
      * Cria uma instância do writer.
-     * 
+     *
      * @param string $filename
      * @throws Exception
      */
     public function __construct(string $filename)
     {
-        $handle = @fopen($filename, 'r');
+        $handle = @fopen($filename, 'w');
         if ($handle === false) {
             throw new Exception(sprintf('Arquivo [%s] inacessível.', $filename));
         }
@@ -56,10 +56,10 @@ class CsvWriter extends CsvAbstract implements WriterInterface
      * Consfigura se o writer irá colocar uma linha de cabeçalho ou não.
      *
      * @param bool $toggle
-     * @return CsvReader
+     * @return CsvWriter
      * @see CsvWriter::hasHead()
      */
-    public function toggleHasHead(bool $toggle): CsvReader
+    public function toggleHasHead(bool $toggle): CsvWriter
     {
         $this->hasHead = $toggle;
         return $this;
@@ -67,41 +67,30 @@ class CsvWriter extends CsvAbstract implements WriterInterface
 
     /**
      * Escreve o data frame para o arquivos csv.
-     * 
+     *
      * @param DataFrame $df
      * @return void
      */
     public function write(DataFrame $df): void
     {
         //escreve o cabeçalho
-        if($this->hasHead){
-            $writed = @fputcsv(
-                $this->handle,
-                $df->getColumnNames(),
-                $this->delimiter,
-                $this->enclosure,
-                $this->escape
-            );
-            
-            if($writed === false){
-                throw new \Exception(sprintf('Falha ao escrever cabeçalho [%s].', join(', ', $df->getColumnNames())));
+        if ($this->hasHead) {
+            $writed = @fputcsv($this->handle, $df->getColumnNames(), $this->delimiter, $this->enclosure, $this->escape);
+            // @codeCoverageIgnoreStart
+            if ($writed === false) {
+                throw new Exception(sprintf('Falha ao escrever cabeçalho [%s].', join(', ', $df->getColumnNames())));
             }
+            // @codeCoverageIgnoreEnd
         }
         
         $data = $df->get();
-        
-        foreach ($data as $index => $row){
-            $writed = @fputcsv(
-                $this->handle,
-                $row,
-                $this->delimiter,
-                $this->enclosure,
-                $this->escape
-            );
-            
-            if($writed === false){
-                throw new \Exception(sprintf('Falha ao escrever a linha [%d].', $index));
+        foreach ($data as $index => $row) {
+            $writed = @fputcsv($this->handle, $row, $this->delimiter, $this->enclosure, $this->escape);
+            // @codeCoverageIgnoreStart
+            if ($writed === false) {
+                throw new Exception(sprintf('Falha ao escrever a linha [%d].', $index));
             }
+            // @codeCoverageIgnoreEnd
         }
     }
     

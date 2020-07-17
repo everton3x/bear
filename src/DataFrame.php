@@ -156,13 +156,15 @@ class DataFrame
         foreach ($this->data as $rowId => $row) {
             if (count($row) !== $numCols) {
                 throw new Exception(
+                    // @codeCoverageIgnoreStart
                     sprintf(
-                        "Número de colunas da linha [%d] é "
-                        . "[%d], porém deveria ser [%d].",
+                        "Número de colunas da linha [%d] é [%d], porém deveria "
+                        . "ser [%d]",
                         $rowId,
                         count($row),
                         $numCols
                     )
+                    // @codeCoverageIgnoreEnd
                 );
             }
         }
@@ -231,12 +233,14 @@ class DataFrame
     {
         if (count($colNames) !== $this->countColumns()) {
             throw new Exception(
+                // @codeCoverageIgnoreStart
                 sprintf(
                     'Número de colunas inválido. Eram esperadas [%d] colunas, '
                     . 'mas [%d] colunas foram encontradas.',
                     $this->countColumns(),
                     count($colNames)
                 )
+                // @codeCoverageIgnoreEnd
             );
         }
 
@@ -334,12 +338,14 @@ class DataFrame
 
         if ($start > $end) {
             throw new Exception(
+                // @codeCoverageIgnoreStart
                 sprintf(
                     'A coluna final [%d] não pode ter índice menor que a coluna '
                     . 'inicial [%d].',
                     $end,
                     $start
                 )
+                // @codeCoverageIgnoreEnd
             );
         }
 
@@ -433,12 +439,14 @@ class DataFrame
 
         if ($start > $end) {
             throw new Exception(
+                // @codeCoverageIgnoreStart
                 sprintf(
                     'A linha de início [%d] não pode ser superior à linha de '
                     . 'fim [%d]',
                     $start,
                     $end
                 )
+                // @codeCoverageIgnoreEnd
             );
         }
 
@@ -468,12 +476,14 @@ class DataFrame
         //verifica se as colunas são as mesmas em tamanho e rótulo
         if ($this->colNames !== $df->getColumnNames()) {
             throw new Exception(
+                // @codeCoverageIgnoreStart
                 sprintf(
                     'O data frame atual tem as colunas [%s], mas o data frame '
                     . 'a mesclar tem as colunas [%s]',
                     join(',', $this->colNames),
                     join(', ', $df->getColumnNames())
                 )
+                // @codeCoverageIgnoreEnd
             );
         }
 
@@ -500,24 +510,28 @@ class DataFrame
         //verifica se os data frames tem o mesmo número de linhas
         if ($this->countRows() !== $df->countRows()) {
             throw new Exception(
+                // @codeCoverageIgnoreStart
                 sprintf(
                     'O data frame atual tem [%d] linhas, mas o data frame a '
                     . 'mesclar tem [%d] linhas.',
                     $this->countRows(),
                     $df->countRows()
                 )
+                // @codeCoverageIgnoreEnd
             );
         }
 
         //verifica se os nomes de colunas são iguais
         if (array_intersect($this->colNames, $df->getColumnNames())) {
             throw new Exception(
+                // @codeCoverageIgnoreStart
                 sprintf(
                     'O data frame atual tem as colunas [%s], mas o data frame '
                     . 'a mesclar tem as colunas [%s].',
                     join(', ', $this->colNames),
                     join(', ', $df->getColumnNames())
                 )
+                // @codeCoverageIgnoreEnd
             );
         }
 

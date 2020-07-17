@@ -1,6 +1,7 @@
 var classBear_1_1IO_1_1Reader_1_1CsvReader =
 [
     [ "__construct", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#ac71e880942df1687c13d6b735024f84b", null ],
+    [ "__destruct", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#a35a6bc228e423af94a5b1f93fb058475", null ],
     [ "getDelimiter", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#abf4294a1eae0e29f5d9ae2110c39a0e7", null ],
     [ "getEnclosure", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#aec1e315047a91ae4940da6ed8dea4f00", null ],
     [ "getEscape", "classBear_1_1IO_1_1Reader_1_1CsvReader.html#ab80b048e0466f17a6974be7bdd50f4c3", null ],

@@ -172,7 +172,7 @@ Atributos Protegidos</h2></td></tr>
 <p>Nova instância de um dataframe.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramtype">array</td><td class="paramname">$data</td><td>Os dados no formato [linha][coluna] = valor, como neste exemplo: <pre class="fragment"> $data = [
+    <tr><td class="paramname">array&lt;array&gt;</td><td>$data Os dados no formato [linha][coluna] = valor, como neste exemplo: <pre class="fragment"> $data = [
 
      [//início da linha 0
          'id' =&gt; 1,//campo id com valor 1
@@ -235,7 +235,7 @@ Atributos Protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Monta um array trocando as chaves numéricas das colunas pelos nomes de colunas em cada linha.</p>
-<dl class="section return"><dt>Retorna</dt><dd>array </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>array&lt;array&gt; </dd></dl>
 <dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classBear_1_1DataFrame.html#ad1615ea58c38fb5bf0e2095d96c89855">DataFrame::disassembleDataFrame()</a> </dd></dl>
 
 </div>
@@ -388,10 +388,10 @@ Atributos Protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Fornece um array com os dados do data frame no formato [linha][coluna] = valor</p>
-<dl class="section return"><dt>Retorna</dt><dd>array </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>array&lt;array&gt; </dd></dl>
 <dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classBear_1_1DataFrame.html#a228d951985567604f1d8fece9fb6a70f">DataFrame::assembleDataFrame()</a> </dd></dl>
 
-<p class="reference">Referenciado(a) por <a class="el" href="classBear_1_1DataFrame.html#a2f40d3024f0b29d0565f2da95c3d7569">Bear\DataFrame\mergeByColumns()</a> e <a class="el" href="classBear_1_1DataFrame.html#a736e2b42990278bfa3f77af8cc222dd9">Bear\DataFrame\mergeByRows()</a>.</p>
+<p class="reference">Referenciado(a) por <a class="el" href="classBear_1_1DataFrame.html#a2f40d3024f0b29d0565f2da95c3d7569">Bear\DataFrame\mergeByColumns()</a>, <a class="el" href="classBear_1_1DataFrame.html#a736e2b42990278bfa3f77af8cc222dd9">Bear\DataFrame\mergeByRows()</a> e <a class="el" href="classBear_1_1IO_1_1Writer_1_1CsvWriter.html#aaa23565444f621f9427765d1ea26424d">Bear\IO\Writer\CsvWriter\write()</a>.</p>
 
 </div>
 </div>
@@ -410,10 +410,10 @@ Atributos Protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Fornece uma arrya com os nomes de colunas.</p>
-<dl class="section return"><dt>Retorna</dt><dd>array </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>array&lt;string|int&gt; </dd></dl>
 <dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classBear_1_1DataFrame.html#ae4645e984c4afb75c5e77bf56c64eb65">DataFrame::$colNames</a> </dd></dl>
 
-<p class="reference">Referenciado(a) por <a class="el" href="classBear_1_1DataFrame.html#a2f40d3024f0b29d0565f2da95c3d7569">Bear\DataFrame\mergeByColumns()</a> e <a class="el" href="classBear_1_1DataFrame.html#a736e2b42990278bfa3f77af8cc222dd9">Bear\DataFrame\mergeByRows()</a>.</p>
+<p class="reference">Referenciado(a) por <a class="el" href="classBear_1_1DataFrame.html#a2f40d3024f0b29d0565f2da95c3d7569">Bear\DataFrame\mergeByColumns()</a>, <a class="el" href="classBear_1_1DataFrame.html#a736e2b42990278bfa3f77af8cc222dd9">Bear\DataFrame\mergeByRows()</a> e <a class="el" href="classBear_1_1IO_1_1Writer_1_1CsvWriter.html#aaa23565444f621f9427765d1ea26424d">Bear\IO\Writer\CsvWriter\write()</a>.</p>
 
 </div>
 </div>
@@ -435,7 +435,7 @@ Atributos Protegidos</h2></td></tr>
 <p>Fornece um data frame com as colunas filtradas pelo seu index (sua ordem dentro do data frame).</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramtype">array</td><td class="paramname">$columns</td><td></td></tr>
+    <tr><td class="paramname">array&lt;int&gt;</td><td>$columns </td></tr>
   </table>
   </dd>
 </dl>
@@ -467,7 +467,7 @@ Atributos Protegidos</h2></td></tr>
 <p>Fornece um data frame com as colunas selecionadas pelo nome.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramtype">array</td><td class="paramname">$columns</td><td></td></tr>
+    <tr><td class="paramname">array&lt;string&gt;</td><td>$columns </td></tr>
   </table>
   </dd>
 </dl>
@@ -628,7 +628,7 @@ Atributos Protegidos</h2></td></tr>
 <p>Fornece um data frame com as linhas filtradas de acordo com a seleção fornecida.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramtype">array</td><td class="paramname">$rows</td><td></td></tr>
+    <tr><td class="paramname">array&lt;int&gt;</td><td>$rows </td></tr>
   </table>
   </dd>
 </dl>
@@ -732,7 +732,7 @@ Atributos Protegidos</h2></td></tr>
 <p>Precisa respeitar a ordem e a quantidade das colunas no data frame.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramtype">array</td><td class="paramname">$colNames</td><td></td></tr>
+    <tr><td class="paramname">array&lt;string|int&gt;</td><td>$colNames </td></tr>
   </table>
   </dd>
 </dl>

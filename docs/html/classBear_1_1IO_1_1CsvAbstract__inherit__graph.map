@@ -1,4 +1,5 @@
 <map id="Bear\IO\CsvAbstract" name="Bear\IO\CsvAbstract">
-<area shape="rect" id="node1" title=" " alt="" coords="27,5,179,200"/>
-<area shape="rect" id="node2" href="$classBear_1_1IO_1_1Reader_1_1CsvReader.html" title=" " alt="" coords="5,248,200,487"/>
+<area shape="rect" id="node1" title=" " alt="" coords="133,5,285,200"/>
+<area shape="rect" id="node2" href="$classBear_1_1IO_1_1Reader_1_1CsvReader.html" title=" " alt="" coords="5,248,200,501"/>
+<area shape="rect" id="node3" href="$classBear_1_1IO_1_1Writer_1_1CsvWriter.html" title=" " alt="" coords="225,299,407,450"/>
 </map>

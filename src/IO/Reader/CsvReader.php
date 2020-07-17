@@ -13,32 +13,38 @@ use Bear\DataFrame;
  */
 class CsvReader extends CsvAbstract implements ReaderInterface
 {
+
     /**
      *
      * @var resource Ponteiro para o arquivo csv.
      */
     protected $handle = null;
-/**
+
+    /**
      *
      * @var bool Indica se o arquivo possui cabeçalhos.
      */
     protected bool $hasHead = true;
-/**
+
+    /**
      *
      * @var int Indica a primeira linha para importar.
      */
     protected int $startIn = 0;
-/**
+
+    /**
      *
      * @var int Número máximo de linhas a serem lidas.
      */
     protected int $readLength = 0;
-/**
+
+    /**
      *
      * @var int Tamanho da linha para ser usado em fgetcsv()
      */
     protected int $length = 0;
-/**
+
+    /**
      * Cria uma nova instância do reader.
      *
      * @param string $filename
@@ -50,7 +56,7 @@ class CsvReader extends CsvAbstract implements ReaderInterface
         if ($handle === false) {
             throw new Exception(sprintf('Arquivo [%s] inacessível.', $filename));
         }
-        
+
         $this->handle = $handle;
     }
 
@@ -65,7 +71,7 @@ class CsvReader extends CsvAbstract implements ReaderInterface
     {
         return $this->hasHead;
     }
-    
+
     /**
      * consfigura o reader para considerar ou não o arquivo csv com uma linha de
      * cabeçalho.
@@ -79,7 +85,7 @@ class CsvReader extends CsvAbstract implements ReaderInterface
         $this->hasHead = $toggle;
         return $this;
     }
-    
+
     /**
      * Configura por qual linha a importação deve começar (incluindo a linha de
      * cabeçalho, se houver).
@@ -93,7 +99,7 @@ class CsvReader extends CsvAbstract implements ReaderInterface
         $this->startIn = $startIn;
         return $this;
     }
-    
+
     /**
      * Indica qual linha o reader começará a leitura, incluindo linha de
      * cabeçalho, se houver.
@@ -105,7 +111,7 @@ class CsvReader extends CsvAbstract implements ReaderInterface
     {
         return $this->startIn;
     }
-    
+
     /**
      * Configura o tamanho da linha que será lido. Se não configurado, a leitura
      * para na primeira quebra de linha encontrada.
@@ -119,7 +125,7 @@ class CsvReader extends CsvAbstract implements ReaderInterface
         $this->readLength = $readLength;
         return $this;
     }
-    
+
     /**
      * Indica o tamanho de linha que será lido. Se zero, a leitura para na
      * primeira quebra de linha encontrada.
@@ -131,7 +137,7 @@ class CsvReader extends CsvAbstract implements ReaderInterface
     {
         return $this->readLength;
     }
-    
+
     /**
      * Faz a leitura do arquivo CSV conforme as configurações do reader.
      *
@@ -142,24 +148,21 @@ class CsvReader extends CsvAbstract implements ReaderInterface
     {
         $data = [];
         $colNames = [];
-        
+
         //pula as linhas do início
         if ($this->startIn !== 0) {
-            for (
-                $i = 0; $i < $this->startIn;
-                $i++
-            ) {
-            //pula as linhas
+            for ($i = 0; $i < $this->startIn; $i++) {
+                //pula as linhas
                 if ($this->readLength === 0) {
                     fgets($this->handle);
                 }
-                
+
                 if ($this->readLength > 0) {
                     fgets($this->handle, $this->readLength);
                 }
             }
         }
-        
+
         if ($this->hasHead) {
             $colNames = (array) fgetcsv(
                 $this->handle,
@@ -168,7 +171,7 @@ class CsvReader extends CsvAbstract implements ReaderInterface
                 $this->enclosure,
                 $this->escape
             );
-            
+
             //não coberto por teste porque não sei (ainda) como causar um erro na leitura da linha neste ponto
             // @codeCoverageIgnoreStart
             if ($colNames === []) {
@@ -192,10 +195,10 @@ class CsvReader extends CsvAbstract implements ReaderInterface
         if ($colNames !== [] && $data !== []) {
             $df->setColumnNames($colNames);
         }
-        
+
         return $df;
     }
-    
+
     /**
      * Fecha o ponteiro do arquivo.
      */
