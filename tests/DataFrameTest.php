@@ -1,10 +1,7 @@
 <?php
 
+use Exception;
 use Bear\DataFrame;
-use Bear\Exception\InvalidColumnNameException;
-use Bear\Exception\InvalidDataStructureException;
-use Bear\Exception\InvalidRowCountException;
-use Bear\Exception\OutOfBoundsException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -45,7 +42,7 @@ class DataFrameTest extends TestCase
 
     public function testConstructBadStructure()
     {
-        $this->expectException(InvalidDataStructureException::class);
+        $this->expectException(Exception::class);
         $dfFail = new DataFrame([
             [1, 'John', 39],
             [2, 'Mary'], //esta linha tem menos colunas
@@ -114,7 +111,6 @@ class DataFrameTest extends TestCase
     public function testGetColumnsByIndex()
     {
         $df = new DataFrame($this->df_1);
-//        $df->setColumnNames(['id', 'name', 'age']);
         $df2 = $df->getColumnsByIndex([0, 2]);
         $this->assertInstanceOf(DataFrame::class, $df2);
         $this->assertEquals([
@@ -127,7 +123,7 @@ class DataFrameTest extends TestCase
     public function testGetColumnsByIndexFail()
     {
         $df = new DataFrame($this->df_1);
-        $this->expectException(OutOfBoundsException::class);
+        $this->expectException(Exception::class);
         $df2 = $df->getColumnsByIndex([0, 3]);
     }
 
@@ -148,7 +144,7 @@ class DataFrameTest extends TestCase
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $this->expectException(OutOfBoundsException::class);
+        $this->expectException(Exception::class);
         $df2 = $df->getColumnsByName(['id', 'unknow']);
     }
 
@@ -169,7 +165,7 @@ class DataFrameTest extends TestCase
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(Exception::class);
         $df2 = $df->getColumnsRangeByIndex(2, 1);
     }
 
@@ -177,7 +173,7 @@ class DataFrameTest extends TestCase
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $this->expectException(OutOfBoundsException::class);
+        $this->expectException(Exception::class);
         $df2 = $df->getColumnsRangeByIndex(4, 2);
     }
 
@@ -185,7 +181,7 @@ class DataFrameTest extends TestCase
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $this->expectException(OutOfBoundsException::class);
+        $this->expectException(Exception::class);
         $df2 = $df->getColumnsRangeByIndex(0, 4);
     }
 
@@ -257,7 +253,7 @@ class DataFrameTest extends TestCase
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $this->expectException(OutOfBoundsException::class);
+        $this->expectException(Exception::class);
         $df2 = $df->getColumnsRangeByName('unknow', 'age');
     }
 
@@ -265,14 +261,14 @@ class DataFrameTest extends TestCase
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $this->expectException(OutOfBoundsException::class);
+        $this->expectException(Exception::class);
         $df2 = $df->getColumnsRangeByName('name', 'unknow');
     }
 
     public function testSetColumnNamesFail()
     {
         $df = new DataFrame($this->df_1);
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(Exception::class);
         $df->setColumnNames(['id', 'name']);
     }
 
@@ -292,7 +288,7 @@ class DataFrameTest extends TestCase
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $this->expectException(OutOfBoundsException::class);
+        $this->expectException(Exception::class);
         $df2 = $df->getRows([1, 4]);
     }
 
@@ -336,7 +332,7 @@ class DataFrameTest extends TestCase
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $this->expectException(OutOfBoundsException::class);
+        $this->expectException(Exception::class);
         $df2 = $df->getRowRange(4, 8);
     }
 
@@ -344,7 +340,7 @@ class DataFrameTest extends TestCase
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $this->expectException(OutOfBoundsException::class);
+        $this->expectException(Exception::class);
         $df2 = $df->getRowRange(0, 8);
     }
 
@@ -352,7 +348,7 @@ class DataFrameTest extends TestCase
     {
         $df = new DataFrame($this->df_1);
         $df->setColumnNames(['id', 'name', 'age']);
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(Exception::class);
         $df2 = $df->getRowRange(2, 1);
     }
 
@@ -373,7 +369,7 @@ class DataFrameTest extends TestCase
             [5, 'Mart'],
             [6, 'Phill']
         ]);
-        $this->expectException(InvalidColumnNameException::class);
+        $this->expectException(Exception::class);
         $merged = $df->mergeByRows($df2);
     }
 
@@ -382,7 +378,7 @@ class DataFrameTest extends TestCase
         $df = new DataFrame($this->df_1);
         $df2 = new DataFrame($this->df_2);
         $df2->setColumnNames(['cod', 'nome', 'idade']);
-        $this->expectException(InvalidColumnNameException::class);
+        $this->expectException(Exception::class);
         $merged = $df->mergeByRows($df2);
     }
 
@@ -407,7 +403,7 @@ class DataFrameTest extends TestCase
     {
         $df = new DataFrame($this->df_1);
         $df2 = new DataFrame($this->df_3);
-        $this->expectException(InvalidColumnNameException::class);
+        $this->expectException(Exception::class);
         $merged = $df->mergeByColumns($df2);
     }
 
@@ -420,7 +416,7 @@ class DataFrameTest extends TestCase
             ['m']
         ]);
         $df2->setColumnNames(['sexo']);
-        $this->expectException(InvalidRowCountException::class);
+        $this->expectException(Exception::class);
         $merged = $df->mergeByColumns($df2);
     }
 }

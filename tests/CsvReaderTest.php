@@ -1,6 +1,6 @@
 <?php
 
-use Bear\Exception\InvalidResourceException;
+use Exception;
 use Bear\IO\Reader\CsvReader;
 use PHPUnit\Framework\TestCase;
 
@@ -20,7 +20,7 @@ class CsvReaderTest extends TestCase
 
     public function testConstructInvalidFile()
     {
-        $this->expectException(InvalidResourceException::class);
+        $this->expectException(Exception::class);
         $reader = new CsvReader('./tests/assets/unknow.csv');
     }
 

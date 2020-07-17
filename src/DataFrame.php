@@ -1,11 +1,9 @@
 <?php
+
 namespace Bear;
 
-use Bear\Exception\InvalidColumnNameException;
-use Bear\Exception\InvalidDataStructureException;
-use Bear\Exception\InvalidRowCountException;
-use Bear\Exception\OutOfBoundsException;
-use InvalidArgumentException;
+use Exception;
+use Bear\DataFrame;
 
 /**
  * Abstração de dados tabulares.
@@ -53,7 +51,7 @@ class DataFrame
      * terá nomes de colunas nem dados e DataFrame::get() e 
      * DataFrame::getColumnNames() retornam um array vazio.
      * 
-     * @throws InvalidDataStructureException
+     * @throws Exception
      * @see DataFrame::setColumnNames()
      * @see DataFrame::getColumnNames()
      * @see DataFrame::$colNames
@@ -69,7 +67,7 @@ class DataFrame
             try {
                 $this->checkDataStructure();
                 $this->disassembleDataFrame();
-            } catch (InvalidDataStructureException $ex) {
+            } catch (Exception $ex) {
                 throw $ex;
             }
         }
@@ -146,7 +144,7 @@ class DataFrame
      * InvalidDataStructureException() se houver diferença.
      * 
      * @return void
-     * @throws InvalidDataStructureException
+     * @throws Exception
      */
     protected function checkDataStructure(): void
     {
@@ -154,7 +152,7 @@ class DataFrame
         
         foreach ($this->data as $rowId => $row) {
             if (count($row) !== $numCols) {
-                throw new InvalidDataStructureException($rowId, array_keys($row));
+                throw new Exception(sprintf("Número de colunas da linha [%d] é [%d], porém deveria ser [%d].", $rowId, count($row), $numCols));
             }
         }
     }
@@ -214,14 +212,14 @@ class DataFrame
      * 
      * @param array $colNames
      * @return DataFrame
-     * @throws InvalidArgumentException
+     * @throws Exception
      * @see DataFrame::$colNames
      * @see DataFrame::getColumnNames()
      */
     public function setColumnNames(array $colNames): DataFrame
     {
         if (count($colNames) !== $this->countColumns()) {
-            throw new InvalidArgumentException(sprintf('Invalid number of columns. %d columns were expected, but $d were provided.', $this->countColumns(), count($colNames)));
+            throw new Exception(sprintf('Número de colunas inválido. Eram esperadas [%d] colunas, mas [%d] colunas foram encontradas.', $this->countColumns(), count($colNames)));
         }
 
         $this->colNames = $colNames;
@@ -234,14 +232,14 @@ class DataFrame
      * 
      * @param array $columns
      * @return DataFrame
-     * @throws OutOfBoundsException
+     * @throws Exception
      */
     public function getColumnsByName(array $columns): DataFrame
     {
         foreach ($columns as $colName) {
             $colIndex = array_search($colName, $this->colNames);
             if ($colIndex === false) {
-                throw new OutOfBoundsException($colName);
+                throw new Exception(sprintf("Não foi encontrada a coluna [%s]", $colName));
             }
 
             $colList[] = $colIndex;
@@ -257,7 +255,7 @@ class DataFrame
      * 
      * @param array $columns
      * @return DataFrame
-     * @throws OutOfBoundsException
+     * @throws Exception
      */
     public function getColumnsByIndex(array $columns): DataFrame
     {
@@ -266,7 +264,7 @@ class DataFrame
         foreach ($this->data as $rowId => $row) {
             foreach ($columns as $colId => $colIndex) {
                 if (!key_exists($colIndex, $this->colNames)) {
-                    throw new OutOfBoundsException($colIndex);
+                    throw new Exception(sprintf('Não foi encontrada coluna de índice [%d]', $colIndex));
                 }
                 $colName = $this->colNames[$colIndex];
 
@@ -286,8 +284,7 @@ class DataFrame
      * @param int|null $start
      * @param int|null $end
      * @return DataFrame
-     * @throws OutOfBoundsException
-     * @throws InvalidArgumentException
+     * @throws Exception
      */
     public function getColumnsRangeByIndex(?int $start = null, ?int $end = null): DataFrame
     {
@@ -302,11 +299,11 @@ class DataFrame
         }
 
         if (!key_exists($start, $this->colNames)) {
-            throw new OutOfBoundsException($start);
+            throw new Exception(sprintf('Não foi encontrada coluna incial de índice [%d]', $start));
         }
 
         if (!key_exists($end, $this->colNames)) {
-            throw new OutOfBoundsException($end);
+            throw new Exception(sprintf('Não foi encontrada coluna final de índice [%d]', $end));
         }
 
         for ($i = $start; $i <= $end; $i++) {
@@ -316,7 +313,7 @@ class DataFrame
         $length = $end - $start + 1;
 
         if ($start > $end) {
-            throw new InvalidArgumentException("The start column $start cannot be later than the end column $end.");
+            throw new Exception(sprintf('A coluna final [%d] não pode ter índice menor que a coluna inicial [%d].', $end, $start));
         }
 
         foreach ($this->data as $row) {
@@ -336,22 +333,24 @@ class DataFrame
      * @param string|null $start
      * @param string|null $end
      * @return DataFrame
-     * @throws OutOfBoundsException
+     * @throws Exception
      */
     public function getColumnsRangeByName(?string $start = null, ?string $end = null): DataFrame
     {
         if (!is_null($start)) {
-            $start = array_search($start, $this->colNames);
-            if ($start === false) {
-                throw new OutOfBoundsException($start);
+            $seek = array_search($start, $this->colNames);
+            if ($seek === false) {
+                throw new Exception(sprintf('Coluna inicial de índice [%d] não foi encontrada.', $start));
             }
+            $start = $seek;
         }
 
         if (!is_null($end)) {
-            $end = array_search($end, $this->colNames);
-            if ($end === false) {
-                throw new OutOfBoundsException($end);
+            $seek = array_search($end, $this->colNames);
+            if ($seek === false) {
+                throw new Exception(sprintf('Coluna final de índice [%d] não foi encontrada.', $end));
             }
+            $end = $seek;
         }
 
         $df = $this->getColumnsRangeByIndex($start, $end);
@@ -365,14 +364,14 @@ class DataFrame
      * 
      * @param array $rows
      * @return DataFrame
-     * @throws OutOfBoundsException
+     * @throws Exception
      */
     public function getRows(array $rows): DataFrame
     {
         $data = [];
         foreach ($rows as $index){
             if(!key_exists($index, $this->data)){
-                throw new OutOfBoundsException($index);
+                throw new Exception(sprintf('Linha de índice [%d] não foi encontrada.', $index));
             }
             $data[] = $this->data[$index];
         }
@@ -389,8 +388,7 @@ class DataFrame
      * @param int|null $start
      * @param int|null $end
      * @return DataFrame
-     * @throws InvalidArgumentException
-     * @throws OutOfBoundsException
+     * @throws Exception
      */
     public function getRowRange(?int $start = null, ?int $end = null): DataFrame
     {
@@ -403,15 +401,15 @@ class DataFrame
         }
         
         if($start > $end){
-            throw new InvalidArgumentException("The start row $start cannot be later than the end row $end.");
+            throw new Exception(sprintf('A linha de início [%d] não pode ser superior à linha de fim [%d]', $start, $end));
         }
         
         if(!key_exists($start, $this->data)){
-            throw new OutOfBoundsException($start);
+            throw new Exception(sprintf('A linha de início [%d] não existe.', $start));
         }
         
         if(!key_exists($end, $this->data)){
-            throw new OutOfBoundsException($end);
+            throw new Exception(sprintf('A linha de fim [%d] não existe.', $end));
         }
         
         return $this->getRows(range($start, $end, 1));
@@ -425,13 +423,13 @@ class DataFrame
      * 
      * @param DataFrame $df
      * @return DataFrame
-     * @throws InvalidColumnNameException
+     * @throws Exception
      */
     public function mergeByRows(DataFrame $df): DataFrame
     {
         //verifica se as colunas são as mesmas em tamanho e rótulo
         if($this->colNames !== $df->getColumnNames()){
-            throw new InvalidColumnNameException(join(', ', $df->getColumnNames()));
+            throw new Exception(sprintf('O data frame atual tem as colunas [%s], mas o data frame a mesclar tem as colunas [%s]', join(',', $this->colNames), join(', ', $df->getColumnNames())));
         }
         
         $data = array_merge($this->get(), $df->get());
@@ -448,21 +446,20 @@ class DataFrame
      * 
      * Não pode haver colunas com os mesmos nomes nos dois data frames.
      * 
-     * @param \Bear\DataFrame $df
-     * @return \Bear\DataFrame
-     * @throws InvalidRowCountException
-     * @throws InvalidColumnNameException
+     * @param DataFrame $df
+     * @return DataFrame
+     * @throws Exception
      */
     public function mergeByColumns(DataFrame $df): DataFrame
     {
         //verifica se os data frames tem o mesmo número de linhas
         if($this->countRows() !== $df->countRows()){
-            throw new InvalidRowCountException($df->countRows());
+            throw new Exception(sprintf('O data frame atual tem [%d] linhas, mas o data frame a mesclar tem [%d] linhas.', $this->countRows(), $df->countRows()));
         }
         
         //verifica se os nomes de colunas são iguais
         if(array_intersect($this->colNames, $df->getColumnNames())){
-            throw new InvalidColumnNameException(join(', ', $df->getColumnNames()));
+            throw new Exception(sprintf('O data frame atual tem as colunas [%s], mas o data frame a mesclar tem as colunas [%s].', join(', ', $this->colNames), join(', ', $df->getColumnNames())));
         }
         
         $data = $this->get();
