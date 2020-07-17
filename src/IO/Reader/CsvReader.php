@@ -195,4 +195,12 @@ class CsvReader extends CsvAbstract implements ReaderInterface
         
         return $df;
     }
+    
+    /**
+     * Fecha o ponteiro do arquivo.
+     */
+    public function __destruct()
+    {
+        @fclose($this->handle);
+    }
 }
