@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['write_107',['write',['../classBear_1_1IO_1_1Writer_1_1CsvWriter.html#aaa23565444f621f9427765d1ea26424d',1,'Bear\IO\Writer\CsvWriter\write()'],['../interfaceBear_1_1IO_1_1Writer_1_1WriterInterface.html#a8312a0c96874b187130fd66db4dbfbc7',1,'Bear\IO\Writer\WriterInterface\write()']]]
+  ['togglehashead_108',['toggleHasHead',['../classBear_1_1IO_1_1Reader_1_1CsvReader.html#a5495535b49f01a9ca603dd2ea2217296',1,'Bear\IO\Reader\CsvReader\toggleHasHead()'],['../classBear_1_1IO_1_1Writer_1_1CsvWriter.html#a4435b2f6ab2a54be708bfe4796b704e8',1,'Bear\IO\Writer\CsvWriter\toggleHasHead()']]]
 ];

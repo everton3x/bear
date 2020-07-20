@@ -397,7 +397,7 @@ class DataFrameTest extends TestCase
             ],
             $merged->get());
     }
-    
+
     public function testMergeByColumnsNoColNames()
     {
         $df = new DataFrame($this->df_1);
@@ -417,5 +417,28 @@ class DataFrameTest extends TestCase
         $df2->setColumnNames(['sexo']);
         $this->expectException(Exception::class);
         $merged = $df->mergeByColumns($df2);
+    }
+
+    public function testFilter()
+    {
+        $filter = function(array $row): bool {
+            if ($row['age'] > 12) {
+                return true;
+            }
+
+            return false;
+        };
+
+        $df = new DataFrame($this->df_1);
+        $df->setColumnNames(['id', 'name', 'age']);
+
+        $df2 = $df->filter($filter);
+
+        $this->assertInstanceOf(DataFrame::class, $df2);
+        $this->assertEquals([
+            ['id'=>1, 'name'=>'John', 'age'=>39],
+            ['id'=>2, 'name'=>'Mary', 'age'=>37]
+        ],
+        $df2->get());
     }
 }

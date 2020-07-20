@@ -7,6 +7,7 @@ var classBear_1_1DataFrame =
     [ "countRows", "classBear_1_1DataFrame.html#a349a7c10a0c60b77c3d3cc01f1aa1056", null ],
     [ "detectColNames", "classBear_1_1DataFrame.html#ac2e13f88a99186bcf87ed1c9b940f2a0", null ],
     [ "disassembleDataFrame", "classBear_1_1DataFrame.html#ad1615ea58c38fb5bf0e2095d96c89855", null ],
+    [ "filter", "classBear_1_1DataFrame.html#a0383306d2296b6e0e3278934356de234", null ],
     [ "get", "classBear_1_1DataFrame.html#adb0057fee7216134f9ff80babdce983d", null ],
     [ "getColumnNames", "classBear_1_1DataFrame.html#aed3e11b7dbc8a76dea0151cdd6ad4006", null ],
     [ "getColumnsByIndex", "classBear_1_1DataFrame.html#a69c9b1f71510502acebe0d298de231fe", null ],

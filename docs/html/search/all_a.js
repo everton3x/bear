@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['setcolumnnames_49',['setColumnNames',['../classBear_1_1DataFrame.html#a92cbfa262d7fd72afbd366d145b69378',1,'Bear::DataFrame']]],
-  ['setdelimiter_50',['setDelimiter',['../classBear_1_1IO_1_1CsvAbstract.html#ab84e6e884be4d9d5f47faedb168d3fa2',1,'Bear::IO::CsvAbstract']]],
-  ['setenclosure_51',['setEnclosure',['../classBear_1_1IO_1_1CsvAbstract.html#a0f7b87bf82a3be52af2b4a0cdc6ea603',1,'Bear::IO::CsvAbstract']]],
-  ['setescape_52',['setEscape',['../classBear_1_1IO_1_1CsvAbstract.html#afc35bf0fec5c4f0b7550015325b0fe1b',1,'Bear::IO::CsvAbstract']]],
-  ['setreadlength_53',['setReadLength',['../classBear_1_1IO_1_1Reader_1_1CsvReader.html#a25f46a74c1d82b1b31ace86b73700e97',1,'Bear::IO::Reader::CsvReader']]],
-  ['setstartin_54',['setStartIn',['../classBear_1_1IO_1_1Reader_1_1CsvReader.html#aabc658e045edbec4e63e8a55a458f25c',1,'Bear::IO::Reader::CsvReader']]]
+  ['read_47',['read',['../classBear_1_1IO_1_1Reader_1_1CsvReader.html#a314e5c93c538ea30c9a7690b2fc777d9',1,'Bear\IO\Reader\CsvReader\read()'],['../interfaceBear_1_1IO_1_1Reader_1_1ReaderInterface.html#abbba00e9290055cb71b01d2edcb116df',1,'Bear\IO\Reader\ReaderInterface\read()']]],
+  ['readerinterface_48',['ReaderInterface',['../interfaceBear_1_1IO_1_1Reader_1_1ReaderInterface.html',1,'Bear::IO::Reader']]],
+  ['readerinterface_2ephp_49',['ReaderInterface.php',['../ReaderInterface_8php.html',1,'']]]
 ];

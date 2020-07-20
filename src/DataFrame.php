@@ -545,4 +545,30 @@ class DataFrame
         $newdf->setColumnNames(array_merge($this->colNames, $df->getColumnNames()));
         return $newdf;
     }
+    
+    /**
+     * Filtra o data frame retornando as linhas filtradas.
+     *
+     * @param callable $filter Uma função que recebe uma linha por vex, devendo
+     * retornar true caso a linha corresponda ao filtro, ou false caso não
+     * corresponda. Apenas as linhas que originam retorno true da função de
+     * filtro são incluídas no retorno.
+     *
+     * @return DataFrame
+     */
+    public function filter(callable $filter): DataFrame
+    {
+        $data = [];
+        
+        foreach ($this->get() as $row) {
+            if ($filter($row) === true) {
+                $data[] = $row;
+            }
+        }
+
+        $df = new DataFrame($data);
+        $df->setColumnNames($this->colNames);
+        
+        return $df;
+    }
 }
