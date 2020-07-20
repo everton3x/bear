@@ -16,33 +16,9 @@ class CsvReader extends CsvAbstract implements ReaderInterface
 
     /**
      *
-     * @var resource Ponteiro para o arquivo csv.
-     */
-    protected $handle = null;
-
-    /**
-     *
      * @var bool Indica se o arquivo possui cabeçalhos.
      */
     protected bool $hasHead = true;
-
-    /**
-     *
-     * @var int Indica a primeira linha para importar.
-     */
-    protected int $startIn = 0;
-
-    /**
-     *
-     * @var int Número máximo de linhas a serem lidas.
-     */
-    protected int $readLength = 0;
-
-    /**
-     *
-     * @var int Tamanho da linha para ser usado em fgetcsv()
-     */
-    protected int $length = 0;
 
     /**
      * Cria uma nova instância do reader.
@@ -84,58 +60,6 @@ class CsvReader extends CsvAbstract implements ReaderInterface
     {
         $this->hasHead = $toggle;
         return $this;
-    }
-
-    /**
-     * Configura por qual linha a importação deve começar (incluindo a linha de
-     * cabeçalho, se houver).
-     *
-     * @param int $startIn
-     * @return CsvReader
-     * @see CsvReader::getStartIn()
-     */
-    public function setStartIn(int $startIn): CsvReader
-    {
-        $this->startIn = $startIn;
-        return $this;
-    }
-
-    /**
-     * Indica qual linha o reader começará a leitura, incluindo linha de
-     * cabeçalho, se houver.
-     *
-     * @return int
-     * @see CsvReader::setStartIn()
-     */
-    public function getStartIn(): int
-    {
-        return $this->startIn;
-    }
-
-    /**
-     * Configura o tamanho da linha que será lido. Se não configurado, a leitura
-     * para na primeira quebra de linha encontrada.
-     *
-     * @param int $readLength
-     * @return CsvReader
-     * @see CsvReader::getReadLength()
-     */
-    public function setReadLength(int $readLength): CsvReader
-    {
-        $this->readLength = $readLength;
-        return $this;
-    }
-
-    /**
-     * Indica o tamanho de linha que será lido. Se zero, a leitura para na
-     * primeira quebra de linha encontrada.
-     *
-     * @return int
-     * @see CsvReader::setReadLength()
-     */
-    public function getReadLength(): int
-    {
-        return $this->readLength;
     }
 
     /**

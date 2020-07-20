@@ -7,15 +7,13 @@ namespace Bear\IO;
  *
  * @author Everton
  */
-abstract class CsvAbstract
+abstract class CsvAbstract extends TextFileAbstract
 {
     protected string $delimiter = ';';
     
     protected string $enclosure = '"';
     
     protected string $escape = '\\';
-    
-    abstract public function __construct(string $filename);
     
     public function setDelimiter(string $delimiter): CsvAbstract
     {
