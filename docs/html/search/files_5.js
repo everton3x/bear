@@ -1,26 +1,4 @@
 var searchData=
 [
-  ['facade_2ephp_5919',['Facade.php',['../php-code-coverage_2src_2Report_2Html_2Facade_8php.html',1,'(<em>Namespace</em> global)'],['../php-code-coverage_2src_2Report_2Xml_2Facade_8php.html',1,'(<em>Namespace</em> global)'],['../php-file-iterator_2src_2Facade_8php.html',1,'(<em>Namespace</em> global)']]],
-  ['factory_2ephp_5920',['Factory.php',['../phpspec_2prophecy_2src_2Prophecy_2Comparator_2Factory_8php.html',1,'(<em>Namespace</em> global)'],['../phpunit_2php-file-iterator_2src_2Factory_8php.html',1,'(<em>Namespace</em> global)'],['../phpunit_2phpunit_2src_2Runner_2Filter_2Factory_8php.html',1,'(<em>Namespace</em> global)'],['../sebastian_2comparator_2src_2Factory_8php.html',1,'(<em>Namespace</em> global)']]],
-  ['failedpredictionexception_2ephp_5921',['FailedPredictionException.php',['../FailedPredictionException_8php.html',1,'']]],
-  ['false_5f_2ephp_5922',['False_.php',['../False___8php.html',1,'']]],
-  ['file_2ephp_5923',['File.php',['../phpdocumentor_2reflection-common_2src_2File_8php.html',1,'(<em>Namespace</em> global)'],['../phpunit_2php-code-coverage_2src_2Node_2File_8php.html',1,'(<em>Namespace</em> global)'],['../phpunit_2php-code-coverage_2src_2Report_2Html_2Renderer_2File_8php.html',1,'(<em>Namespace</em> global)'],['../phpunit_2php-code-coverage_2src_2Report_2Xml_2File_8php.html',1,'(<em>Namespace</em> global)'],['../phpunit_2phpunit_2src_2TextUI_2Configuration_2Filesystem_2File_8php.html',1,'(<em>Namespace</em> global)']]],
-  ['filecollection_2ephp_5924',['FileCollection.php',['../FileCollection_8php.html',1,'']]],
-  ['filecollectioniterator_2ephp_5925',['FileCollectionIterator.php',['../FileCollectionIterator_8php.html',1,'']]],
-  ['fileexists_2ephp_5926',['FileExists.php',['../FileExists_8php.html',1,'']]],
-  ['fileloader_2ephp_5927',['FileLoader.php',['../FileLoader_8php.html',1,'']]],
-  ['filesystem_2ephp_5928',['Filesystem.php',['../Filesystem_8php.html',1,'']]],
-  ['filter_2ephp_5929',['Filter.php',['../myclabs_2deep-copy_2src_2DeepCopy_2Filter_2Filter_8php.html',1,'(<em>Namespace</em> global)'],['../phpunit_2php-code-coverage_2src_2Filter_8php.html',1,'(<em>Namespace</em> global)'],['../phpunit_2phpunit_2src_2TextUI_2Configuration_2Filter_2Filter_8php.html',1,'(<em>Namespace</em> global)'],['../phpunit_2phpunit_2src_2Util_2Filter_8php.html',1,'(<em>Namespace</em> global)']]],
-  ['filterdirectory_2ephp_5930',['FilterDirectory.php',['../FilterDirectory_8php.html',1,'']]],
-  ['filterdirectorycollection_2ephp_5931',['FilterDirectoryCollection.php',['../FilterDirectoryCollection_8php.html',1,'']]],
-  ['filterdirectorycollectioniterator_2ephp_5932',['FilterDirectoryCollectionIterator.php',['../FilterDirectoryCollectionIterator_8php.html',1,'']]],
-  ['filterfile_2ephp_5933',['FilterFile.php',['../FilterFile_8php.html',1,'']]],
-  ['filterfilecollection_2ephp_5934',['FilterFileCollection.php',['../FilterFileCollection_8php.html',1,'']]],
-  ['filterfilecollectioniterator_2ephp_5935',['FilterFileCollectionIterator.php',['../FilterFileCollectionIterator_8php.html',1,'']]],
-  ['float_5f_2ephp_5936',['Float_.php',['../Float___8php.html',1,'']]],
-  ['formatter_2ephp_5937',['Formatter.php',['../Formatter_8php.html',1,'']]],
-  ['fqsen_2ephp_5938',['Fqsen.php',['../reflection-common_2src_2Fqsen_8php.html',1,'(<em>Namespace</em> global)'],['../reflection-docblock_2src_2DocBlock_2Tags_2Reference_2Fqsen_8php.html',1,'(<em>Namespace</em> global)']]],
-  ['fqsenresolver_2ephp_5939',['FqsenResolver.php',['../FqsenResolver_8php.html',1,'']]],
-  ['functions_2ephp_5940',['Functions.php',['../Functions_8php.html',1,'']]],
-  ['functionunit_2ephp_5941',['FunctionUnit.php',['../FunctionUnit_8php.html',1,'']]]
+  ['writerinterface_2ephp_95',['WriterInterface.php',['../WriterInterface_8php.html',1,'']]]
 ];

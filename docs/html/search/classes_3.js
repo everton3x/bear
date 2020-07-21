@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['writerinterface_65',['WriterInterface',['../interfaceBear_1_1IO_1_1Writer_1_1WriterInterface.html',1,'Bear::IO::Writer']]]
+  ['readerinterface_80',['ReaderInterface',['../interfaceBear_1_1IO_1_1Reader_1_1ReaderInterface.html',1,'Bear::IO::Reader']]]
 ];

@@ -1,4 +1,5 @@
 <?php
+
 namespace Bear\IO;
 
 /**
@@ -11,6 +12,7 @@ abstract class TextFileAbstract
     /**
      *
      * @var int Tamanho da linha para ser usado em fgetcsv()
+     * @todo Eu não sei onde isto está sendo usado. Ver no futuro.
      */
     protected int $length = 0;
     
@@ -37,8 +39,8 @@ abstract class TextFileAbstract
      * cabeçalho, se houver).
      *
      * @param int $startIn
-     * @return CsvReader
-     * @see CsvReader::getStartIn()
+     * @return TextFileAbstract
+     * @see TextFileAbstract::getStartIn()
      */
     public function setStartIn(int $startIn): TextFileAbstract
     {
@@ -63,8 +65,8 @@ abstract class TextFileAbstract
      * para na primeira quebra de linha encontrada.
      *
      * @param int $readLength
-     * @return CsvReader
-     * @see CsvReader::getReadLength()
+     * @return TextFileAbstract
+     * @see TextFileAbstract::getReadLength()
      */
     public function setReadLength(int $readLength): TextFileAbstract
     {

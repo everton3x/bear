@@ -1,5 +1,6 @@
 <map id="Bear\IO\Writer\CsvWriter" name="Bear\IO\Writer\CsvWriter">
-<area shape="rect" id="node1" title=" " alt="" coords="94,248,277,399"/>
-<area shape="rect" id="node2" href="$classBear_1_1IO_1_1CsvAbstract.html" title=" " alt="" coords="5,5,157,200"/>
-<area shape="rect" id="node3" href="$interfaceBear_1_1IO_1_1Writer_1_1WriterInterface.html" title=" " alt="" coords="181,64,397,141"/>
+<area shape="rect" id="node1" title=" " alt="" coords="107,461,290,612"/>
+<area shape="rect" id="node2" href="$classBear_1_1IO_1_1CsvAbstract.html" title=" " alt="" coords="19,233,171,413"/>
+<area shape="rect" id="node3" href="$classBear_1_1IO_1_1TextFileAbstract.html" title=" " alt="" coords="5,5,184,185"/>
+<area shape="rect" id="node4" href="$interfaceBear_1_1IO_1_1Writer_1_1WriterInterface.html" title=" " alt="" coords="195,285,411,362"/>
 </map>

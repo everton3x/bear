@@ -10,6 +10,7 @@
     <rule ref="rulesets/codesize.xml">
         <exclude name="ExcessiveClassComplexity" />
         <exclude name="CyclomaticComplexity" />
+        <exclude name="NPathComplexity" />
     </rule>
     <rule ref="rulesets/controversial.xml" />
     <rule ref="rulesets/design.xml" />
@@ -28,9 +29,16 @@
     <rule ref="rulesets/codesize.xml/CyclomaticComplexity">
         <priority>1</priority>
         <properties>
-            <property name="reportLevel" value="11" />
+            <property name="reportLevel" value="15" />
             <property name="showClassesComplexity" value="tru" />
             <property name="showMethodsComplexity" value="true" />
+        </properties>
+    </rule>
+    
+    <rule ref="rulesets/codesize.xml/NPathComplexity">
+        <priority>1</priority>
+        <properties>
+            <property name="minimum" value="745" />
         </properties>
     </rule>
     

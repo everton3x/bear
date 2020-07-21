@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readerinterface_116',['ReaderInterface',['../interfaceBear_1_1Reader_1_1ReaderInterface.html',1,'Bear::Reader']]]
+  ['textfileabstract_81',['TextFileAbstract',['../classBear_1_1IO_1_1TextFileAbstract.html',1,'Bear::IO']]]
 ];

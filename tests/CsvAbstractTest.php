@@ -8,8 +8,9 @@ use PHPUnit\Framework\TestCase;
  * Testes para CsvAbstrat
  *
  * @author Everton
+ * @todo Desmembrar em classes extendíveis para contemplar os métodos das classes abstratas.
  */
-class CsvAbstratTest extends TestCase
+class CsvAbstractTest extends TestCase
 {
     public function testSetGetDelimiter()
     {

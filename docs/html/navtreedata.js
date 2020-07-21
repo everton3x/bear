@@ -23,6 +23,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Bear API", "index.html", [
+    [ "Lista de atividades futuras", "todo.html", null ],
     [ "<em>Namespaces</em>", "namespaces.html", [
       [ "Lista de Namespaces", "namespaces.html", "namespaces_dup" ]
     ] ],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['write_57',['write',['../classBear_1_1IO_1_1Writer_1_1CsvWriter.html#aaa23565444f621f9427765d1ea26424d',1,'Bear\IO\Writer\CsvWriter\write()'],['../interfaceBear_1_1IO_1_1Writer_1_1WriterInterface.html#a8312a0c96874b187130fd66db4dbfbc7',1,'Bear\IO\Writer\WriterInterface\write()']]],
-  ['writerinterface_58',['WriterInterface',['../interfaceBear_1_1IO_1_1Writer_1_1WriterInterface.html',1,'Bear::IO::Writer']]],
-  ['writerinterface_2ephp_59',['WriterInterface.php',['../WriterInterface_8php.html',1,'']]]
+  ['textfileabstract_68',['TextFileAbstract',['../classBear_1_1IO_1_1TextFileAbstract.html',1,'Bear::IO']]],
+  ['textfileabstract_2ephp_69',['TextFileAbstract.php',['../TextFileAbstract_8php.html',1,'']]],
+  ['togglehashead_70',['toggleHasHead',['../classBear_1_1IO_1_1Reader_1_1CsvReader.html#a5495535b49f01a9ca603dd2ea2217296',1,'Bear\IO\Reader\CsvReader\toggleHasHead()'],['../classBear_1_1IO_1_1Writer_1_1CsvWriter.html#a4435b2f6ab2a54be708bfe4796b704e8',1,'Bear\IO\Writer\CsvWriter\toggleHasHead()']]]
 ];
