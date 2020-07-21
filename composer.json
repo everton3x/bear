@@ -1,5 +1,5 @@
 {
-    "name": "everton3x/bear",
+    "name": "php-tool-kit/bear",
     "description": "Biblioteca PHP para manipulação e análise de dados inspirada no Pandas (Python) e no R.",
     "type": "library",
     "license": "MIT",
