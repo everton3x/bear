@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['mergebycolumns_122',['mergeByColumns',['../classBear_1_1DataFrame.html#a2f40d3024f0b29d0565f2da95c3d7569',1,'Bear::DataFrame']]],
-  ['mergebyrows_123',['mergeByRows',['../classBear_1_1DataFrame.html#a736e2b42990278bfa3f77af8cc222dd9',1,'Bear::DataFrame']]]
+  ['hashead_129',['hasHead',['../classBear_1_1IO_1_1Reader_1_1CsvReader.html#ae563cd3101f53c896f5fc1a20c84690e',1,'Bear\IO\Reader\CsvReader\hasHead()'],['../classBear_1_1IO_1_1Writer_1_1CsvWriter.html#a838f211667551a6e441c20802f6d867c',1,'Bear\IO\Writer\CsvWriter\hasHead()']]]
 ];

@@ -53,10 +53,7 @@ class FwfReader extends FwfAbstract implements ReaderInterface
 
         //pula as linhas do início
         if ($this->startIn !== 0) {
-            for (
-                $i = 0; $i < $this->startIn;
-                $i++
-            ) {
+            for ($i = 0; $i < $this->startIn; $i++) {
             //pula as linhas
                 if ($this->readLength === 0) {
                     fgets($this->handle);

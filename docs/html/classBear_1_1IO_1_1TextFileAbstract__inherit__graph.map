@@ -1,8 +1,9 @@
 <map id="Bear\IO\TextFileAbstract" name="Bear\IO\TextFileAbstract">
-<area shape="rect" id="node1" title=" " alt="" coords="315,5,493,185"/>
+<area shape="rect" id="node1" title=" " alt="" coords="333,5,512,185"/>
 <area shape="rect" id="node2" href="$classBear_1_1IO_1_1CsvAbstract.html" title=" " alt="" coords="240,233,392,413"/>
-<area shape="rect" id="node5" href="$classBear_1_1IO_1_1FwfAbstract.html" title=" " alt="" coords="435,270,587,377"/>
+<area shape="rect" id="node5" href="$classBear_1_1IO_1_1FwfAbstract.html" title=" " alt="" coords="453,270,605,377"/>
 <area shape="rect" id="node3" href="$classBear_1_1IO_1_1Reader_1_1CsvReader.html" title=" " alt="" coords="5,469,200,605"/>
 <area shape="rect" id="node4" href="$classBear_1_1IO_1_1Writer_1_1CsvWriter.html" title=" " alt="" coords="225,461,407,612"/>
 <area shape="rect" id="node6" href="$classBear_1_1IO_1_1Reader_1_1FwfReader.html" title=" " alt="" coords="432,476,627,597"/>
+<area shape="rect" id="node7" href="$classBear_1_1IO_1_1Writer_1_1FwfWriter.html" title=" " alt="" coords="651,461,834,612"/>
 </map>

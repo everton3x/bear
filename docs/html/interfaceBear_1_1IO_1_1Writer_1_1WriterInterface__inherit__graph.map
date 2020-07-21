@@ -1,4 +1,5 @@
 <map id="Bear\IO\Writer\WriterInterface" name="Bear\IO\Writer\WriterInterface">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,221,83"/>
-<area shape="rect" id="node2" href="$classBear_1_1IO_1_1Writer_1_1CsvWriter.html" title=" " alt="" coords="22,131,205,281"/>
+<area shape="rect" id="node1" title=" " alt="" coords="91,5,307,83"/>
+<area shape="rect" id="node2" href="$classBear_1_1IO_1_1Writer_1_1CsvWriter.html" title=" " alt="" coords="5,131,188,281"/>
+<area shape="rect" id="node3" href="$classBear_1_1IO_1_1Writer_1_1FwfWriter.html" title=" " alt="" coords="212,131,395,281"/>
 </map>

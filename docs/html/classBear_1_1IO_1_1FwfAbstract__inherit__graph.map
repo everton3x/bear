@@ -1,5 +1,6 @@
 <map id="Bear\IO\FwfAbstract" name="Bear\IO\FwfAbstract">
-<area shape="rect" id="node1" title=" " alt="" coords="27,233,179,340"/>
-<area shape="rect" id="node3" href="$classBear_1_1IO_1_1Reader_1_1FwfReader.html" title=" " alt="" coords="5,388,200,509"/>
-<area shape="rect" id="node2" href="$classBear_1_1IO_1_1TextFileAbstract.html" title=" " alt="" coords="13,5,192,185"/>
+<area shape="rect" id="node1" title=" " alt="" coords="133,233,285,340"/>
+<area shape="rect" id="node3" href="$classBear_1_1IO_1_1Reader_1_1FwfReader.html" title=" " alt="" coords="5,403,200,524"/>
+<area shape="rect" id="node4" href="$classBear_1_1IO_1_1Writer_1_1FwfWriter.html" title=" " alt="" coords="225,388,407,539"/>
+<area shape="rect" id="node2" href="$classBear_1_1IO_1_1TextFileAbstract.html" title=" " alt="" coords="120,5,299,185"/>
 </map>
