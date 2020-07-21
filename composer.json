@@ -1,6 +1,6 @@
 {
     "name": "everton3x/bear",
-    "description": "Pandas para PHP, ou quase isso...",
+    "description": "Biblioteca PHP para manipulação e análise de dados inspirada no Pandas (Python) e no R.",
     "type": "library",
     "license": "MIT",
     "authors": [
