@@ -30,6 +30,7 @@ Para exemplos, por enquanto você pode consultar o código-fonte dos testes no d
 
 ## To-do
 
+- [ ] sort;
 - [ ] reader/writer para PDO;
 - [ ] exemplos de utilização;
 - [ ] integração com o Github Actions;
